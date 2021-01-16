@@ -1,0 +1,32 @@
+body {
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  overflow-scrolling: touch;
+  @include regular;
+}
+
+span {
+  display: inline-block;
+}
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color .2s;
+}
+
+.container {
+  max-width: 90vw;
+  width: 100%;
+  margin: auto;
+  @media (min-width:1440px) {
+    max-width: 1280px;
+  }
+}

@@ -1,0 +1,48 @@
+%cover-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%contain-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@function scale-value($minValue, $maxValue, $minSize, $maxSize) {
+  @return calc(
+          #{$minValue}px + (#{$maxValue} - #{$minValue}) * ((100vw - #{$minSize}px) / (#{$maxSize} - #{$minSize}))
+  );
+}
+
+// Конвертируем px в vw. $vw-viewport - ширина макета в px. $font - размер в px
+$vw-viewport: 1920;
+@function get-vw($font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return $font / $vw-context * 1vw;
+  @return $font;
+}
+
+// Ограничиваем высоту текста по кол-ву строкю. $lines - кол-во строк, $max-width - макс. ширина конейнера с текстом
+@mixin line-clamp($lines, $max-width) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  max-width: $max-width;
+}
+
+@mixin centerImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
