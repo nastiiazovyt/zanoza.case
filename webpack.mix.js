@@ -45,6 +45,6 @@ mix.browserSync({
     watch: true,
     host: 'localhost',
     //Домен на локальном сервере
-    proxy: 'site_name'
+    proxy: 'new-starter-template'
 });
 
