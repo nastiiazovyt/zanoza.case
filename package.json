@@ -26,7 +26,6 @@
     },
     "dependencies": {
         "css-reset-and-normalize": "^2.1.0",
-        "inputmask": "^4.0.6",
         "vue-template-compiler": "^2.6.12"
     }
 }

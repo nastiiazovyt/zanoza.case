@@ -1,6 +1,7 @@
 const mix = require('laravel-mix');
 
 mix.setPublicPath('./');
+mix.disableNotifications();
 
 if (mix.inProduction()) {
     mix

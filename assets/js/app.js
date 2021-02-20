@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function (event) {});
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\OpenServer\OSPanel\domains\new_starter_template\src\js\app */"./src/js/app.js");
-module.exports = __webpack_require__(/*! D:\OpenServer\OSPanel\domains\new_starter_template\src\scss\main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! D:\OpenServer\OSPanel\domains\new-starter-template\src\js\app */"./src/js/app.js");
+module.exports = __webpack_require__(/*! D:\OpenServer\OSPanel\domains\new-starter-template\src\scss\main.scss */"./src/scss/main.scss");
 
 
 /***/ })

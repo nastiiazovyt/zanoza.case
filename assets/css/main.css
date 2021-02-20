@@ -554,7 +554,6 @@ template {
   display: none;
 }
 
-/******************************************/
 @-webkit-keyframes showBlock {
   0% {
     display: none;
@@ -569,6 +568,7 @@ template {
     opacity: 1;
   }
 }
+
 @keyframes showBlock {
   0% {
     display: none;
@@ -596,8 +596,6 @@ body {
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   overflow-scrolling: touch;
-  font-family: "Cera Pro", sans-serif;
-  font-weight: normal;
 }
 
 span {
@@ -616,6 +614,7 @@ a {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
+
 .container {
   max-width: 90vw;
   width: 100%;
@@ -625,15 +624,4 @@ a {
   .container {
     max-width: 1280px;
   }
-}
-
-.bg {
-  position: relative;
-}
-.bg__img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
 }
