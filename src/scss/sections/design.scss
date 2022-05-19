@@ -1,0 +1,599 @@
+@use "src/scss/vars" as v;
+
+.design {
+  &__first-small-block {
+    position: relative;
+    padding-top: v.dynamic-vw(1920, 63px);
+    padding-bottom: v.dynamic-vw(1920, 180px);
+  }
+
+  &_first-blur {
+    position: absolute;
+    top: -25%;
+    left: -12%;
+    width: 100%;
+  }
+
+  &__container {
+    padding: v.dynamic-vw(1920, 177px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 166px);
+  }
+
+  &__title {
+    position: relative;
+    font-family: v.$halvarRegular;
+    line-height: 1;
+    color: #ffffff;
+    font-size: v.dynamic-vw(1920, 80px);
+    margin-bottom: v.dynamic-vw(1920, 120px);
+    font-weight: 500;
+  }
+
+  &__desc {
+    position: relative;
+    font-family: v.$ttCommons;
+    font-size: v.dynamic-vw(1920, 22px);
+    line-height: 1.3;
+    color: #D6D6D6;
+    max-width: v.dynamic-vw(1920, 751px);
+    width: 100%;
+    margin-left: v.dynamic-vw(1920, 200px);
+    margin-bottom: v.dynamic-vw(1920, 180px);
+    font-weight: 300;
+  }
+}
+
+.task-block {
+  position: relative;
+
+  &_title {
+    font-family: v.$halvarRegular;
+    line-height: 1;
+    font-size: v.dynamic-vw(1920, 32px);
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: v.dynamic-vw(1920, 80px);
+  }
+
+  &_desc {
+    max-width: v.dynamic-vw(1920, 680px);
+    width: 100%;
+    margin-left: v.dynamic-vw(1920, 200px);
+    margin-bottom: v.dynamic-vw(1920, 104px);
+
+    p {
+      font-family: v.$ttCommons;
+      color: #D6D6D6;
+      font-size: v.dynamic-vw(1920, 22px);
+      font-weight: 300;
+      line-height: 1.3;
+
+      &:first-child {
+        color: #ffffff;
+        font-size: v.dynamic-vw(1920, 30px);
+        margin-bottom: v.dynamic-vw(1920, 24px);
+      }
+    }
+
+  }
+
+  &_points {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;
+    margin-left: v.dynamic-vw(1920, 200px);
+    max-width: v.dynamic-vw(1920, 1226px);
+    width: 100%;
+
+    &:before {
+      content: "";
+      width: 100%;
+      background-color: #ffffff;
+      height: v.dynamic-vw(1920, 1px);
+      opacity: 0.2;
+      position: absolute;
+      top: -20%;
+      z-index: 2;
+      left: 0;
+    }
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: v.dynamic-vw(1920, 18px);
+      font-family: v.$ttCommons;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #ffffff;
+      max-width: v.dynamic-vw(1920, 320px);
+      width: 100%;
+    }
+  }
+}
+
+.process-block {
+  &_title {
+    position: relative;
+    font-family: v.$halvarRegular;
+    line-height: 1;
+    font-size: v.dynamic-vw(1920, 32px);
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: v.dynamic-vw(1920, 52px);
+  }
+}
+
+.process-section {
+  padding-left: v.dynamic-vw(1920, 200px);
+  padding-right: v.dynamic-vw(1920, 54px);
+  width: 100%;
+
+  &-3 {
+    &_img {
+      max-width: v.dynamic-vw(1920, 1280px);
+      max-height: v.dynamic-vw(1920, 673px);
+      width: 100%;
+      height: 100%;
+      margin-bottom: v.dynamic-vw(1920, 80px);
+    }
+  }
+
+  &_4 {
+    position: relative;
+  }
+
+  &_number {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    font-family: v.$ttCommons;
+    font-weight: 300;
+    font-size: v.dynamic-vw(1920, 20px);
+    line-height: 1.2;
+    color: #ffffff;
+    text-align: center;
+
+    &-circle {
+      position: relative;
+      width: v.dynamic-vw(1920, 32px);
+      height: v.dynamic-vw(1920, 32px);
+      border-radius: 50%;
+      border: #ffffff 1px solid;
+      margin-bottom: v.dynamic-vw(1920, 8px);
+      margin-left: v.dynamic-vw(1920, -40px);
+    }
+  }
+
+  &_title-block {
+    position: relative;
+    margin-bottom: v.dynamic-vw(1920, 80px);
+  }
+
+  &_title {
+    font-family: v.$halvarRegular;
+    font-size: v.dynamic-vw(1920, 24px);
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: v.dynamic-vw(1920, 24px);
+  }
+
+  &_desc {
+    font-family: v.$ttCommons;
+    font-weight: 300;
+    line-height: 1.3;
+    font-size: v.dynamic-vw(1920, 24px);
+    color: #ffffff;
+  }
+
+  &_pic {
+    &-1 {
+      max-width: v.dynamic-vw(1920, 700px);
+      max-height: v.dynamic-vw(1920, 368px);
+      width: 100%;
+      height: 100%;
+      margin-bottom: v.dynamic-vw(1920, 40px);
+    }
+
+    &-2 {
+      max-width: v.dynamic-vw(1920, 294px);
+      max-height: v.dynamic-vw(1920, 368px);
+      width: 100%;
+      height: 100%;
+    }
+
+    &-3 {
+      max-width: v.dynamic-vw(1920, 700px);
+      max-height: v.dynamic-vw(1920, 368px);
+      width: 100%;
+      height: 100%;
+    }
+
+    &-4 {
+      max-width: v.dynamic-vw(1920, 294px);
+      max-height: v.dynamic-vw(1920, 368px);
+      width: 100%;
+      height: 100%;
+    }
+
+    &-block {
+      padding-right: v.dynamic-vw(1920, 206px);
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: v.dynamic-vw(1920, 140px);
+    }
+  }
+
+  &_text {
+    &-string {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: v.dynamic-vw(1920, 49px);
+
+      p {
+        font-family: v.$ttCommons;
+        font-weight: 300;
+        line-height: 1.3;
+        color: #ffffff;
+        font-size: v.dynamic-vw(1920, 24px);
+        max-width: v.dynamic-vw(1920, 600px);
+        width: 100%;
+      }
+    }
+
+    &-block {
+      max-width: v.dynamic-vw(1920, 600px);
+      width: 100%;
+
+      p {
+        font-family: v.$ttCommons;
+        font-weight: 300;
+        line-height: 1.3;
+        color: #ffffff;
+        font-size: v.dynamic-vw(1920, 24px);
+
+        &:first-child {
+          margin-bottom: v.dynamic-vw(1920, 24px);
+        }
+      }
+    }
+  }
+
+  &_photosession {
+    &-line {
+      &-1 {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: v.dynamic-vw(1920, 120px);
+      }
+
+      &-2 {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: v.dynamic-vw(1920, 140px);
+        padding-right: v.dynamic-vw(1920, 100px);
+      }
+    }
+  }
+}
+
+.line-1 {
+  &_left-block {
+    max-width: v.dynamic-vw(1920, 448px);
+    width: 100%;
+
+    p {
+      font-size: v.dynamic-vw(1920, 22px);
+      font-weight: 300;
+      font-family: v.$ttCommons;
+      color: #D6D6D6;
+      line-height: 1.3;
+
+      &:first-child {
+        margin-bottom: v.dynamic-vw(1920, 40px);
+      }
+    }
+  }
+
+  &_right-block {
+    max-width: v.dynamic-vw(1920, 375px);
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    p {
+      font-size: v.dynamic-vw(1920, 18px);
+      font-weight: 300;
+      font-family: v.$ttCommons;
+      color: #ACACAC;
+      line-height: 1.3;
+    }
+
+    &_img {
+      margin-left: v.dynamic-vw(1920, -80px);
+    }
+  }
+}
+
+.line-2 {
+  &_left-block {
+    max-width: v.dynamic-vw(1920, 524px);
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    p {
+      font-weight: 300;
+      font-family: v.$ttCommons;
+      color: #ffffff;
+      font-size: v.dynamic-vw(1920, 24px);
+      line-height: 1.3;
+      margin-bottom: v.dynamic-vw(1920, 40px);
+    }
+  }
+
+  &_right-block {
+    max-width: v.dynamic-vw(1920, 501px);
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    p {
+      font-weight: 300;
+      font-family: v.$ttCommons;
+      color: #ffffff;
+      font-size: v.dynamic-vw(1920, 24px);
+      line-height: 1.3;
+      margin-bottom: v.dynamic-vw(1920, 40px);
+    }
+
+    &_img {
+      width: v.dynamic-vw(1920, 294px);
+      height: v.dynamic-vw(1920, 368px);
+    }
+  }
+}
+
+.photosession_blur {
+  position: absolute;
+  top: -60%;
+  left: -20%;
+  width: 100%;
+}
+
+.line-3 {
+  &_title {
+    color: #ffffff;
+    margin-bottom: v.dynamic-vw(1920, 80px);
+    font-size: v.dynamic-vw(1920, 60px);
+    line-height: 1.2;
+
+    span {
+      &:first-child {
+        font-family: v.$halvarRegular;
+        font-weight: 500;
+      }
+
+      &:last-child {
+        font-family: v.$apocLC;
+        font-weight: 400;
+        font-style: italic;
+      }
+    }
+  }
+
+  &_photos {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.sanya-pravo {
+  transform: rotateY(180deg);
+}
+
+.parties {
+  &__container {
+    padding-right: v.dynamic-vw(1920, 60px);
+    padding-bottom: v.dynamic-vw(1920, 270px);
+  }
+
+  &__line {
+    padding: v.dynamic-vw(1920, 86.12px) v.dynamic-vw(1920, 21.46px) v.dynamic-vw(1920, 58.31px) v.dynamic-vw(1920, 21.46px);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &:nth-child(3) {
+      .parties__date {
+        color: #FF3D54;
+      }
+
+      .parties__name {
+        color: #FF3D54;
+      }
+
+      margin-bottom: v.dynamic-vw(1920, 71.77px);
+    }
+
+    &:first-child {
+      &:after {
+        content: "";
+        max-width: v.dynamic-vw(1920, 1480px);
+        width: 100%;
+        background-color: #ffffff;
+        height: v.dynamic-vw(1920, 1px);
+        opacity: 0.2;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &:before {
+      content: "";
+      max-width: v.dynamic-vw(1920, 1480px);
+      width: 100%;
+      background-color: #ffffff;
+      height: v.dynamic-vw(1920, 1px);
+      opacity: 0.2;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 100%;
+    }
+  }
+
+  &__date {
+    font-family: v.$halvarRegular;
+    color: #ffffff;
+    line-height: 1;
+    font-weight: 400;
+    font-size: v.dynamic-vw(1920, 35.88px);
+
+  }
+
+  &__name {
+    font-family: v.$badRussian;
+    font-size: v.dynamic-vw(1920, 71.77px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #ffffff;
+  }
+
+  &__about {
+    font-weight: 500;
+    font-family: v.$halvarRegular;
+    line-height: 1.2;
+    color: #ffffff;
+    font-size: v.dynamic-vw(1920, 16.15px);
+
+    &:nth-child(4) {
+      margin-left: v.dynamic-vw(1920, 120px);
+    }
+  }
+}
+
+.about-titles__block {
+  &_title {
+    font-weight: 500;
+    line-height: 1;
+    font-family: v.$halvarRegular;
+    font-size: v.dynamic-vw(1920, 20px);
+    color: #ffffff;
+    margin-bottom: v.dynamic-vw(1920, 16px);
+  }
+
+  &_desc {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: v.dynamic-vw(1920, 27px);
+  }
+}
+
+.title-desc {
+  &_left {
+    font-family: v.$ttCommons;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.3;
+    font-size: v.dynamic-vw(1920, 24px);
+    max-width: v.dynamic-vw(1920, 406px);
+    width: 100%;
+  }
+
+  &_right {
+    max-width: v.dynamic-vw(1920, 316px);
+    width: 100%;
+
+    p {
+      font-weight: 300;
+      line-height: 1.3;
+      font-family: v.$ttCommons;
+      font-size: v.dynamic-vw(1920, 18px);
+      color: #ACACAC;
+
+      &:not(:last-child) {
+        margin-bottom: v.dynamic-vw(1920, 16px);
+      }
+    }
+  }
+}
+
+.microanimation {
+  &__block {
+
+  }
+
+  &__text {
+    &-top {
+      margin-bottom: v.dynamic-vw(1920, 50px);
+
+      &_title {
+        font-weight: 500;
+        line-height: 1;
+        font-family: v.$halvarRegular;
+        font-size: v.dynamic-vw(1920, 20px);
+        color: #ffffff;
+        margin-bottom: v.dynamic-vw(1920, 16px);
+      }
+
+      &_desc {
+        font-family: v.$ttCommons;
+        color: #ffffff;
+        font-weight: 300;
+        line-height: 1.3;
+        font-size: v.dynamic-vw(1920, 24px);
+        max-width: v.dynamic-vw(1920, 561px);
+        width: 100%;
+      }
+    }
+
+    &-bottom {
+      margin-left: v.dynamic-vw(1920, 597px);
+      max-width: v.dynamic-vw(1920, 683px);
+      margin-bottom: v.dynamic-vw(1920, 141px);
+      width: 100%;
+      &_title {
+        margin-bottom: v.dynamic-vw(1920, 16px);
+        font-weight: 300;
+        line-height: 1.3;
+        font-size: v.dynamic-vw(1920, 24px);
+        color: #ffffff;
+        font-family: v.$ttCommons;
+      }
+
+      &_desc {
+        color: #D6D6D6;
+        font-family: v.$ttCommons;
+        font-weight: 300;
+        font-size: v.dynamic-vw(1920, 22px);
+        line-height: 1.3;
+      }
+    }
+  }
+}

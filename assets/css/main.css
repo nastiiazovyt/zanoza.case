@@ -1,3 +1,164 @@
+@font-face {
+  font-family: "Halvar Breit Rg";
+  src: url("../fonts/HalvarBreit/subset-HalvarBreit-Rg.woff2") format("woff2"), url("../fonts/HalvarBreit/subset-HalvarBreit-Rg.woff") format("woff"), url("../fonts/HalvarBreit/subset-HalvarBreit-Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Halvar Breit Rg";
+  src: url("../fonts/HalvarBreit/subset-HalvarBreit-RgSlanted.woff2") format("woff2"), url("../fonts/HalvarBreit/subset-HalvarBreit-RgSlanted.woff") format("woff"), url("../fonts/HalvarBreit/subset-HalvarBreit-RgSlanted.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Halvar Breit Rg";
+  src: url("../fonts/HalvarBreit/subset-HalvarBreit-Lt.woff2") format("woff2"), url("../fonts/HalvarBreit/subset-HalvarBreit-Lt.woff") format("woff"), url("../fonts/HalvarBreit/subset-HalvarBreit-Lt.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Halvar Breit Rg";
+  src: url("../fonts/HalvarBreit/subset-HalvarBreit-Md.woff2") format("woff2"), url("../fonts/HalvarBreit/subset-HalvarBreit-Md.woff") format("woff"), url("../fonts/HalvarBreit/subset-HalvarBreit-Md.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Halvar Breit Rg";
+  src: url("../fonts/HalvarBreit/subset-HalvarBreit-XTh.woff2") format("woff2"), url("../fonts/HalvarBreit/subset-HalvarBreit-XTh.woff") format("woff"), url("../fonts/HalvarBreit/subset-HalvarBreit-XTh.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Commons";
+  src: url("../fonts/TTCommons/subset-TTCommons-Light.woff2") format("woff2"), url("../fonts/TTCommons/subset-TTCommons-Light.woff") format("woff"), url("../fonts/TTCommons/subset-TTCommons-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bad Russian";
+  src: url("../fonts/BadRussian/subset-BadRussian-Regular.woff2") format("woff2"), url("../fonts/BadRussian/subset-BadRussian-Regular.woff") format("woff"), url("../fonts/BadRussian/subset-BadRussian-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-UltraBoldItalic.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-UltraBoldItalic.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-UltraBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-RegularItalic.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-RegularItalic.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-Light.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-Light.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-Light_1.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-Light_1.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-Light_1.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-LightItalic.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-LightItalic.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-Regular.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-Regular.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-UltraBold.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-UltraBold.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-UltraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC Revelations";
+  src: url("../fonts/ApocLC/subset-ApocLC-RevelationsItalic.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-RevelationsItalic.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-RevelationsItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC Revelations";
+  src: url("../fonts/ApocLC/subset-ApocLC-Revelations.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-Revelations.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-Revelations.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-BoldItalic.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-BoldItalic.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC";
+  src: url("../fonts/ApocLC/subset-ApocLC-Bold.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-Bold.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc Revelations";
+  src: url("../fonts/ApocLC/subset-Apoc-Revelations.woff2") format("woff2"), url("../fonts/ApocLC/subset-Apoc-Revelations.woff") format("woff"), url("../fonts/ApocLC/subset-Apoc-Revelations.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apoc LC Hairline";
+  src: url("../fonts/ApocLC/subset-ApocLC-Hairline.woff2") format("woff2"), url("../fonts/ApocLC/subset-ApocLC-Hairline.woff") format("woff"), url("../fonts/ApocLC/subset-ApocLC-Hairline.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sverdlovsk";
+  src: url("../fonts/Sverdlovsk/subset-SverdlovskRegular.woff2") format("woff2"), url("../fonts/Sverdlovsk/subset-SverdlovskRegular.woff") format("woff"), url("../fonts/Sverdlovsk/subset-SverdlovskRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CorpusRomanUpdate";
+  src: url("../fonts/CorpusRoman/subset-CorpusRomanUpdate-Regular.woff2") format("woff2"), url("../fonts/CorpusRoman/subset-CorpusRomanUpdate-Regular.woff") format("woff"), url("../fonts/CorpusRoman/subset-CorpusRomanUpdate-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CorpusRomanUpdate";
+  src: url("../fonts/CorpusRoman/subset-CorpusRomanUpdateItalic-Ita.woff2") format("woff2"), url("../fonts/CorpusRoman/subset-CorpusRomanUpdateItalic-Ita.woff") format("woff"), url("../fonts/CorpusRoman/subset-CorpusRomanUpdateItalic-Ita.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
 /**
  * Based on
  *
@@ -596,6 +757,7 @@ body {
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   overflow-scrolling: touch;
+  background-color: #111111;
 }
 
 span {
@@ -624,4 +786,680 @@ a {
   .container {
     max-width: 1280px;
   }
+}
+
+.hero__container {
+  padding: 17.8125vw 11.4583333333vw 8.3458333333vw 11.4583333333vw;
+  position: relative;
+}
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.hero__background_blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.hero__title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 14.1380208333vw;
+}
+.hero__title_first-line {
+  font-family: "Sverdlovsk";
+  font-size: 10.4166666667vw;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 0.3932291667vw;
+  font-weight: 400;
+}
+.hero__title_second-line {
+  font-family: "Apoc LC";
+  font-size: 1.6666666667vw;
+  line-height: 1;
+  color: #FF3D54;
+  font-weight: 400;
+}
+.hero__text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: start;
+  position: relative;
+}
+.hero__text-block_title {
+  color: #FFFFFF;
+  font-size: 1.1458333333vw;
+  line-height: 1.2;
+  font-family: "Halvar Breit Rg";
+  margin-bottom: 1.6666666667vw;
+  font-weight: 400;
+}
+.hero__text-block_desc {
+  font-family: "TT Commons";
+  font-size: 1.0416666667vw;
+  line-height: 1.3;
+  color: #FFFFFF;
+  max-width: 25.5729166667vw;
+  font-weight: 300;
+}
+.hero__text-block:before {
+  content: "";
+  max-width: 77.0833333333vw;
+  width: 100%;
+  background-color: #ffffff;
+  height: 0.0520833333vw;
+  opacity: 0.2;
+  position: absolute;
+  top: 20%;
+  z-index: 2;
+  left: 0;
+}
+
+.design__first-small-block {
+  position: relative;
+  padding-top: 3.28125vw;
+  padding-bottom: 9.375vw;
+}
+.design_first-blur {
+  position: absolute;
+  top: -25%;
+  left: -12%;
+  width: 100%;
+}
+.design__container {
+  padding: 9.21875vw 11.4583333333vw 5.2083333333vw 8.6458333333vw;
+}
+.design__title {
+  position: relative;
+  font-family: "Halvar Breit Rg";
+  line-height: 1;
+  color: #ffffff;
+  font-size: 4.1666666667vw;
+  margin-bottom: 6.25vw;
+  font-weight: 500;
+}
+.design__desc {
+  position: relative;
+  font-family: "TT Commons";
+  font-size: 1.1458333333vw;
+  line-height: 1.3;
+  color: #D6D6D6;
+  max-width: 39.1145833333vw;
+  width: 100%;
+  margin-left: 10.4166666667vw;
+  margin-bottom: 9.375vw;
+  font-weight: 300;
+}
+
+.task-block {
+  position: relative;
+}
+.task-block_title {
+  font-family: "Halvar Breit Rg";
+  line-height: 1;
+  font-size: 1.6666666667vw;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 4.1666666667vw;
+}
+.task-block_desc {
+  max-width: 35.4166666667vw;
+  width: 100%;
+  margin-left: 10.4166666667vw;
+  margin-bottom: 5.4166666667vw;
+}
+.task-block_desc p {
+  font-family: "TT Commons";
+  color: #D6D6D6;
+  font-size: 1.1458333333vw;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.task-block_desc p:first-child {
+  color: #ffffff;
+  font-size: 1.5625vw;
+  margin-bottom: 1.25vw;
+}
+.task-block_points {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-left: 10.4166666667vw;
+  max-width: 63.8541666667vw;
+  width: 100%;
+}
+.task-block_points:before {
+  content: "";
+  width: 100%;
+  background-color: #ffffff;
+  height: 0.0520833333vw;
+  opacity: 0.2;
+  position: absolute;
+  top: -20%;
+  z-index: 2;
+  left: 0;
+}
+.task-block_points p {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.9375vw;
+  font-family: "TT Commons";
+  font-weight: 400;
+  line-height: 1.3;
+  color: #ffffff;
+  max-width: 16.6666666667vw;
+  width: 100%;
+}
+
+.process-block_title {
+  position: relative;
+  font-family: "Halvar Breit Rg";
+  line-height: 1;
+  font-size: 1.6666666667vw;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 2.7083333333vw;
+}
+
+.process-section {
+  padding-left: 10.4166666667vw;
+  padding-right: 2.8125vw;
+  width: 100%;
+}
+.process-section-3_img {
+  max-width: 66.6666666667vw;
+  max-height: 35.0520833333vw;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 4.1666666667vw;
+}
+.process-section_4 {
+  position: relative;
+}
+.process-section_number {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  font-family: "TT Commons";
+  font-weight: 300;
+  font-size: 1.0416666667vw;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+}
+.process-section_number-circle {
+  position: relative;
+  width: 1.6666666667vw;
+  height: 1.6666666667vw;
+  border-radius: 50%;
+  border: #ffffff 1px solid;
+  margin-bottom: 0.4166666667vw;
+  margin-left: -2.0833333333vw;
+}
+.process-section_title-block {
+  position: relative;
+  margin-bottom: 4.1666666667vw;
+}
+.process-section_title {
+  font-family: "Halvar Breit Rg";
+  font-size: 1.25vw;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 1.25vw;
+}
+.process-section_desc {
+  font-family: "TT Commons";
+  font-weight: 300;
+  line-height: 1.3;
+  font-size: 1.25vw;
+  color: #ffffff;
+}
+.process-section_pic-1 {
+  max-width: 36.4583333333vw;
+  max-height: 19.1666666667vw;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2.0833333333vw;
+}
+.process-section_pic-2 {
+  max-width: 15.3125vw;
+  max-height: 19.1666666667vw;
+  width: 100%;
+  height: 100%;
+}
+.process-section_pic-3 {
+  max-width: 36.4583333333vw;
+  max-height: 19.1666666667vw;
+  width: 100%;
+  height: 100%;
+}
+.process-section_pic-4 {
+  max-width: 15.3125vw;
+  max-height: 19.1666666667vw;
+  width: 100%;
+  height: 100%;
+}
+.process-section_pic-block {
+  padding-right: 10.7291666667vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 7.2916666667vw;
+}
+.process-section_text-string {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2.5520833333vw;
+}
+.process-section_text-string p {
+  font-family: "TT Commons";
+  font-weight: 300;
+  line-height: 1.3;
+  color: #ffffff;
+  font-size: 1.25vw;
+  max-width: 31.25vw;
+  width: 100%;
+}
+.process-section_text-block {
+  max-width: 31.25vw;
+  width: 100%;
+}
+.process-section_text-block p {
+  font-family: "TT Commons";
+  font-weight: 300;
+  line-height: 1.3;
+  color: #ffffff;
+  font-size: 1.25vw;
+}
+.process-section_text-block p:first-child {
+  margin-bottom: 1.25vw;
+}
+.process-section_photosession-line-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 6.25vw;
+}
+.process-section_photosession-line-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 7.2916666667vw;
+  padding-right: 5.2083333333vw;
+}
+
+.line-1_left-block {
+  max-width: 23.3333333333vw;
+  width: 100%;
+}
+.line-1_left-block p {
+  font-size: 1.1458333333vw;
+  font-weight: 300;
+  font-family: "TT Commons";
+  color: #D6D6D6;
+  line-height: 1.3;
+}
+.line-1_left-block p:first-child {
+  margin-bottom: 2.0833333333vw;
+}
+.line-1_right-block {
+  max-width: 19.53125vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.line-1_right-block p {
+  font-size: 0.9375vw;
+  font-weight: 300;
+  font-family: "TT Commons";
+  color: #ACACAC;
+  line-height: 1.3;
+}
+.line-1_right-block_img {
+  margin-left: -4.1666666667vw;
+}
+
+.line-2_left-block {
+  max-width: 27.2916666667vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.line-2_left-block p {
+  font-weight: 300;
+  font-family: "TT Commons";
+  color: #ffffff;
+  font-size: 1.25vw;
+  line-height: 1.3;
+  margin-bottom: 2.0833333333vw;
+}
+.line-2_right-block {
+  max-width: 26.09375vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.line-2_right-block p {
+  font-weight: 300;
+  font-family: "TT Commons";
+  color: #ffffff;
+  font-size: 1.25vw;
+  line-height: 1.3;
+  margin-bottom: 2.0833333333vw;
+}
+.line-2_right-block_img {
+  width: 15.3125vw;
+  height: 19.1666666667vw;
+}
+
+.photosession_blur {
+  position: absolute;
+  top: -60%;
+  left: -20%;
+  width: 100%;
+}
+
+.line-3_title {
+  color: #ffffff;
+  margin-bottom: 4.1666666667vw;
+  font-size: 3.125vw;
+  line-height: 1.2;
+}
+.line-3_title span:first-child {
+  font-family: "Halvar Breit Rg";
+  font-weight: 500;
+}
+.line-3_title span:last-child {
+  font-family: "Apoc LC";
+  font-weight: 400;
+  font-style: italic;
+}
+.line-3_photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sanya-pravo {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.parties__container {
+  padding-right: 3.125vw;
+  padding-bottom: 14.0625vw;
+}
+.parties__line {
+  padding: 4.4854166667vw 1.1177083333vw 3.0369791667vw 1.1177083333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.parties__line:nth-child(3) {
+  margin-bottom: 3.7380208333vw;
+}
+.parties__line:nth-child(3) .parties__date {
+  color: #FF3D54;
+}
+.parties__line:nth-child(3) .parties__name {
+  color: #FF3D54;
+}
+.parties__line:first-child:after {
+  content: "";
+  max-width: 77.0833333333vw;
+  width: 100%;
+  background-color: #ffffff;
+  height: 0.0520833333vw;
+  opacity: 0.2;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.parties__line:before {
+  content: "";
+  max-width: 77.0833333333vw;
+  width: 100%;
+  background-color: #ffffff;
+  height: 0.0520833333vw;
+  opacity: 0.2;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 100%;
+}
+.parties__date {
+  font-family: "Halvar Breit Rg";
+  color: #ffffff;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.86875vw;
+}
+.parties__name {
+  font-family: "Bad Russian";
+  font-size: 3.7380208333vw;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #ffffff;
+}
+.parties__about {
+  font-weight: 500;
+  font-family: "Halvar Breit Rg";
+  line-height: 1.2;
+  color: #ffffff;
+  font-size: 0.8411458333vw;
+}
+.parties__about:nth-child(4) {
+  margin-left: 6.25vw;
+}
+
+.about-titles__block_title {
+  font-weight: 500;
+  line-height: 1;
+  font-family: "Halvar Breit Rg";
+  font-size: 1.0416666667vw;
+  color: #ffffff;
+  margin-bottom: 0.8333333333vw;
+}
+.about-titles__block_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.40625vw;
+}
+
+.title-desc_left {
+  font-family: "TT Commons";
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.3;
+  font-size: 1.25vw;
+  max-width: 21.1458333333vw;
+  width: 100%;
+}
+.title-desc_right {
+  max-width: 16.4583333333vw;
+  width: 100%;
+}
+.title-desc_right p {
+  font-weight: 300;
+  line-height: 1.3;
+  font-family: "TT Commons";
+  font-size: 0.9375vw;
+  color: #ACACAC;
+}
+.title-desc_right p:not(:last-child) {
+  margin-bottom: 0.8333333333vw;
+}
+
+.microanimation__text-top {
+  margin-bottom: 2.6041666667vw;
+}
+.microanimation__text-top_title {
+  font-weight: 500;
+  line-height: 1;
+  font-family: "Halvar Breit Rg";
+  font-size: 1.0416666667vw;
+  color: #ffffff;
+  margin-bottom: 0.8333333333vw;
+}
+.microanimation__text-top_desc {
+  font-family: "TT Commons";
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.3;
+  font-size: 1.25vw;
+  max-width: 29.21875vw;
+  width: 100%;
+}
+.microanimation__text-bottom {
+  margin-left: 31.09375vw;
+  max-width: 35.5729166667vw;
+  margin-bottom: 7.34375vw;
+  width: 100%;
+}
+.microanimation__text-bottom_title {
+  margin-bottom: 0.8333333333vw;
+  font-weight: 300;
+  line-height: 1.3;
+  font-size: 1.25vw;
+  color: #ffffff;
+  font-family: "TT Commons";
+}
+.microanimation__text-bottom_desc {
+  color: #D6D6D6;
+  font-family: "TT Commons";
+  font-weight: 300;
+  font-size: 1.1458333333vw;
+  line-height: 1.3;
 }

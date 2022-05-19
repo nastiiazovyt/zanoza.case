@@ -1,34 +1,3 @@
-%cover-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-%contain-img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@function scale-value($minValue, $maxValue, $minSize, $maxSize) {
-  @return calc(
-          #{$minValue}px + (#{$maxValue} - #{$minValue}) * ((100vw - #{$minSize}px) / (#{$maxSize} - #{$minSize}))
-  );
-}
-
-// Конвертируем px в vw. $vw-viewport - ширина макета в px. $font - размер в px
-@function dynamic-vw ($vw-viewport, $font) {
-  $vw-context: $vw-viewport * 0.01 * 1px;
-  @return $font / $vw-context * 1vw;
-  @return $font;
-}
-
-// Высчитываем $line-height относительно размера шрифта. $font-size - размер шрифта в px, $line-height - line-height в px
-@function get-lh($font-size, $line-height) {
-  @return 1 - (($font-size - $line-height) / $font-size)
-}
-
-
 // Ограничиваем высоту текста по кол-ву строкю. $lines - кол-во строк, $max-width - макс. ширина конейнера с текстом
 @mixin line-clamp($lines, $max-width) {
   overflow: hidden;
@@ -50,5 +19,6 @@
   object-fit: cover;
   object-position: center;
 }
+
 
 

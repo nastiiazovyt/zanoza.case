@@ -1,11 +1,14 @@
+@import "fonts";
 @import "libs/libs";
-@import './vars/fonts';
-@import './vars/colors';
-@import './vars/mixins';
 @import "helpers";
+@import "./vars/placeholders";
 @import "animation";
 
 @import "interface";
 
 // сюда подлючаем файлы стилей
+@import "src/scss/sections/header";
+@import "src/scss/sections/hero";
+@import "src/scss/sections/footer";
+@import "src/scss/sections/design";
 

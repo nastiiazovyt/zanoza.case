@@ -1,0 +1,52 @@
+$halvarRegular: 'Halvar Breit Rg';
+
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('../fonts/HalvarBreit/subset-HalvarBreit-Rg.woff2') format('woff2'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-Rg.woff') format('woff'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('../fonts/HalvarBreit/subset-HalvarBreit-RgSlanted.woff2') format('woff2'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-RgSlanted.woff') format('woff'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-RgSlanted.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('../fonts/HalvarBreit/subset-HalvarBreit-Lt.woff2') format('woff2'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-Lt.woff') format('woff'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-Lt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('../fonts/HalvarBreit/subset-HalvarBreit-Md.woff2') format('woff2'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-Md.woff') format('woff'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('../fonts/HalvarBreit/subset-HalvarBreit-XTh.woff2') format('woff2'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-XTh.woff') format('woff'),
+  url('../fonts/HalvarBreit/subset-HalvarBreit-XTh.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+

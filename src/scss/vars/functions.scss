@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@function scale-value($minValue, $maxValue, $minSize, $maxSize) {
+  @return calc(
+          #{$minValue}px + (#{$maxValue} - #{$minValue}) * ((100vw - #{$minSize}px) / (#{$maxSize} - #{$minSize}))
+  );
+}
+
+// Конвертируем px в vw. $vw-viewport - ширина макета в px. $font - размер в px
+@function dynamic-vw ($vw-viewport, $font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+  @return $font;
+}
+
+// Высчитываем $line-height относительно размера шрифта. $font-size - размер шрифта в px, $line-height - line-height в px
+@function get-lh($font-size, $line-height) {
+  @return 1 - (math.div(($font-size - $line-height), $font-size))
+}

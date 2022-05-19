@@ -1,0 +1,12 @@
+$ttCommons: 'TT Commons';
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/subset-TTCommons-Light.woff2') format('woff2'),
+  url('../fonts/TTCommons/subset-TTCommons-Light.woff') format('woff'),
+  url('../fonts/TTCommons/subset-TTCommons-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+

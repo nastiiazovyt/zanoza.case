@@ -91,9 +91,37 @@
   !*** ./src/js/app.js ***!
   \***********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  __webpack_require__(/*! ./hero */ "./src/js/hero/index.js");
+});
+
+/***/ }),
+
+/***/ "./src/js/hero/index.js":
+/*!******************************!*\
+  !*** ./src/js/hero/index.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./test.file.js */ "./src/js/hero/test.file.js");
+
+/***/ }),
+
+/***/ "./src/js/hero/test.file.js":
+/*!**********************************!*\
+  !*** ./src/js/hero/test.file.js ***!
+  \**********************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-document.addEventListener('DOMContentLoaded', function (event) {});
+var testConsoleLog = function testConsoleLog() {
+  console.log('im hero!');
+};
+
+testConsoleLog();
 
 /***/ }),
 
@@ -115,8 +143,8 @@ document.addEventListener('DOMContentLoaded', function (event) {});
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\OpenServer\OSPanel\domains\new-starter-template\src\js\app */"./src/js/app.js");
-module.exports = __webpack_require__(/*! D:\OpenServer\OSPanel\domains\new-starter-template\src\scss\main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! /Applications/MAMP/htdocs/zanoza.case/src/js/app */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/zanoza.case/src/scss/main.scss */"./src/scss/main.scss");
 
 
 /***/ })

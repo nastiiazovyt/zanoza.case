@@ -1,0 +1,11 @@
+$badRussian: 'Bad Russian';
+
+@font-face {
+  font-family: 'Bad Russian';
+  src: url('../fonts/BadRussian/subset-BadRussian-Regular.woff2') format('woff2'),
+  url('../fonts/BadRussian/subset-BadRussian-Regular.woff') format('woff'),
+  url('../fonts/BadRussian/subset-BadRussian-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

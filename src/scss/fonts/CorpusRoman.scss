@@ -1,0 +1,22 @@
+$corpusRoman: 'CorpusRomanUpdate';
+
+@font-face {
+  font-family: 'CorpusRomanUpdate';
+  src: url('../fonts/CorpusRoman/subset-CorpusRomanUpdate-Regular.woff2') format('woff2'),
+  url('../fonts/CorpusRoman/subset-CorpusRomanUpdate-Regular.woff') format('woff'),
+  url('../fonts/CorpusRoman/subset-CorpusRomanUpdate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CorpusRomanUpdate';
+  src: url('../fonts/CorpusRoman/subset-CorpusRomanUpdateItalic-Ita.woff2') format('woff2'),
+  url('../fonts/CorpusRoman/subset-CorpusRomanUpdateItalic-Ita.woff') format('woff'),
+  url('../fonts/CorpusRoman/subset-CorpusRomanUpdateItalic-Ita.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
