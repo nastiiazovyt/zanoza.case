@@ -1,6 +1,9 @@
 <div class="hero__container">
 <!--    <img class="hero__background" src="./assets/images/hero/hero-bg.jpeg" alt="hero-bg">-->
-    <img class="hero__background" src="./assets/images/hero/hero-background.png" alt="hero-bg">
+<!--    <img class="hero__background" src="./assets/images/hero/hero-bg-img.jpeg" alt="hero-bg">-->
+    <div class="hero__container_for-img">
+    <img class="hero__background" src="./assets/images/hero/hero_bg.jpeg" alt="hero-bg">
+    </div>
     <img class="hero__background_blur" src="./assets/images/hero/hero-blur.png" alt="hero-blur">
     <div class="hero__title">
         <div class="hero__title_first-line">ZANOZA</div>
