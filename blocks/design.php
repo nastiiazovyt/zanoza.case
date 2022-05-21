@@ -1,4 +1,4 @@
-<div class="stage__container">
+<div class="stage__container design">
     <div class="stage__title-block">
         <img class="body__blur_1" src="./assets/images/design/design-blur.png" alt="blur">
         <div class="stage__title">Дизайн</div>
