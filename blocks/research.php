@@ -1,4 +1,4 @@
-<div class="stage__container research">
+<div class="stage__container">
     <div class="stage__title stage__title_research">Исследование</div>
     <div class="stage__section stage__section_1">
         <div class="stage__section_title-block">
@@ -33,6 +33,7 @@
         </div>
     </div>
     <div class="stage__section stage__section_3">
+            <img class="body__blur_1" src="./assets/images/blurs/blur_1.png" alt="">
         <div class="stage__section_title-block">
             <div class="stage__section_number-circle">
                 <div class="stage__section_number">03</div>
@@ -107,6 +108,5 @@
             </div>
         </div>
     </div>
-</div>
 
 

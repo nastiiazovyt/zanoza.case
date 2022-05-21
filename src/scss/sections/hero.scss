@@ -2,7 +2,7 @@
 
 .hero {
   &__container {
-    padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 160.24px) v.dynamic-vw(1920, 220px);
+    padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 180px) v.dynamic-vw(1920, 220px);
     position: relative;
     height: v.dynamic-vw(1920, 1260px);
     &_for-img {
@@ -23,6 +23,7 @@
       height: 100%;
       z-index: 2;
       background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%);
+      pointer-events: none;
     }
   }
 
@@ -30,7 +31,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    //width: 100%;
     height: 100%;
 
     &_blur {
@@ -39,6 +39,7 @@
       left: 0;
       width: 100%;
       z-index: 3;
+      pointer-events: none;
     }
   }
 

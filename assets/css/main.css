@@ -789,7 +789,7 @@ a {
 }
 
 .hero__container {
-  padding: 17.8125vw 11.4583333333vw 8.3458333333vw 11.4583333333vw;
+  padding: 17.8125vw 11.4583333333vw 9.375vw 11.4583333333vw;
   position: relative;
   height: 65.625vw;
 }
@@ -813,6 +813,7 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0)), to(#111111));
   background: -o-linear-gradient(top, rgba(17, 17, 17, 0) 0%, #111111 100%);
   background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%);
+  pointer-events: none;
 }
 .hero__background {
   position: absolute;
@@ -826,6 +827,7 @@ a {
   left: 0;
   width: 100%;
   z-index: 3;
+  pointer-events: none;
 }
 .hero__title {
   position: relative;
@@ -896,11 +898,11 @@ a {
 }
 
 .stage__container {
-  padding: 9.21875vw 11.4583333333vw 5.2083333333vw 8.6458333333vw;
+  padding: 0 11.4583333333vw 9.21875vw 8.6458333333vw;
+  overflow-x: hidden;
 }
 .stage__title-block {
   position: relative;
-  padding-top: 3.28125vw;
   padding-bottom: 9.375vw;
 }
 .stage__title {
@@ -968,9 +970,11 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  margin-left: 10.4166666667vw;
+  margin-left: 2.6041666667vw;
   max-width: 63.8541666667vw;
   width: 100%;
+  padding-right: 2.4479166667vw;
+  padding-left: 7.2395833333vw;
 }
 .stage__block_tabl:before {
   content: "";
@@ -999,32 +1003,36 @@ a {
   padding-right: 2.8125vw;
   width: 100%;
 }
-.stage__section_1 {
-  margin-bottom: 7.2916666667vw;
-}
 .stage__section_1 .stage__section_title-block {
   max-width: 36.4583333333vw;
   width: 100%;
 }
-.stage__section_3 {
-  padding-bottom: 7.2916666667vw;
+.stage__section_2 {
+  position: relative;
 }
-.stage__section_3 img {
+.stage__section_3 {
+  position: relative;
+}
+.stage__section_3_title-block {
+  max-width: 19.2708333333vw !important;
+  width: 100%;
+}
+.stage__section_3_img {
   width: 100%;
   margin-bottom: 4.1666666667vw;
-}
-.stage__section_3 .stage__section_title-block {
-  max-width: 19.7916666667vw;
-  width: 100%;
 }
 .stage__section_3 .stage__section_text-string p:first-child {
   max-width: 23.4375vw;
   width: 100%;
 }
+.stage__section_4 {
+  position: relative;
+}
 .stage__section_4 .stage__section_title-block {
   margin-bottom: 0;
 }
 .stage__section_content-row_1 {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,6 +1049,7 @@ a {
   margin-bottom: 6.25vw;
 }
 .stage__section_content-row_2 {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1058,6 +1067,7 @@ a {
   padding-right: 5.2083333333vw;
 }
 .stage__section_content-row_3 {
+  position: relative;
   margin-bottom: 9.375vw;
 }
 .stage__section_content-row_5 {
@@ -1097,7 +1107,9 @@ a {
   border-radius: 50%;
   border: #ffffff 1px solid;
   margin-bottom: 0.4166666667vw;
-  margin-left: -2.0833333333vw;
+  -webkit-transform: translateX(-2.0833333333vw);
+      -ms-transform: translateX(-2.0833333333vw);
+          transform: translateX(-2.0833333333vw);
 }
 .stage__section_title-block {
   position: relative;
@@ -1161,6 +1173,7 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: 7.2916666667vw;
 }
 .stage__section_text-string {
   display: -webkit-box;
@@ -1191,6 +1204,7 @@ a {
 .stage__section_text-block {
   max-width: 31.25vw;
   width: 100%;
+  padding-bottom: 7.2916666667vw;
 }
 .stage__section_text-block p {
   font-family: "TT Commons";
@@ -1240,11 +1254,14 @@ a {
   font-family: "TT Commons";
   color: #ACACAC;
   line-height: 1.3;
+  margin-bottom: 2.0833333333vw;
 }
 .row_1_right-block_img {
-  margin-left: -4.1666666667vw;
+  border-radius: 0.8333333333vw;
   width: 19.53125vw;
   height: 19.6354166667vw;
+  -webkit-box-shadow: 0 0 80px rgba(239, 46, 68, 0.2);
+          box-shadow: 0 0 80px rgba(239, 46, 68, 0.2);
 }
 
 .row_2_left-block {
@@ -1371,7 +1388,7 @@ a {
 }
 .row_4_img {
   width: 66.6666666667vw;
-  margin-bottom: 9.375vw;
+  margin-bottom: 6.25vw;
 }
 
 .row_5_block {
@@ -1394,16 +1411,32 @@ a {
 
 .body__blur_1 {
   position: absolute;
-  top: -25%;
-  left: -12%;
+  top: -100%;
+  left: 30%;
   width: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 .body__blur_2 {
-  display: none;
   position: absolute;
-  top: -60%;
-  left: -20%;
+  top: -50%;
+  left: -12%;
   width: 100%;
+  pointer-events: none;
+}
+.body__blur_3 {
+  position: absolute;
+  top: -50%;
+  left: 40%;
+  width: 100%;
+  pointer-events: none;
+}
+.body__blur_4 {
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 100%;
+  pointer-events: none;
 }
 
 .sanya-pravo {
@@ -1563,20 +1596,10 @@ a {
   line-height: 1.3;
 }
 
-.stage__title-block {
-  position: relative;
-  padding-top: 3.28125vw;
-  padding-bottom: 9.375vw;
+.process .stage__block_title {
+  margin-bottom: 2.7083333333vw;
 }
-.stage__title {
-  position: relative;
-  font-family: "Halvar Breit Rg";
-  line-height: 1;
-  color: #ffffff;
-  font-size: 4.1666666667vw;
-  margin-bottom: 6.25vw;
-  font-weight: 500;
-}
+
 .stage__title_research {
   margin-bottom: 4.1666666667vw;
   max-width: 47.34375vw;
@@ -1593,88 +1616,6 @@ a {
   line-height: 1.2;
   font-style: italic;
   margin-bottom: 0;
-}
-.stage__desc {
-  position: relative;
-  font-family: "TT Commons";
-  font-size: 1.1458333333vw;
-  line-height: 1.3;
-  color: #D6D6D6;
-  max-width: 39.1145833333vw;
-  width: 100%;
-  margin-left: 10.4166666667vw;
-  font-weight: 300;
-}
-.stage__block {
-  position: relative;
-  padding-bottom: 9.375vw;
-}
-.stage__block_title {
-  font-family: "Halvar Breit Rg";
-  line-height: 1;
-  font-size: 1.6666666667vw;
-  color: #ffffff;
-  font-weight: 500;
-  margin-bottom: 4.1666666667vw;
-}
-.stage__block_desc {
-  max-width: 35.4166666667vw;
-  width: 100%;
-  margin-left: 10.4166666667vw;
-  margin-bottom: 5.4166666667vw;
-}
-.stage__block_desc p {
-  font-family: "TT Commons";
-  color: #D6D6D6;
-  font-size: 1.1458333333vw;
-  font-weight: 300;
-  line-height: 1.3;
-}
-.stage__block_desc p:first-child {
-  color: #ffffff;
-  font-size: 1.5625vw;
-  margin-bottom: 1.25vw;
-}
-.stage__block_tabl {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  margin-left: 10.4166666667vw;
-  max-width: 63.8541666667vw;
-  width: 100%;
-}
-.stage__block_tabl:before {
-  content: "";
-  width: 100%;
-  background-color: #ffffff;
-  height: 0.0520833333vw;
-  opacity: 0.2;
-  position: absolute;
-  top: -20%;
-  z-index: 2;
-  left: 0;
-}
-.stage__block_tabl p {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0.9375vw;
-  font-family: "TT Commons";
-  font-weight: 400;
-  line-height: 1.3;
-  color: #ffffff;
-  max-width: 16.6666666667vw;
-  width: 100%;
 }
 .stage__section {
   padding-left: 10.4166666667vw;
@@ -1727,6 +1668,9 @@ a {
   margin-bottom: 0.8333333333vw;
   font-size: 0.9375vw;
 }
+.stage__section_4 .stage__section_pic-text-row {
+  margin-bottom: 8.8020833333vw;
+}
 .stage__section_5 {
   margin-bottom: 20.8333333333vw;
 }
@@ -1746,6 +1690,9 @@ a {
 }
 .stage__section_5 .stage__section_text-row p:first-child {
   max-width: 26.5625vw;
+}
+.stage__section_6 {
+  margin-bottom: 9.21875vw;
 }
 .stage__section_6 .stage__section_title-block {
   max-width: 28.125vw;
@@ -1811,28 +1758,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 19.7916666667vw;
-}
-.stage_title-block {
   position: relative;
-  margin-bottom: 4.1666666667vw;
-}
-.stage_title {
-  font-family: "Halvar Breit Rg";
-  font-size: 1.25vw;
-  font-weight: 500;
-  color: #ffffff;
-  line-height: 1;
-  margin-bottom: 1.25vw;
-}
-.stage_desc {
-  font-family: "TT Commons";
-  font-weight: 300;
-  line-height: 1.3;
-  font-size: 1.25vw;
-  color: #ffffff;
-}
-.stage_desc-3 {
-  font-size: 1.1458333333vw;
+  z-index: 10;
 }
 
 .research__block_big-pic {
@@ -1848,6 +1775,8 @@ a {
 .research__block_text-1 {
   max-width: 21.1979166667vw;
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 .research__block_text-1 p {
   font-family: "TT Commons";

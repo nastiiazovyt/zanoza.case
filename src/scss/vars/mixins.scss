@@ -20,5 +20,16 @@
   object-position: center;
 }
 
+@mixin mobile {
+  @media (max-width: 525px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+}
+
+@mixin mobileHeight {
+  @media (max-height: 812px) { @content; }
+}
+
 
 
