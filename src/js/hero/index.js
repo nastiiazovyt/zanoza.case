@@ -1,1 +1,1 @@
-require('./test.file.js')
+require('./telegram.circle.js')

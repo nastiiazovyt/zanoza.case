@@ -105,6 +105,7 @@
 
     &_6 {
       margin-bottom: v.dynamic-vw(1920, 177px);
+
       .stage__section_title-block {
         max-width: v.dynamic-vw(1920, 540px);
         width: 100%;
@@ -183,7 +184,6 @@
       height: v.dynamic-vw(1920, 368px);
       border: 3px solid white;
     }
-
     &_text-1 {
       max-width: v.dynamic-vw(1920, 407px);
       width: 100%;
@@ -203,6 +203,7 @@
           margin-bottom: v.dynamic-vw(1920, 40px);
         }
       }
+
     }
 
     &_text-2 {

@@ -106,22 +106,73 @@ document.addEventListener('DOMContentLoaded', function (event) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./test.file.js */ "./src/js/hero/test.file.js");
+__webpack_require__(/*! ./telegram.circle.js */ "./src/js/hero/telegram.circle.js");
 
 /***/ }),
 
-/***/ "./src/js/hero/test.file.js":
-/*!**********************************!*\
-  !*** ./src/js/hero/test.file.js ***!
-  \**********************************/
+/***/ "./src/js/hero/telegram.circle.js":
+/*!****************************************!*\
+  !*** ./src/js/hero/telegram.circle.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var testConsoleLog = function testConsoleLog() {
-  console.log('im hero!');
+var video = document.querySelector('.den4ik');
+var videoButton = document.querySelector('.den4ik-button');
+
+var videoPlayer = function videoPlayer() {
+  if (video.paused === false) {
+    video.pause();
+    video.firstChild.nodeValue = 'Play';
+    console.log('ne slaziet');
+    videoButton.classList.remove('den4ik-button_hidden');
+  } else {
+    video.play();
+    video.firstChild.nodeValue = 'Pause';
+    videoButton.classList.add('den4ik-button_hidden');
+    console.log('slaziet');
+  }
 };
 
-testConsoleLog();
+var videoWatcher = function videoWatcher() {
+  console.log('pup');
+};
+/*133 pupa*/
+
+
+video.addEventListener('timeupdate', videoWatcher);
+video.addEventListener('click', videoPlayer);
+videoButton.addEventListener('click', videoPlayer);
+var circle = document.querySelector('.svg');
+var input = document.querySelector('.percent');
+var cont = document.querySelector('.cont'); // let val = parseInt(input.value, 10)
+
+var val = input.value;
+
+var progressBar = function progressBar() {
+  if (val <= 100) {
+    val = 100;
+    console.log('pip');
+  } else {
+    var r = circle.getAttribute('r');
+    var c = Math.PI * (r * 2);
+    console.log('pop');
+
+    if (val < 0) {
+      val = 0;
+    }
+
+    if (val > 100) {
+      val = 100;
+    }
+
+    console.log(val);
+    circle.style.strokeDashoffset = (100 - val) / 100 * c;
+    cont.setAttribute('data-pct', val);
+  }
+};
+
+input.addEventListener("change", progressBar);
 
 /***/ }),
 

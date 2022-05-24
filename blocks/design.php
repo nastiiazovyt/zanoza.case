@@ -7,11 +7,22 @@
 </div>
 <div class="stage__block task">
     <div class="stage__block_title">Задача</div>
+    <div class="stage__block_desc-row">
     <div class="stage__block_desc">
         <p>Ощущение к которому стремимся: страстный, заигрывающий, побуждающий
             к посещению, но не переходя к пошлости, сайт.</p>
         <p>Необходимо передать особенный подход персонала к гостям клуба. Создать ощущение, что каждый гость
             — особенный.</p>
+    </div>
+        <div class="stage__block_video">
+            <svg class="den4ik-button" width="39" height="50" viewBox="0 0 39 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M0 50V0L39 25L0 50Z" fill="white"/>
+            </svg>
+            <video class="den4ik" muted width="216px" height="216px">
+                <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.webm">
+                <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.mp4">
+            </video>
+        </div>
     </div>
     <div class="stage__block_tabl">
         <p>Донести, что это уютное пространство, в которое можно приходить не только за красивыми танцами,
@@ -228,7 +239,24 @@
         </div>
     </div>
 </div>
+
+
+
+<h1>SVG Circle Progress</h1>
+<h2>Based off of CSS3 circle progress bars</h2>
+
+<div class="cont" data-pct="100">
+    <svg class="svg" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+        <circle class="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+    </svg>
 </div>
+
+
+<label for="percent">
+    <input class="percent" name="percent">
+</label>
+
 
 
 
