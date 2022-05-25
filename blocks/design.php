@@ -8,17 +8,22 @@
 <div class="stage__block task">
     <div class="stage__block_title">Задача</div>
     <div class="stage__block_desc-row">
-    <div class="stage__block_desc">
-        <p>Ощущение к которому стремимся: страстный, заигрывающий, побуждающий
-            к посещению, но не переходя к пошлости, сайт.</p>
-        <p>Необходимо передать особенный подход персонала к гостям клуба. Создать ощущение, что каждый гость
-            — особенный.</p>
-    </div>
+        <div class="stage__block_desc">
+            <p>Ощущение к которому стремимся: страстный, заигрывающий, побуждающий
+                к посещению, но не переходя к пошлости, сайт.</p>
+            <p>Необходимо передать особенный подход персонала к гостям клуба. Создать ощущение, что каждый гость
+                — особенный.</p>
+        </div>
         <div class="stage__block_video">
-            <svg class="den4ik-button" width="39" height="50" viewBox="0 0 39 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="progress__svg" width="200" height="200" viewBox="0 0 200 200">
+                <circle class="circle_white" r="98" cx="100" cy="100" fill="transparent" stroke-dasharray="615.44"
+                        stroke-dashoffset="615.44" stroke-width="4"></circle>
+            </svg>
+            <svg class="den4ik-button" width="39" height="50" viewBox="0 0 39 50" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.6" d="M0 50V0L39 25L0 50Z" fill="white"/>
             </svg>
-            <video class="den4ik" muted width="216px" height="216px">
+            <video class="den4ik" width="216" height="216">
                 <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.webm">
                 <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.mp4">
             </video>
@@ -75,12 +80,61 @@
                         женской фигуры.</p>
                 </div>
             </div>
+            <div class="content__block_svg-text">
+                <svg overflow="visible" id="hero-svg" preserveAspectRatio="none" width="2128" height="403"
+                     viewBox="0 0 2128 403" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path id="hero-path2"
+                          d="M0.511719 311.5C0.511719 311.5 352.155 402.088 837.123 402.088C1322.09 402.088 1633.74 338.727 2127.04 338.727"
+                          stroke="none"/>
+                    <path id="hero-path1"
+                          d="M0.511719 52C107.727 115.885 405.486 191.403 738.797 188.736C1155.44 185.403 1633.74 100.409 2127.04 100.409"
+                          stroke="none"/>
+
+                    <text id="hero-text-1">
+                        <textPath href="#hero-path1" id="hero-text-inner1" startOffset="15%"
+                                  alignment-baseline="baseline">когда ты -
+                        </textPath>
+                    </text>
+                    <text id="hero-text-2">
+                        <textPath href="#hero-path2" id="hero-text-inner2" startOffset="13%"
+                                  alignment-baseline="baseline">главный гость
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
         </div>
         <div class="content__block_2">
             <div class="content__block_title">Микроанимации</div>
             <div class="content__block_desc">Проработка микроанимаций — важный процесс,
                 на который стоит уделять внимание, проектируя интерфейс. Мы стараемся делать пользовательский
                 опыт бесшовным и увлекательным.
+            </div>
+            <div class="content__block_girls-cursor">
+                <picture class="trail-block">
+                    <source type="image/webp" srcset="assets/images/design/girls-cursor/6.webp">
+                    <img src="assets/images/design/girls-cursor/6.png" title=" " alt=" ">
+                </picture>
+                <picture class="trail-block">
+                    <source type="image/webp" srcset="assets/images/design/girls-cursor/5.webp">
+                    <img src="assets/images/design/girls-cursor/5.png" title=" " alt=" ">
+                </picture>
+                <picture class="trail-block">
+                    <source type="image/webp" srcset="assets/images/design/girls-cursor/4.webp">
+                    <img src="assets/images/design/girls-cursor/4.png" title=" " alt=" ">
+                </picture>
+                <picture class="trail-block">
+                    <source type="image/webp" srcset="assets/images/design/girls-cursor/3.webp">
+                    <img src="assets/images/design/girls-cursor/3.png" title=" " alt=" ">
+                </picture>
+                <picture class="trail-block">
+                    <source type="image/webp" srcset="assets/images/design/girls-cursor/2.webp">
+                    <img src="assets/images/design/girls-cursor/2.png" title=" " alt=" ">
+                </picture>
+                <picture class="trail-block">
+                    <source type="image/webp" srcset="assets/images/design/girls-cursor/1.png">
+                    <img src="assets/images/design/girls-cursor/1.png" title=" " alt=" ">
+                </picture>
             </div>
             <div class="content__block_2_bottom">
                 <p>Курсор на главной — это фотографии танцовщиц.</p>
@@ -242,20 +296,8 @@
 
 
 
-<h1>SVG Circle Progress</h1>
-<h2>Based off of CSS3 circle progress bars</h2>
-
-<div class="cont" data-pct="100">
-    <svg class="svg" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
-        <circle class="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
-    </svg>
-</div>
 
 
-<label for="percent">
-    <input class="percent" name="percent">
-</label>
 
 
 
