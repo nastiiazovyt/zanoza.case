@@ -9,26 +9,57 @@ const options = {
     threshold: 1.0
 }
 
-let played = false
+let played = false;
+let text1 = document.querySelector('#hero-text-inner1');
+let text2 = document.querySelector('#hero-text-inner2');
+let scrub;
+scrub = window.matchMedia('(max-width:525px)').matches ? true : 6;
+let svgAnimationSection = document.querySelector('.content__block_1')
+
 const svgTitleAnimation = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !played) {
             console.log('aga')
             played = true
             document.querySelector('#hero-svg').classList.add('active')
-            gsap.from(document.querySelector('#hero-text-inner1'), {
+
+
+            gsap.fromTo(text1, {
                 attr: {
-                    startOffset: '90%'
+                    startOffset: `100%`
                 },
-                duration: 2.5,
-                ease: 'power4.out',
+            }, {
+                attr: {
+                    startOffset: `-100%`
+                },
+                // delay: 1,
+                // duration: 8,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: svgAnimationSection,
+                    scrub: scrub,
+                    start: "top center",
+                    end: "bottom center",
+                }
             })
-            gsap.from(document.querySelector('#hero-text-inner2'), {
+            gsap.fromTo(text2, {
                 attr: {
-                    startOffset: '-55%'
+                    startOffset: `-100%`
                 },
-                duration: 2.5,
-                ease: 'power4.out',
+            }, {
+                attr: {
+                    startOffset: `200%`
+                },
+                // delay: ,
+                // duration: 4,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: svgAnimationSection,
+                    scrub: scrub,
+                    markers: true,
+                    start: "top center",
+                    end: "bottom center",
+                }
             })
         } else {
             console.log('nea')
@@ -38,3 +69,5 @@ const svgTitleAnimation = (entries, observer) => {
 
 const observer = new IntersectionObserver(svgTitleAnimation, options);
 observer.observe(document.querySelector('.content__block_text'));
+
+

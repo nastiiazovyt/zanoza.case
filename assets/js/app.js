@@ -7508,6 +7508,11 @@ var options = {
   threshold: 1.0
 };
 var played = false;
+var text1 = document.querySelector('#hero-text-inner1');
+var text2 = document.querySelector('#hero-text-inner2');
+var scrub;
+scrub = window.matchMedia('(max-width:525px)').matches ? true : 6;
+var svgAnimationSection = document.querySelector('.content__block_1');
 
 var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
   entries.forEach(function (entry) {
@@ -7515,19 +7520,42 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
       console.log('aga');
       played = true;
       document.querySelector('#hero-svg').classList.add('active');
-      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].from(document.querySelector('#hero-text-inner1'), {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].fromTo(text1, {
         attr: {
-          startOffset: '90%'
+          startOffset: "100%"
+        }
+      }, {
+        attr: {
+          startOffset: "-100%"
         },
-        duration: 2.5,
-        ease: 'power4.out'
+        // delay: 1,
+        // duration: 8,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: svgAnimationSection,
+          scrub: scrub,
+          start: "top center",
+          end: "bottom center"
+        }
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].from(document.querySelector('#hero-text-inner2'), {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].fromTo(text2, {
         attr: {
-          startOffset: '-55%'
+          startOffset: "-100%"
+        }
+      }, {
+        attr: {
+          startOffset: "200%"
         },
-        duration: 2.5,
-        ease: 'power4.out'
+        // delay: ,
+        // duration: 4,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: svgAnimationSection,
+          scrub: scrub,
+          markers: true,
+          start: "top center",
+          end: "bottom center"
+        }
       });
     } else {
       console.log('nea');

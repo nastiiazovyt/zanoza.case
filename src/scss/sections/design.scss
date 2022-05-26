@@ -815,10 +815,17 @@
   }
 
   &_girls-cursor {
+    position: absolute;
+    top: -54%;
+    left: -30%;
+    width: v.dynamic-vw(1920, 1920px);
+    height: v.dynamic-vw(1920, 1080px);
+  }
+
+  &_cursor-container {
     position: relative;
     width: 100%;
-    height: v.dynamic-vw(1920, 600px);
-    margin: 0 auto v.dynamic-vw(1920, 120px) auto;
+    height: v.dynamic-vw(1920, 500px);
     overflow: visible;
     @media (max-width: 525px) {
       overflow: hidden;

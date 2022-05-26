@@ -93,12 +93,12 @@
 
                     <text id="hero-text-1">
                         <textPath href="#hero-path1" id="hero-text-inner1" startOffset="15%"
-                                  alignment-baseline="baseline">когда ты -
+                                  alignment-baseline="end">когда ты -
                         </textPath>
                     </text>
                     <text id="hero-text-2">
                         <textPath href="#hero-path2" id="hero-text-inner2" startOffset="13%"
-                                  alignment-baseline="baseline">главный гость
+                                  alignment-baseline="start">главный гость
                         </textPath>
                     </text>
                 </svg>
@@ -110,6 +110,7 @@
                 на который стоит уделять внимание, проектируя интерфейс. Мы стараемся делать пользовательский
                 опыт бесшовным и увлекательным.
             </div>
+            <div class="content__block_cursor-container">
             <div class="content__block_girls-cursor">
                 <picture class="trail-block">
                     <source type="image/webp" srcset="assets/images/design/girls-cursor/6.webp">
@@ -135,6 +136,7 @@
                     <source type="image/webp" srcset="assets/images/design/girls-cursor/1.png">
                     <img src="assets/images/design/girls-cursor/1.png" title=" " alt=" ">
                 </picture>
+            </div>
             </div>
             <div class="content__block_2_bottom">
                 <p>Курсор на главной — это фотографии танцовщиц.</p>
@@ -293,6 +295,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 
 

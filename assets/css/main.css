@@ -1692,14 +1692,20 @@ a {
   margin-bottom: 11.9791666667vw;
 }
 .content__block_girls-cursor {
+  position: absolute;
+  top: -54%;
+  left: -30%;
+  width: 100vw;
+  height: 56.25vw;
+}
+.content__block_cursor-container {
   position: relative;
   width: 100%;
-  height: 31.25vw;
-  margin: 0 auto 6.25vw auto;
+  height: 26.0416666667vw;
   overflow: visible;
 }
 @media (max-width: 525px) {
-  .content__block_girls-cursor {
+  .content__block_cursor-container {
     overflow: hidden;
   }
 }
