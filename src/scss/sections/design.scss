@@ -4,11 +4,23 @@
   &__container {
     padding: 0 v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 177px) v.dynamic-vw(1920, 166px);
     overflow-x: hidden;
+    @include v.tablet {
+      padding: 0 v.dynamic-vw(1024, 40px) v.dynamic-vw(1024, 100px) v.dynamic-vw(1024, 40px);
+    }
+    @include v.mobile {
+      padding: 0 v.dynamic-vw(375, 20px) v.dynamic-vw(375, 89px) v.dynamic-vw(375, 20px);
+    }
   }
 
   &__title-block {
     position: relative;
     padding-bottom: v.dynamic-vw(1920, 180px);
+    @include v.tablet {
+      padding-bottom: v.dynamic-vw(1024, 64px);
+    }
+    @include v.mobile {
+      padding-bottom: v.dynamic-vw(375, 56px);
+    }
   }
 
   &__title {
@@ -19,6 +31,14 @@
     font-size: v.dynamic-vw(1920, 80px);
     margin-bottom: v.dynamic-vw(1920, 120px);
     font-weight: 500;
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 80px);
+      font-size: v.dynamic-vw(1024, 60px);
+    }
+    @include v.mobile {
+      margin-bottom: v.dynamic-vw(375, 64px);
+      font-size: v.dynamic-vw(375, 32px);
+    }
   }
 
   &__desc {
@@ -31,11 +51,28 @@
     width: 100%;
     margin-left: v.dynamic-vw(1920, 200px);
     font-weight: 300;
+    @include v.tablet {
+      margin-left: v.dynamic-vw(1024, 87px);
+      max-width: v.dynamic-vw(1024, 608px);
+      font-size: v.dynamic-vw(1024, 22px);
+    }
+    @include v.mobile {
+      margin-left: 0;
+      max-width: unset;
+      font-size: v.dynamic-vw(375, 22px);
+
+    }
   }
 
   &__block {
     position: relative;
     padding-bottom: v.dynamic-vw(1920, 180px);
+    @include v.tablet {
+      padding-bottom: v.dynamic-vw(1024, 64px);
+    }
+    @include v.mobile {
+      padding-bottom: v.dynamic-vw(375, 56px);
+    }
 
     &_title {
       font-family: v.$halvarRegular;
@@ -44,6 +81,14 @@
       color: #ffffff;
       font-weight: 500;
       margin-bottom: v.dynamic-vw(1920, 80px);
+      @include v.tablet {
+        margin-bottom: v.dynamic-vw(1024, 56px);
+        font-size: v.dynamic-vw(1024, 28px);
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 24px);
+        margin-bottom: v.dynamic-vw(375, 40px);
+      }
     }
 
     &_desc-row {
@@ -53,6 +98,14 @@
       justify-content: space-between;
       max-width: v.dynamic-vw(1920, 1100px);
       width: 100%;
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 855px);
+      }
+      @include v.mobile {
+        max-width: unset;
+        flex-flow: column nowrap;
+        justify-content: unset;
+      }
     }
 
     &_video {
@@ -60,6 +113,17 @@
       width: v.dynamic-vw(1920, 220px);
       height: v.dynamic-vw(1920, 220px);
       position: relative;
+      @include v.tablet {
+        width: v.dynamic-vw(1024, 180px);
+        height: v.dynamic-vw(1024, 180px);
+      }
+      @include v.mobile {
+        width: v.dynamic-vw(375, 180px);
+        height: v.dynamic-vw(375, 180px);
+        order: 1;
+        margin-left: v.dynamic-vw(375, 155px);
+        margin-bottom: v.dynamic-vw(375, 32px);
+      }
 
       video {
         border-radius: 50%;
@@ -77,6 +141,16 @@
       width: 100%;
       margin-left: v.dynamic-vw(1920, 200px);
       margin-bottom: v.dynamic-vw(1920, 104px);
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 571px);
+        margin-left: v.dynamic-vw(1024, 87px);
+      }
+      @include v.mobile {
+        order: 2;
+        margin-left: 0;
+        max-width: v.dynamic-vw(375, 375px);
+        margin-bottom: v.dynamic-vw(375, 56px);
+      }
 
       p {
         font-family: v.$ttCommons;
@@ -84,11 +158,25 @@
         font-size: v.dynamic-vw(1920, 22px);
         font-weight: 300;
         line-height: 1.3;
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 20px);
+        }
+        @include v.mobile {
+          font-size: v.dynamic-vw(375, 20px);
+        }
 
         &:first-child {
           color: #ffffff;
           font-size: v.dynamic-vw(1920, 30px);
           margin-bottom: v.dynamic-vw(1920, 24px);
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 24px);
+            margin-bottom: v.dynamic-vw(1024, 24px);
+          }
+          @include v.mobile {
+            font-size: v.dynamic-vw(375, 22px);
+            margin-bottom: v.dynamic-vw(375, 28px);
+          }
         }
       }
 
@@ -105,6 +193,19 @@
       width: 100%;
       padding-right: v.dynamic-vw(1920, 47px);
       padding-left: v.dynamic-vw(1920, 139px);
+      @include v.tablet {
+        padding-left: unset;
+        padding-right: unset;
+        margin-left: v.dynamic-vw(1024, 87px);
+        max-width: v.dynamic-vw(1024, 857px);
+      }
+      @include v.mobile {
+        display: block;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+        max-width: unset;
+      }
 
       &:before {
         content: "";
@@ -116,6 +217,9 @@
         top: -20%;
         z-index: 2;
         left: 0;
+        @include v.tablet {
+          height: v.dynamic-vw(1024, 1px);
+        }
       }
 
       p {
@@ -128,6 +232,19 @@
         color: #ffffff;
         max-width: v.dynamic-vw(1920, 320px);
         width: 100%;
+        &:not(:last-child) {
+          @include v.mobile {
+            margin-bottom: v.dynamic-vw(375, 28px);
+          }
+        }
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 16px);
+          max-width: v.dynamic-vw(1024, 261px);
+        }
+        @include v.mobile {
+          max-width: unset;
+          font-size: v.dynamic-vw(375, 16px);
+        }
       }
     }
   }
@@ -136,11 +253,22 @@
     padding-left: v.dynamic-vw(1920, 200px);
     padding-right: v.dynamic-vw(1920, 54px);
     width: 100%;
+    @include v.tablet {
+      padding-left: v.dynamic-vw(1024, 87px);
+      padding-right: 0;
+    }
+    @include v.mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &_1 {
       .stage__section_title-block {
         max-width: v.dynamic-vw(1920, 700px);
         width: 100%;
+        @include v.tablet {
+          max-width: v.dynamic-vw(1024, 488px);
+        }
       }
     }
 
@@ -152,6 +280,9 @@
       &_title-block {
         max-width: v.dynamic-vw(1920, 370px) !important;
         width: 100%;
+        @include v.tablet {
+          max-width: v.dynamic-vw(1024, 279px) !important;
+        }
       }
 
       position: relative;
@@ -159,6 +290,9 @@
       &_img {
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 80px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 56px);
+        }
       }
 
       .stage__section_text-string {
@@ -166,6 +300,9 @@
           &:first-child {
             max-width: v.dynamic-vw(1920, 450px);
             width: 100%;
+            @include v.tablet {
+              max-width: v.dynamic-vw(1024, 397px);
+            }
           }
         }
       }
@@ -173,6 +310,8 @@
 
     &_4 {
       position: relative;
+      @include v.tablet {
+      }
 
       .stage__section_title-block {
         margin-bottom: 0;
@@ -187,6 +326,9 @@
         align-items: flex-start;
         justify-content: space-between;
         margin-bottom: v.dynamic-vw(1920, 120px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 64.36px);
+        }
       }
 
       &_2 {
@@ -197,11 +339,18 @@
         justify-content: space-between;
         margin-bottom: v.dynamic-vw(1920, 140px);
         padding-right: v.dynamic-vw(1920, 100px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 82px);
+          padding-right: 0;
+        }
       }
 
       &_3 {
         position: relative;
         margin-bottom: v.dynamic-vw(1920, 180px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 64px);
+        }
       }
 
       &_5 {
@@ -226,6 +375,13 @@
       line-height: 1.2;
       color: #ffffff;
       text-align: center;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 24px);
+        top: 15%;
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 20px);
+      }
 
       &-circle {
         position: relative;
@@ -235,12 +391,27 @@
         border: #ffffff 1px solid;
         margin-bottom: v.dynamic-vw(1920, 8px);
         transform: translateX(v.dynamic-vw(1920, -40px));
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 32px);
+          height: v.dynamic-vw(1024, 32px);
+          margin-bottom: v.dynamic-vw(1024, 24px);
+          transform: translateX(v.dynamic-vw(1024, -40px));
+        }
+        @include v.mobile {
+          transform: translateX(0);
+          width: v.dynamic-vw(375, 32px);
+          height: v.dynamic-vw(375, 32px);
+          margin-bottom: v.dynamic-vw(375, 20px);
+        }
       }
     }
 
     &_title-block {
       position: relative;
       margin-bottom: v.dynamic-vw(1920, 80px);
+      @include v.tablet {
+        margin-bottom: v.dynamic-vw(1024, 40px);
+      }
     }
 
     &_title {
@@ -250,6 +421,10 @@
       color: #ffffff;
       line-height: 1;
       margin-bottom: v.dynamic-vw(1920, 24px);
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 22px);
+        margin-bottom: v.dynamic-vw(1024, 16px);
+      }
     }
 
     &_desc {
@@ -258,6 +433,9 @@
       line-height: 1.3;
       font-size: v.dynamic-vw(1920, 24px);
       color: #ffffff;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 20px);
+      }
 
       &-3 {
         font-size: v.dynamic-vw(1920, 22px);
@@ -271,6 +449,11 @@
         width: 100%;
         height: 100%;
         margin-bottom: v.dynamic-vw(1920, 40px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 20px);
+          max-height: v.dynamic-vw(1024, 289px);
+          max-width: v.dynamic-vw(1024, 550px);
+        }
       }
 
       &-2 {
@@ -278,6 +461,10 @@
         max-height: v.dynamic-vw(1920, 368px);
         width: 100%;
         height: 100%;
+        @include v.tablet {
+          max-height: v.dynamic-vw(1024, 289px);
+          max-width: v.dynamic-vw(1024, 231px);
+        }
       }
 
       &-3 {
@@ -285,6 +472,11 @@
         max-height: v.dynamic-vw(1920, 368px);
         width: 100%;
         height: 100%;
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 20px);
+          max-height: v.dynamic-vw(1024, 289px);
+          max-width: v.dynamic-vw(1024, 550px);
+        }
       }
 
       &-4 {
@@ -292,6 +484,10 @@
         max-height: v.dynamic-vw(1920, 368px);
         width: 100%;
         height: 100%;
+        @include v.tablet {
+          max-height: v.dynamic-vw(1024, 289px);
+          max-width: v.dynamic-vw(1024, 231px);
+        }
       }
 
       &-block {
@@ -301,6 +497,10 @@
         justify-content: space-between;
         align-items: flex-start;
         margin-bottom: v.dynamic-vw(1920, 140px);
+        @include v.tablet {
+          padding-right: v.dynamic-vw(1024, 2px);
+          margin-bottom: v.dynamic-vw(1024, 64px);
+        }
       }
     }
 
@@ -312,6 +512,9 @@
         justify-content: space-between;
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 49px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 40px);
+        }
 
         p {
           font-family: v.$ttCommons;
@@ -321,6 +524,10 @@
           font-size: v.dynamic-vw(1920, 24px);
           max-width: v.dynamic-vw(1920, 600px);
           width: 100%;
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 22px);
+            max-width: v.dynamic-vw(1024, 406px);
+          }
         }
       }
 
@@ -328,6 +535,10 @@
         max-width: v.dynamic-vw(1920, 600px);
         width: 100%;
         padding-bottom: v.dynamic-vw(1920, 140px);
+        @include v.tablet {
+          padding-bottom: v.dynamic-vw(1024, 64px);
+          max-width: v.dynamic-vw(1024, 450px);
+        }
 
         p {
           font-family: v.$ttCommons;
@@ -335,9 +546,15 @@
           line-height: 1.3;
           color: #ffffff;
           font-size: v.dynamic-vw(1920, 24px);
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 22px);
+          }
 
           &:first-child {
             margin-bottom: v.dynamic-vw(1920, 24px);
+            @include v.tablet {
+              margin-bottom: v.dynamic-vw(1024, 24px);
+            }
           }
         }
       }
@@ -351,9 +568,6 @@
     stroke-width: v.dynamic-vw(1920, 4px);
     transition: stroke-dashoffset 0.4s linear;
     opacity: 0.3;
-    //position: absolute;
-    //top: 0;
-    //left: 0;
   }
 }
 
@@ -367,6 +581,7 @@
   z-index: 3;
   width: 100%;
   height: 100%;
+  transform: rotate(-90deg);
 }
 
 .den4ik-button {
@@ -388,6 +603,9 @@
   &_left-block {
     max-width: v.dynamic-vw(1920, 448px);
     width: 100%;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 448px);
+    }
 
     p {
       font-size: v.dynamic-vw(1920, 22px);
@@ -395,9 +613,15 @@
       font-family: v.$ttCommons;
       color: #D6D6D6;
       line-height: 1.3;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 22px);
+      }
 
       &:first-child {
         margin-bottom: v.dynamic-vw(1920, 40px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 32px);
+        }
       }
     }
   }
@@ -409,6 +633,9 @@
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: space-between;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 306px);
+    }
 
     p {
       font-size: v.dynamic-vw(1920, 18px);
@@ -417,6 +644,10 @@
       color: #ACACAC;
       line-height: 1.3;
       margin-bottom: v.dynamic-vw(1920, 40px);
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 16px);
+        margin-bottom: v.dynamic-vw(1024, 35px);
+      }
     }
 
     &_img {
@@ -424,6 +655,12 @@
       width: v.dynamic-vw(1920, 375px);
       height: v.dynamic-vw(1920, 377px);
       box-shadow: 0 0 80px rgba(239, 46, 68, 0.2);
+      @include v.tablet {
+        width: v.dynamic-vw(1024, 308px);
+        height: v.dynamic-vw(1024, 309px);
+        border-radius: v.dynamic-vw(1024, 16px);
+        box-shadow: 0 0 65.7067px rgba(239, 46, 68, 0.2);
+      }
     }
   }
 }
@@ -435,6 +672,9 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 450px);
+    }
 
     p {
       font-weight: 300;
@@ -443,11 +683,19 @@
       font-size: v.dynamic-vw(1920, 24px);
       line-height: 1.3;
       margin-bottom: v.dynamic-vw(1920, 40px);
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 20px);
+        margin-bottom: v.dynamic-vw(1024, 40px);
+      }
     }
 
     img {
       width: v.dynamic-vw(1920, 456px);
       height: v.dynamic-vw(1920, 294px);
+      @include v.tablet {
+        height: v.dynamic-vw(1024, 290px);
+        width: v.dynamic-vw(1024, 450px);
+      }
     }
   }
 
@@ -457,6 +705,9 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 307px);
+    }
 
     p {
       font-weight: 300;
@@ -465,11 +716,19 @@
       font-size: v.dynamic-vw(1920, 24px);
       line-height: 1.3;
       margin-bottom: v.dynamic-vw(1920, 40px);
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 20px);
+        margin-bottom: v.dynamic-vw(1024, 40px);
+      }
     }
 
     &_img {
       width: v.dynamic-vw(1920, 294px);
       height: v.dynamic-vw(1920, 368px);
+      @include v.tablet {
+        height: v.dynamic-vw(1024, 384px);
+        width: v.dynamic-vw(1024, 307px);
+      }
     }
   }
 }
@@ -480,6 +739,10 @@
     margin-bottom: v.dynamic-vw(1920, 80px);
     font-size: v.dynamic-vw(1920, 60px);
     line-height: 1.2;
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 64px);
+      font-size: v.dynamic-vw(1024, 48px);
+    }
 
     span {
       &:first-child {
@@ -504,6 +767,9 @@
 
     img {
       width: v.dynamic-vw(1920, 600px);
+      @include v.tablet {
+        width: v.dynamic-vw(1024, 402px);
+      }
     }
   }
 }
@@ -513,6 +779,10 @@
     max-width: v.dynamic-vw(1920, 670px);
     width: 100%;
     margin-bottom: v.dynamic-vw(1920, 80px);
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 649px);
+      margin-bottom: v.dynamic-vw(1024, 40px);
+    }
   }
 
   &_title {
@@ -522,6 +792,10 @@
     font-size: v.dynamic-vw(1920, 20px);
     line-height: 1;
     color: #ffffff;
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 16px);
+      font-size: v.dynamic-vw(1024, 20px);
+    }
   }
 
   &_desc {
@@ -531,11 +805,18 @@
       line-height: 1.3;
       color: #ffffff;
       font-family: v.$ttCommons;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 22px);
+      }
 
       &:first-child {
         margin-bottom: v.dynamic-vw(1920, 16px);
         color: #ACACAC;
         font-size: v.dynamic-vw(1920, 18px);
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 16px);
+          margin-bottom: v.dynamic-vw(1024, 16px);
+        }
       }
     }
 
@@ -548,6 +829,11 @@
         font-family: v.$ttCommons;
         margin-bottom: v.dynamic-vw(1920, 80px);
         width: v.dynamic-vw(1920, 640px);
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 651px);
+          margin-bottom: v.dynamic-vw(1024, 40px);
+          font-size: v.dynamic-vw(1024, 22px);
+        }
       }
     }
   }
@@ -555,6 +841,10 @@
   &_img {
     width: v.dynamic-vw(1920, 1280px);
     margin-bottom: v.dynamic-vw(1920, 120px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 64px);
+      width: v.dynamic-vw(1024, 857px);
+    }
   }
 }
 
@@ -562,6 +852,14 @@
   &_block {
     max-width: v.dynamic-vw(1920, 600px);
     width: 100%;
+    &:nth-child(2) {
+      p {
+        max-width: v.dynamic-vw(1024, 275px);
+      }
+    }
+    @include v.tablet {
+      max-width: unset;
+    }
 
     p {
       max-width: v.dynamic-vw(1920, 520px);
@@ -572,10 +870,23 @@
       font-family: v.$ttCommons;
       line-height: 1.3;
       margin-bottom: v.dynamic-vw(1920, 40px);
+      &:nth-child(2) {
+        @include v.tablet {
+          max-width: v.dynamic-vw(1024, 275px);
+        }
+      }
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 354px);
+        margin-bottom: v.dynamic-vw(1024, 40px);
+        font-size: v.dynamic-vw(1024, 20px);
+      }
     }
 
     img {
       width: v.dynamic-vw(1920, 600px);
+      @include v.tablet {
+        width: v.dynamic-vw(1024, 407px);
+      }
     }
   }
 }
@@ -624,6 +935,10 @@
   &__container {
     padding-right: v.dynamic-vw(1920, 60px);
     padding-bottom: v.dynamic-vw(1920, 270px);
+    @include v.tablet {
+      padding-bottom: v.dynamic-vw(1024, 80px);
+      padding-right: 0;
+    }
   }
 
   &__line {
@@ -681,6 +996,9 @@
     line-height: 1;
     font-weight: 400;
     font-size: v.dynamic-vw(1920, 35.88px);
+    @include v.tablet {
+      font-size: v.dynamic-vw(1024, 32px);
+    }
 
   }
 
@@ -690,6 +1008,9 @@
     font-weight: 400;
     line-height: 1.3;
     color: #ffffff;
+    @include v.tablet {
+      font-size: v.dynamic-vw(1024, 48px);
+    }
   }
 
   &__about {
@@ -698,10 +1019,17 @@
     line-height: 1.2;
     color: #ffffff;
     font-size: v.dynamic-vw(1920, 16.15px);
+    @include v.tablet {
+      font-size: v.dynamic-vw(1024, 16px);
+    }
 
     svg {
       width: v.dynamic-vw(1920, 10.09px);
       height: v.dynamic-vw(1920, 10.09px);
+      @include v.tablet {
+        width: v.dynamic-vw(1024, 11.25px);
+        height: v.dynamic-vw(1024, 11.25px);
+      }
     }
 
     &:nth-child(4) {
@@ -718,6 +1046,10 @@
     font-size: v.dynamic-vw(1920, 20px);
     color: #ffffff;
     margin-bottom: v.dynamic-vw(1920, 16px);
+    @include v.tablet {
+      font-size: v.dynamic-vw(1024, 20px);
+      margin-bottom: v.dynamic-vw(1024, 16px);
+    }
   }
 
   &_desc {
@@ -729,6 +1061,12 @@
     max-width: v.dynamic-vw(1920, 490px);
     width: 100%;
     margin-bottom: v.dynamic-vw(1920, 111px);
+    @include v.tablet {
+      font-size: v.dynamic-vw(1024, 18px);
+      margin-bottom: v.dynamic-vw(1024, 157px);
+      max-width: v.dynamic-vw(1024, 339px);
+      padding-right: v.dynamic-vw(1024, 18px);
+    }
   }
 
   &_video {
@@ -754,6 +1092,9 @@
   &_paragraphs {
     max-width: v.dynamic-vw(1920, 316px);
     width: 100%;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 289px);
+    }
 
     p {
       font-weight: 300;
@@ -761,9 +1102,15 @@
       font-family: v.$ttCommons;
       font-size: v.dynamic-vw(1920, 18px);
       color: #ACACAC;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 16px);
+      }
 
       &:not(:last-child) {
         margin-bottom: v.dynamic-vw(1920, 16px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 16px);
+        }
       }
     }
   }
@@ -774,6 +1121,9 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: v.dynamic-vw(1920, 27px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 132px);
+    }
   }
 
   &_2 {
@@ -782,6 +1132,11 @@
       max-width: v.dynamic-vw(1920, 683px);
       margin-bottom: v.dynamic-vw(1920, 141px);
       width: 100%;
+      @include v.tablet {
+        margin-left: v.dynamic-vw(1024, 450px);
+        max-width: v.dynamic-vw(1024, 407px);
+        margin-bottom: v.dynamic-vw(1024, 80px);
+      }
 
       p {
         &:first-child {
@@ -791,6 +1146,10 @@
           font-size: v.dynamic-vw(1920, 24px);
           color: #ffffff;
           font-family: v.$ttCommons;
+          @include v.tablet {
+            margin-bottom: v.dynamic-vw(1024, 16px);
+            font-size: v.dynamic-vw(1024, 22px);
+          }
         }
 
         &:last-child {
@@ -799,6 +1158,9 @@
           font-weight: 300;
           font-size: v.dynamic-vw(1920, 22px);
           line-height: 1.3;
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 16px);
+          }
         }
 
       }
@@ -812,6 +1174,11 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: v.dynamic-vw(1920, 230px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 177px);
+      height: v.dynamic-vw(1024, 203px);
+      width: v.dynamic-vw(1024, 629px);
+    }
   }
 
   &_girls-cursor {
@@ -820,6 +1187,12 @@
     left: -30%;
     width: v.dynamic-vw(1920, 1920px);
     height: v.dynamic-vw(1920, 1080px);
+    @include v.tablet {
+      height: v.dynamic-vw(1024, 1366px);
+      width: v.dynamic-vw(1024, 1024px);
+      top: -112%;
+      left: -15%;
+    }
   }
 
   &_cursor-container {
@@ -827,6 +1200,9 @@
     width: 100%;
     height: v.dynamic-vw(1920, 500px);
     overflow: visible;
+    @include v.tablet {
+      height: v.dynamic-vw(1024, 467px);
+    }
     @media (max-width: 525px) {
       overflow: hidden;
     }
@@ -852,13 +1228,12 @@
   pointer-events: none;
   opacity: 0;
   max-width: 1920px;
-  //transform: translateX(-50%);
-  @media (max-width: 1024px) {
+  @include v.tablet {
     transform-origin: 15% center;
     transform: scale(1.5);
     left: 0;
+    max-width: v.dynamic-vw(1024, 629px);
   }
-
   &.active {
     opacity: 1;
   }
@@ -923,7 +1298,15 @@
   }
 }
 
+#hero-path1 {
+  max-width: v.dynamic-vw(1024, 629px);
+}
 
+#hero-path2 {
+  @include v.tablet {
+    max-width: v.dynamic-vw(1024, 629px);
+  }
+}
 
 
 

@@ -5,6 +5,15 @@
     padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 180px) v.dynamic-vw(1920, 220px);
     position: relative;
     height: v.dynamic-vw(1920, 1260px);
+    @include v.tablet {
+      height: unset;
+      padding: v.dynamic-vw(1024, 403px) v.dynamic-vw(1024, 40px) v.dynamic-vw(1024, 170px) v.dynamic-vw(1024, 40px);
+    }
+    @include v.mobile {
+      height: unset;
+      padding: v.dynamic-vw(375, 299px) v.dynamic-vw(375, 35px) v.dynamic-vw(375, 118px) v.dynamic-vw(375, 35px);
+    }
+
     &_for-img {
       position: absolute;
       top: 0;
@@ -13,7 +22,18 @@
       width: v.dynamic-vw(1920, 1905px);
       padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 160.24px) v.dynamic-vw(1920, 220px);
       height: v.dynamic-vw(1920, 1260px);
+      @include v.tablet {
+        height: v.dynamic-vw(1024, 1396px);
+        padding: v.dynamic-vw(1024, 403px) v.dynamic-vw(1024, 40px) v.dynamic-vw(1024, 170px) v.dynamic-vw(1024, 40px);
+        width: v.dynamic-vw(1024, 1024px);
+      }
+      @include v.mobile {
+        height: v.dynamic-vw(375, 1238px);
+        width: v.dynamic-vw(375, 375px);
+        padding: v.dynamic-vw(375, 299px) v.dynamic-vw(375, 35px) v.dynamic-vw(375, 118px) v.dynamic-vw(375, 35px);
+      }
     }
+
     &:before {
       position: absolute;
       top: 0;
@@ -32,6 +52,9 @@
     top: 0;
     left: 0;
     height: 100%;
+    @include v.tablet {
+      transform: translateX(-25%);
+    }
 
     &_blur {
       position: absolute;
@@ -40,6 +63,12 @@
       width: 100%;
       z-index: 3;
       pointer-events: none;
+      @include v.tablet {
+        height: 100%;
+      }
+      @include v.mobile {
+        height: 100%;
+      }
     }
   }
 
@@ -48,6 +77,12 @@
     text-align: center;
     margin-bottom: v.dynamic-vw(1920, 271.45px);
     z-index: 5;
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 409.45px);
+    }
+    @include v.mobile {
+      margin-bottom: v.dynamic-vw(375, 344px);
+    }
 
     &_first-line {
       font-family: v.$sverdlovsk;
@@ -56,6 +91,14 @@
       color: #ffffff;
       margin-bottom: v.dynamic-vw(1920, 7.55px);
       font-weight: 400;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 200px);
+        margin-bottom: v.dynamic-vw(1024, 7.55px);
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 120px);
+        margin-bottom: v.dynamic-vw(375, 8px);
+      }
     }
 
     &_second-line {
@@ -64,6 +107,12 @@
       line-height: 1;
       color: #FF3D54;
       font-weight: 400;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 32px);
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 24px);
+      }
     }
   }
 
@@ -75,6 +124,9 @@
     text-align: start;
     position: relative;
     z-index: 5;
+    @include v.mobile {
+      flex-flow: column nowrap;
+    }
 
     &_title {
       color: #FFFFFF;
@@ -83,6 +135,34 @@
       font-family: v.$halvarRegular;
       margin-bottom: v.dynamic-vw(1920, 32px);
       font-weight: 400;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 18px);
+        margin-bottom: v.dynamic-vw(1024, 28px);
+      }
+      @include v.mobile {
+        margin-bottom: v.dynamic-vw(375, 28px);
+        font-size: v.dynamic-vw(375, 18px);
+        position: relative;
+      }
+      &:before {
+        display: none;
+        @include v.tablet {
+          display: none;
+        }
+        @include v.mobile {
+          display: block;
+          position: absolute;
+          top: 146%;
+          left: 0;
+          content: "";
+          max-width: v.dynamic-vw(375, 375px);
+          width: 100%;
+          background-color: #ffffff;
+          height: v.dynamic-vw(1920, 1px);
+          opacity: 0.2;
+          z-index: 2;
+        }
+      }
     }
 
     &_desc {
@@ -92,6 +172,19 @@
       color: #FFFFFF;
       max-width: v.dynamic-vw(1920, 491px);
       font-weight: 300;
+      &:not(last-child) {
+        @include v.mobile {
+          margin-bottom: v.dynamic-vw(375, 40px);
+        }
+      }
+      @include v.tablet {
+      font-size: v.dynamic-vw(1024, 16px);
+      max-width: v.dynamic-vw(1024, 460px);
+    }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 16px);
+        max-width: v.dynamic-vw(375, 334px);
+      }
     }
 
     &:before {
@@ -105,6 +198,38 @@
       top: 20%;
       z-index: 2;
       left: 0;
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 1024px);
+        width: 100%;
+        height: v.dynamic-vw(1024, 1px);
+      }
+      @include v.mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.left-block {
+  @include v.tablet {
+    max-width: v.dynamic-vw(1024, 140px);
+    width: 100%;
+  }
+  @include v.mobile {
+    max-width: unset;
+    .hero__text-block_desc {
+      max-width: v.dynamic-vw(375, 140px);
+    }
+  }
+}
+
+.center-block {
+  max-width: v.dynamic-vw(1024, 233px);
+  width: 100%;
+  @include v.mobile {
+    max-width: unset;
+    .hero__text-block_desc {
+      max-width: v.dynamic-vw(375, 240px);
     }
   }
 }

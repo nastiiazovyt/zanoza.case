@@ -14,7 +14,9 @@ let text1 = document.querySelector('#hero-text-inner1');
 let text2 = document.querySelector('#hero-text-inner2');
 let scrub;
 scrub = window.matchMedia('(max-width:525px)').matches ? true : 6;
-let svgAnimationSection = document.querySelector('.content__block_1')
+let svgAnimationSectionFirst = document.querySelector('.content__block_text');
+let svgAnimationSectionSecond = document.querySelector('.content__block_svg-text')
+
 
 const svgTitleAnimation = (entries, observer) => {
     entries.forEach(entry => {
@@ -30,16 +32,34 @@ const svgTitleAnimation = (entries, observer) => {
                 },
             }, {
                 attr: {
-                    startOffset: `-100%`
+                    startOffset: `24%`
                 },
                 // delay: 1,
                 // duration: 8,
                 ease: 'none',
                 scrollTrigger: {
-                    trigger: svgAnimationSection,
-                    scrub: scrub,
+                    trigger: svgAnimationSectionFirst,
+                    scrub: true,
                     start: "top center",
                     end: "bottom center",
+                }
+            })
+            gsap.fromTo(text1, {
+                attr: {
+                    startOffset: `24%`
+                },
+            }, {
+                attr: {
+                    startOffset: `100%`
+                },
+                // delay: 1,
+                // duration: 8,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: svgAnimationSectionSecond,
+                    scrub: true,
+                    start: "top 20%",
+                    end: "bottom 20%",
                 }
             })
             gsap.fromTo(text2, {
@@ -48,17 +68,36 @@ const svgTitleAnimation = (entries, observer) => {
                 },
             }, {
                 attr: {
-                    startOffset: `200%`
+                    startOffset: `13%`
                 },
                 // delay: ,
                 // duration: 4,
                 ease: 'none',
                 scrollTrigger: {
-                    trigger: svgAnimationSection,
-                    scrub: scrub,
-                    markers: true,
+                    trigger: svgAnimationSectionFirst,
+                    scrub: true,
+                    // markers: true,
                     start: "top center",
                     end: "bottom center",
+                }
+            })
+            gsap.fromTo(text2, {
+                attr: {
+                    startOffset: `13%`
+                },
+            }, {
+                attr: {
+                    startOffset: `-200%`
+                },
+                // delay: ,
+                // duration: 4,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: svgAnimationSectionSecond,
+                    scrub: true,
+                    // markers: true,
+                    start: "top 20%",
+                    end: "bottom 20%",
                 }
             })
         } else {

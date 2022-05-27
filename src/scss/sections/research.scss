@@ -5,10 +5,18 @@
     margin-bottom: v.dynamic-vw(1920, 80px);
     max-width: v.dynamic-vw(1920, 909px);
     width: 100%;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 730px);
+      margin-bottom: v.dynamic-vw(1024, 80px);
+    }
 
     span {
       font-size: v.dynamic-vw(1920, 60px);
       margin-bottom: v.dynamic-vw(1920, 60px);
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 48px);
+        margin-bottom: 0;
+      }
 
       &:first-child {
         font-family: v.$apocLC;
@@ -17,14 +25,15 @@
         line-height: 1.2;
         font-style: italic;
         margin-bottom: 0;
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 48px);
+          margin-bottom: 0;
+        }
       }
     }
   }
 
   &__section {
-    padding-left: v.dynamic-vw(1920, 200px);
-    padding-right: v.dynamic-vw(1920, 54px);
-    width: 100%;
 
     &_text-row {
       display: flex;
@@ -35,11 +44,27 @@
 
     &_research_2 {
       padding-right: v.dynamic-vw(1920, 526px);
+      @include v.tablet {
+        padding-right: v.dynamic-vw(1024, 113px);
+      }
 
       .stage__section_desc {
         max-width: v.dynamic-vw(1920, 500px);
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 80px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 40px);
+          max-width: v.dynamic-vw(1024, 450px);
+        }
+      }
+    }
+
+    &_1 {
+      .research__block_small-pic {
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 230px);
+          height: v.dynamic-vw(1024, 288px);
+        }
       }
     }
 
@@ -48,11 +73,17 @@
         max-width: v.dynamic-vw(1920, 580px);
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 80px);
+        @include v.tablet {
+          max-width: v.dynamic-vw(1024, 450px);
+        }
       }
     }
 
     &_4 {
       margin-bottom: v.dynamic-vw(1920, 180px);
+      @include v.tablet {
+        margin-bottom: 0;
+      }
 
       .stage__section_desc {
         max-width: v.dynamic-vw(1920, 500px);
@@ -74,16 +105,33 @@
 
       .stage__section_pic-text-row {
         margin-bottom: v.dynamic-vw(1920, 169px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 64px);
+        }
+      }
+      .research__block_big-pic {
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 502px);
+          height: v.dynamic-vw(1024, 264px);
+        }
       }
     }
 
     &_5 {
       margin-bottom: v.dynamic-vw(1920, 400px);
+      @include v.tablet {
+        margin-bottom: v.dynamic-vw(1024, 64px);
+      }
 
       .stage__section_title-block {
         max-width: v.dynamic-vw(1920, 574px);
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 80px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 40px);
+          max-width: v.dynamic-vw(1024, 530px);
+          font-size: v.dynamic-vw(1024, 18px);
+        }
       }
 
       .stage__section_text-row {
@@ -95,9 +143,16 @@
           font-family: v.$ttCommons;
           max-width: v.dynamic-vw(1920, 650px);
           width: 100%;
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 20px);
+            max-width: v.dynamic-vw(1024, 407px);
+          }
 
           &:first-child {
             max-width: v.dynamic-vw(1920, 510px);
+            @include v.tablet {
+              max-width: v.dynamic-vw(1024, 384px);
+            }
           }
         }
       }
@@ -105,16 +160,26 @@
 
     &_6 {
       margin-bottom: v.dynamic-vw(1920, 177px);
+      @include v.tablet {
+        margin-bottom: v.dynamic-vw(1024, 113px);
+      }
 
       .stage__section_title-block {
         max-width: v.dynamic-vw(1920, 540px);
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 144px);
+        @include v.tablet {
+          max-width: v.dynamic-vw(1024, 382px);
+          margin-bottom: v.dynamic-vw(1024, 40px);
+        }
       }
 
       .stage__section_text-row {
         padding-right: v.dynamic-vw(1920, 279px);
         align-items: flex-end;
+        @include v.tablet {
+          padding-right: v.dynamic-vw(1024, 36px);
+        }
 
         p {
           font-weight: 400;
@@ -122,15 +187,24 @@
           font-family: v.$ttCommons;
           font-size: v.dynamic-vw(1920, 18px);
           line-height: 1.3;
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 16px);
+          }
         }
 
         &_left {
           max-width: v.dynamic-vw(1920, 300px);
           width: 100%;
+          @include v.tablet {
+            max-width: v.dynamic-vw(1024, 299px);
+          }
 
           p {
             &:first-child {
               margin-bottom: v.dynamic-vw(1920, 47px);
+              @include v.tablet {
+                margin-bottom: v.dynamic-vw(1024, 63px);
+              }
             }
           }
         }
@@ -138,10 +212,16 @@
         &_right {
           width: 100%;
           max-width: v.dynamic-vw(1920, 350px);
+          @include v.tablet {
+            max-width: v.dynamic-vw(1024, 370px);
+          }
 
           p {
             &:first-child {
               margin-bottom: v.dynamic-vw(1920, 24px);
+              @include v.tablet {
+                margin-bottom: v.dynamic-vw(1024, 40px);
+              }
             }
           }
         }
@@ -156,6 +236,9 @@
         align-items: center;
         width: 100%;
         margin-bottom: v.dynamic-vw(1920, 212px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 88px);
+        }
       }
 
       &-text-row {
@@ -166,6 +249,9 @@
         margin-bottom: v.dynamic-vw(1920, 380px);
         position: relative;
         z-index: 10;
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 101px);
+        }
       }
     }
   }
@@ -177,18 +263,29 @@
       width: v.dynamic-vw(1920, 700px);
       height: v.dynamic-vw(1920, 368px);
       border: 3px solid white;
+      @include v.tablet{
+        width: v.dynamic-vw(1024, 550px);
+        height: v.dynamic-vw(1024, 288px);
+      }
     }
 
     &_small-pic {
       width: v.dynamic-vw(1920, 294px);
       height: v.dynamic-vw(1920, 368px);
       border: 3px solid white;
+      @include v.tablet {
+        width: v.dynamic-vw(1024, 294px);
+        height: v.dynamic-vw(1024, 368px);
+      }
     }
     &_text-1 {
       max-width: v.dynamic-vw(1920, 407px);
       width: 100%;
       position: relative;
       z-index: 10;
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 407px);
+      }
 
       p {
         font-family: v.$ttCommons;
@@ -196,11 +293,18 @@
         line-height: 1.3;
         font-size: v.dynamic-vw(1920, 18px);
         color: #ACACAC;
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 16px);
+        }
 
         &:first-child {
           font-size: v.dynamic-vw(1920, 24px);
           color: #ffffff;
           margin-bottom: v.dynamic-vw(1920, 40px);
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 20px);
+            margin-bottom: v.dynamic-vw(1024, 30px);
+          }
         }
       }
 
@@ -214,6 +318,11 @@
       color: #ffffff;
       max-width: v.dynamic-vw(1920, 340px);
       margin-right: v.dynamic-vw(1920, 16px);
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 289px);
+        font-size: v.dynamic-vw(1024, 20px);
+        margin-right: v.dynamic-vw(1024, 18px);
+      }
     }
   }
 }
