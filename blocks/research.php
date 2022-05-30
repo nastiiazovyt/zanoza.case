@@ -32,7 +32,7 @@
             <div class="research__block_small-pic"></div>
         </div>
     </div>
-    <div class="stage__section stage__section_3">
+    <div class="stage__section stage__section_3 stage__section_research_3">
             <img class="body__blur_1" src="./assets/images/blurs/blur_1.png" alt="">
         <div class="stage__section_title-block">
             <div class="stage__section_number-circle">
@@ -43,9 +43,23 @@
                 часть пользователей, попадающих на сайт, но не посещающих клуб по ряду причин. <br> Объективных и нет
                 (вот их мы и решили проработать):
             </div>
+            <div class="research__block_small-pic"></div>
         </div>
         <div class="stage__section_pic-text-row">
-            <div class="research__block_small-pic"></div>
+            <div class="stage__block_video">
+                <svg class="progress__svg" width="200" height="200" viewBox="0 0 200 200">
+                    <circle class="circle_white" r="98" cx="100" cy="100" fill="transparent" stroke-dasharray="615.44"
+                            stroke-dashoffset="615.44" stroke-width="4"></circle>
+                </svg>
+                <svg class="den4ik-button" width="39" height="50" viewBox="0 0 39 50" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" d="M0 50V0L39 25L0 50Z" fill="white"/>
+                </svg>
+                <video class="den4ik" width="216" height="216">
+                    <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.webm">
+                    <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.mp4">
+                </video>
+            </div>
             <div class="research__block_text-1">
                 <p>Мы предположили,
                     что самой весомой из субъективных — является психологический фактор.</p>

@@ -2,16 +2,16 @@
 
 .hero {
   &__container {
-    padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 180px) v.dynamic-vw(1920, 220px);
+    padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 206px) v.dynamic-vw(1920, 100px);
     position: relative;
-    height: v.dynamic-vw(1920, 1260px);
+    //height: v.dynamic-vw(1920, 1080px);
     @include v.tablet {
       height: unset;
       padding: v.dynamic-vw(1024, 403px) v.dynamic-vw(1024, 40px) v.dynamic-vw(1024, 170px) v.dynamic-vw(1024, 40px);
     }
     @include v.mobile {
       height: unset;
-      padding: v.dynamic-vw(375, 299px) v.dynamic-vw(375, 35px) v.dynamic-vw(375, 118px) v.dynamic-vw(375, 35px);
+      padding: v.dynamic-vw(375, 299px) v.dynamic-vw(375, 35px) v.dynamic-vw(375, 78px) v.dynamic-vw(375, 35px);
     }
 
     &_for-img {
@@ -20,8 +20,9 @@
       left: 0;
       overflow: hidden;
       width: v.dynamic-vw(1920, 1905px);
-      padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 220px) v.dynamic-vw(1920, 160.24px) v.dynamic-vw(1920, 220px);
-      height: v.dynamic-vw(1920, 1260px);
+      padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 181px) v.dynamic-vw(1920, 100px);
+      //height: v.dynamic-vw(1920, 1080px);
+      height: 100%;
       @include v.tablet {
         height: v.dynamic-vw(1024, 1396px);
         padding: v.dynamic-vw(1024, 403px) v.dynamic-vw(1024, 40px) v.dynamic-vw(1024, 170px) v.dynamic-vw(1024, 40px);
@@ -64,7 +65,7 @@
       z-index: 3;
       pointer-events: none;
       @include v.tablet {
-        height: 100%;
+        height: 120%;
       }
       @include v.mobile {
         height: 100%;
@@ -172,11 +173,6 @@
       color: #FFFFFF;
       max-width: v.dynamic-vw(1920, 491px);
       font-weight: 300;
-      &:not(last-child) {
-        @include v.mobile {
-          margin-bottom: v.dynamic-vw(375, 40px);
-        }
-      }
       @include v.tablet {
       font-size: v.dynamic-vw(1024, 16px);
       max-width: v.dynamic-vw(1024, 460px);
@@ -184,12 +180,13 @@
       @include v.mobile {
         font-size: v.dynamic-vw(375, 16px);
         max-width: v.dynamic-vw(375, 334px);
+        margin-bottom: v.dynamic-vw(375, 40px);
       }
     }
 
     &:before {
       content: "";
-      max-width: v.dynamic-vw(1920, 1480px);
+      //max-width: v.dynamic-vw(1920, 1560px);
       width: 100%;
       background-color: #ffffff;
       height: v.dynamic-vw(1920, 1px);
@@ -231,5 +228,12 @@
     .hero__text-block_desc {
       max-width: v.dynamic-vw(375, 240px);
     }
+  }
+}
+
+.right-block {
+  padding-right: v.dynamic-vw(1920, 125px);
+  @include v.tablet {
+    padding-right: 0;
   }
 }

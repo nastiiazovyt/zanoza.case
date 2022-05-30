@@ -145,47 +145,47 @@
                     исследования.</p>
             </div>
         </div>
-        <div class="parties__container">
-            <div class="parties__line">
-                <div class="parties__date">21 мая</div>
-                <div class="parties__name">Тропические Ночи</div>
-                <div class="parties__about">
-                    <span>Подробнее</span>
-                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
-                              stroke="#FF3D54" stroke-width="1.79422"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="parties__line">
-                <div class="parties__date">1 июня</div>
-                <div class="parties__name">НЕЗЕМНОЙ Weekend</div>
-                <div class="parties__about">
-                    <span>Подробнее</span>
-                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
-                              stroke="#FF3D54" stroke-width="1.79422"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="parties__line">
-                <div class="parties__date">18 июня</div>
-                <div class="parties__name">Playboy Party</div>
-                <div class="parties__about">
-                    <span>Подробнее</span>
-                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
-                              stroke="#FF3D54" stroke-width="1.79422"/>
-                    </svg>
-                </div>
-            </div>
+    </div>
+    <div class="parties__container">
+        <div class="parties__line">
+            <div class="parties__date">21 мая</div>
+            <div class="parties__name">Тропические Ночи</div>
             <div class="parties__about">
-                <span>Уже было</span>
+                <span>Подробнее</span>
                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.44397 11.1992L11.5366 1.10661M11.5366 1.10661V10.7604M11.5366 1.10661H1.88278"
+                    <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
                           stroke="#FF3D54" stroke-width="1.79422"/>
                 </svg>
             </div>
+        </div>
+        <div class="parties__line">
+            <div class="parties__date">1 июня</div>
+            <div class="parties__name">НЕЗЕМНОЙ Weekend</div>
+            <div class="parties__about">
+                <span>Подробнее</span>
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
+                          stroke="#FF3D54" stroke-width="1.79422"/>
+                </svg>
+            </div>
+        </div>
+        <div class="parties__line">
+            <div class="parties__date">18 июня</div>
+            <div class="parties__name">Playboy Party</div>
+            <div class="parties__about">
+                <span>Подробнее</span>
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
+                          stroke="#FF3D54" stroke-width="1.79422"/>
+                </svg>
+            </div>
+        </div>
+        <div class="parties__about">
+            <span>Уже было</span>
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.44397 11.1992L11.5366 1.10661M11.5366 1.10661V10.7604M11.5366 1.10661H1.88278"
+                      stroke="#FF3D54" stroke-width="1.79422"/>
+            </svg>
         </div>
     </div>
     <div class="stage__section stage__section_3">
@@ -264,7 +264,7 @@
                         он может визуально и по интересам.</p>
                 </div>
             </div>
-            <img class="row_4_img" src="./assets/images/design/girls-line-img.png" alt="">
+            <img class="row_4_img row_4_img-1" src="./assets/images/design/girls-line-img.png" alt="">
             <div class="row_4_desc_2">
                 <p>На фотографиях, светом подчёркивали достоинства фигур каждой девушки, позы моделей передают
                     эстетику
