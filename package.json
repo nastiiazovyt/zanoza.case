@@ -27,6 +27,8 @@
     "dependencies": {
         "css-reset-and-normalize": "^2.1.0",
         "gsap": "./gsap-bonus.tgz",
+        "smooth-scrollbar": "^8.7.4",
+        "swiper": "^8.1.6",
         "vue-template-compiler": "^2.6.12"
     }
 }

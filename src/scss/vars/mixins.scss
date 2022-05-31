@@ -8,6 +8,17 @@
   max-width: $max-width;
 }
 
+@mixin mobile {
+  @media (max-width: 525px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+}
+
+@mixin mobileHeight {
+  @media (max-height: 812px) { @content; }
+}
+
 @mixin centerImg {
   position: absolute;
   width: 100%;
@@ -20,16 +31,19 @@
   object-position: center;
 }
 
-@mixin mobile {
-  @media (max-width: 525px) { @content; }
-}
-@mixin tablet {
-  @media (max-width: 1024px) { @content; }
+%before-gradient {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  transform: translate(-50%, -50%);
+  content: '';
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.46%, #000000 100%);
 }
 
-@mixin mobileHeight {
-  @media (max-height: 812px) { @content; }
-}
 
 
 

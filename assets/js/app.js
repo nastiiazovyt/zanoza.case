@@ -7266,7 +7266,7 @@ var randomNumber = function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 };
 
-window.onload = function () {
+window.addEventListener('load', function () {
   if (document.querySelector('.content__block_girls-cursor')) {
     var section = document.querySelector('.content__block_girls-cursor');
 
@@ -7304,6 +7304,7 @@ window.onload = function () {
       }
     };
     var firstRender = true;
+    console.log(trailArray);
     var bounds;
     var breakpoint = window.matchMedia('(min-width:1025px)');
     var hasHover = window.matchMedia('(hover: hover)');
@@ -7462,6 +7463,7 @@ window.onload = function () {
         section.addEventListener('mouseenter', loopRender);
         section.addEventListener('mouseleave', stopCycle);
       } else {
+        /*TODO трекать висит ли ивентлисенер через булевую переменную, вынести объявление loopRender и stopCycle выше*/
         mobileAnimation();
       }
     };
@@ -7469,7 +7471,7 @@ window.onload = function () {
     window.addEventListener('resize', debounce(breakpointChecker, 200));
     mainInit();
   }
-};
+});
 
 /***/ }),
 
@@ -7485,6 +7487,265 @@ __webpack_require__(/*! ./telegram.circle.js */ "./src/js/hero/telegram.circle.j
 __webpack_require__(/*! ./svg.text.animation.js */ "./src/js/hero/svg.text.animation.js");
 
 __webpack_require__(/*! ./girls.animation.js */ "./src/js/hero/girls.animation.js");
+
+__webpack_require__(/*! ./parties.animation.js */ "./src/js/hero/parties.animation.js");
+
+/***/ }),
+
+/***/ "./src/js/hero/parties.animation.js":
+/*!******************************************!*\
+  !*** ./src/js/hero/parties.animation.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+function debounce(callback, interval) {
+  var debounceTimeoutId;
+  return function () {
+    var _this = this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    clearTimeout(debounceTimeoutId);
+    debounceTimeoutId = setTimeout(function () {
+      return callback.apply(_this, args);
+    }, interval);
+  };
+}
+
+var map = function map(x, a1, a2, b1, b2) {
+  return (x - a1) * (b2 - b1) / (a2 - a1) + b1;
+};
+
+var lerp = function lerp(a, b, n) {
+  return (1 - n) * a + n * b;
+};
+
+var clamp = function clamp(num, min, max) {
+  return num <= min ? min : num >= max ? max : num;
+};
+
+var randomNumber = function randomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+window.addEventListener('load', function () {
+  if (document.querySelector('.parties__container')) {
+    var partiesSection = document.querySelector('.parties__container');
+
+    var partiesTrailArray = _toConsumableArray(partiesSection.querySelectorAll('.parties__line_img'));
+
+    var partiesMousepos = {
+      x: 0,
+      y: 0
+    };
+    var partiesMousePosCache = partiesMousepos;
+    var partiesDirection = {
+      x: partiesMousePosCache.x - partiesMousepos.x,
+      y: partiesMousePosCache.y - partiesMousepos.y
+    };
+    var partiesAnimatableProperties = {
+      tx: {
+        previous: 0,
+        current: 0,
+        amt: 0.08
+      },
+      ty: {
+        previous: 0,
+        current: 0,
+        amt: 0.08
+      },
+      op: {
+        previous: 0,
+        current: 0,
+        amt: 0.08
+      },
+      rotation: {
+        previous: 0,
+        current: 0,
+        amt: 0.08
+      }
+    };
+    var partiesFirstRender = true;
+    var partiesBounds;
+    var partiesBreakpoint = window.matchMedia('(min-width:1025px)');
+    var partiesHasHover = window.matchMedia('(hover: hover)'); // let partiesOpacityArr = []
+    // for (let i in partiesTrailArray) {
+    //     partiesOpacityArr.push(map(i, 0, partiesTrailArray.length - 1, 0, 1))
+    // }
+    // partiesOpacityArr.reverse()
+
+    partiesSection.addEventListener('pointermove', function (e) {
+      var partiesRect = partiesSection.getBoundingClientRect();
+      var px = e.clientX - partiesRect.left - partiesBounds.child.width;
+      var py = e.clientY - partiesRect.top - partiesBounds.child.height - partiesBounds.child.height * 0.5;
+      partiesMousepos = {
+        x: px,
+        y: py
+      };
+    });
+    var partiesInitialCoords = {
+      x: 0,
+      y: 0,
+      r: 5
+    };
+
+    var partiesInitialPos = function partiesInitialPos() {
+      if (partiesBreakpoint.matches && partiesHasHover.matches) {
+        partiesInitialCoords.x = partiesBounds.container.width / 1.5;
+        partiesInitialCoords.y = partiesBounds.container.height / 3 - partiesBounds.child.height / 2;
+        partiesInitialCoords.r = 5;
+      } else {
+        partiesInitialCoords.x = partiesBounds.container.width / 2 - partiesBounds.child.width / 2;
+        partiesInitialCoords.y = partiesBounds.container.height / 2 - partiesBounds.child.height / 2;
+        partiesInitialCoords.r = 0;
+      }
+
+      console.log(partiesInitialCoords.y);
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].set(partiesTrailArray, {
+        x: function x() {
+          return partiesBreakpoint.matches && partiesHasHover.matches ? partiesInitialCoords.x : partiesInitialCoords.x - randomNumber(-20, 20);
+        },
+        y: function y() {
+          return partiesBreakpoint.matches && partiesHasHover.matches ? partiesInitialCoords.y : partiesInitialCoords.y - randomNumber(-40, 40);
+        },
+        rotation: function rotation() {
+          return partiesBreakpoint.matches && partiesHasHover.matches ? partiesInitialCoords.r : randomNumber(-10, 10);
+        } // opacity: i => partiesBreakpoint.matches && partiesHasHover.matches ? i === 0 ? 1 : 0 : partiesOpacityArr[i],
+
+      });
+    };
+
+    var partiesMobileAnimation = function partiesMobileAnimation() {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].fromTo(partiesTrailArray, {
+        autoAlpha: 1
+      }, {
+        scrollTrigger: {
+          trigger: partiesSection,
+          start: "top top",
+          end: "bottom 50%",
+          scrub: .5
+        },
+        autoAlpha: function autoAlpha(i) {
+          return i !== partiesTrailArray.length - 1 ? 0 : 1;
+        },
+        stagger: 1,
+        repeat: 1,
+        yoyo: true,
+        ease: 'sine.inOut',
+        duration: 1
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].to(partiesTrailArray, {
+        yPercent: 50,
+        ease: 'sine.inOut',
+        scrollTrigger: {
+          trigger: partiesSection,
+          start: "top top",
+          end: "bottom 50%",
+          scrub: 0.1
+        }
+      });
+    };
+
+    var partiesLoopRender = function partiesLoopRender() {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].ticker.add(partiesRender);
+    };
+
+    var partiesStopCycle = function partiesStopCycle() {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].ticker.remove(partiesRender);
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].to(partiesTrailArray, {
+        x: partiesInitialCoords.x,
+        y: partiesInitialCoords.y,
+        rotation: partiesInitialCoords.r,
+        // opacity: i => i === 0 ? 1 : 0,
+        stagger: 0.08
+      });
+    };
+
+    var partiesRender = function partiesRender() {
+      var partiesMouseDistanceX = clamp(Math.abs(partiesMousePosCache.x - partiesMousepos.x), 0, 100);
+      var partiesMouseDistanceY = clamp(Math.abs(partiesMousePosCache.y - partiesMousepos.y), 0, 100);
+
+      var partiesBiggerTravelDistance = function partiesBiggerTravelDistance() {
+        return partiesMouseDistanceX >= partiesMouseDistanceY ? partiesMouseDistanceX : partiesMouseDistanceY;
+      };
+
+      partiesDirection = {
+        x: partiesMousePosCache.x - partiesMousepos.x,
+        y: partiesMousePosCache.y - partiesMousepos.y
+      };
+      partiesMousePosCache = {
+        x: partiesMousepos.x,
+        y: partiesMousepos.y
+      };
+      partiesAnimatableProperties.tx.current = partiesMousepos.x;
+      partiesAnimatableProperties.ty.current = partiesMousepos.y;
+      partiesAnimatableProperties.op.current = map(partiesBiggerTravelDistance(), 0, 20, 0, 1);
+      partiesAnimatableProperties.rotation.current = map(partiesMouseDistanceX, 0, 100, 0, partiesDirection.x < 0 ? 45 : -45);
+      partiesAnimatableProperties.tx.previous = partiesFirstRender ? partiesInitialCoords.x : lerp(partiesAnimatableProperties.tx.previous, partiesAnimatableProperties.tx.current, partiesAnimatableProperties.tx.amt);
+      partiesAnimatableProperties.ty.previous = partiesFirstRender ? partiesInitialCoords.y : lerp(partiesAnimatableProperties.ty.previous, partiesAnimatableProperties.ty.current, partiesAnimatableProperties.ty.amt);
+      partiesAnimatableProperties.op.previous = lerp(partiesAnimatableProperties.op.previous, partiesAnimatableProperties.op.current, partiesAnimatableProperties.op.amt);
+      partiesAnimatableProperties.rotation.previous = partiesFirstRender ? partiesInitialCoords.r : lerp(partiesAnimatableProperties.rotation.previous, partiesAnimatableProperties.rotation.current, partiesAnimatableProperties.rotation.amt);
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].set(partiesTrailArray, {
+        transformOrigin: 'center center',
+        x: partiesAnimatableProperties.tx.previous,
+        y: partiesAnimatableProperties.ty.previous,
+        rotation: partiesAnimatableProperties.rotation.previous,
+        // opacity: i => i === 0 ? 1 : partiesAnimatableProperties.op.previous,
+        stagger: 0.08
+      });
+      partiesFirstRender = false;
+      partiesLoopRender();
+    };
+
+    var partiesWidth = window.innerWidth;
+
+    var partiesBreakpointChecker = function partiesBreakpointChecker() {
+      if (window.innerWidth !== partiesWidth) {
+        partiesWidth = window.innerWidth;
+        partiesMainInit();
+      }
+    };
+
+    var partiesMainInit = function partiesMainInit() {
+      partiesBounds = {
+        container: partiesSection.getBoundingClientRect(),
+        child: partiesTrailArray[0].getBoundingClientRect()
+      };
+      partiesInitialPos();
+      console.log(partiesTrailArray);
+
+      if (partiesBreakpoint.matches && matchMedia('(hover: hover)').matches) {
+        partiesSection.addEventListener('mouseenter', partiesLoopRender);
+        partiesSection.addEventListener('mouseleave', partiesStopCycle);
+      } else {
+        partiesMobileAnimation();
+      }
+    };
+
+    window.addEventListener('resize', debounce(partiesBreakpointChecker, 200));
+    partiesMainInit();
+  }
+});
 
 /***/ }),
 
@@ -7529,8 +7790,6 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
         attr: {
           startOffset: "24%"
         },
-        // delay: 1,
-        // duration: 8,
         ease: 'none',
         scrollTrigger: {
           trigger: svgAnimationSectionFirst,
@@ -7547,8 +7806,6 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
         attr: {
           startOffset: "100%"
         },
-        // delay: 1,
-        // duration: 8,
         ease: 'none',
         scrollTrigger: {
           trigger: svgAnimationSectionSecond,
@@ -7565,13 +7822,10 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
         attr: {
           startOffset: "13%"
         },
-        // delay: ,
-        // duration: 4,
         ease: 'none',
         scrollTrigger: {
           trigger: svgAnimationSectionFirst,
           scrub: true,
-          // markers: true,
           start: "top center",
           end: "bottom center"
         }
@@ -7584,13 +7838,10 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
         attr: {
           startOffset: "-200%"
         },
-        // delay: ,
-        // duration: 4,
         ease: 'none',
         scrollTrigger: {
           trigger: svgAnimationSectionSecond,
           scrub: true,
-          // markers: true,
           start: "top 20%",
           end: "bottom 20%"
         }

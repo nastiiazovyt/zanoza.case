@@ -34,8 +34,6 @@ const svgTitleAnimation = (entries, observer) => {
                 attr: {
                     startOffset: `24%`
                 },
-                // delay: 1,
-                // duration: 8,
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionFirst,
@@ -52,8 +50,6 @@ const svgTitleAnimation = (entries, observer) => {
                 attr: {
                     startOffset: `100%`
                 },
-                // delay: 1,
-                // duration: 8,
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionSecond,
@@ -70,13 +66,10 @@ const svgTitleAnimation = (entries, observer) => {
                 attr: {
                     startOffset: `13%`
                 },
-                // delay: ,
-                // duration: 4,
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionFirst,
                     scrub: true,
-                    // markers: true,
                     start: "top center",
                     end: "bottom center",
                 }
@@ -89,13 +82,10 @@ const svgTitleAnimation = (entries, observer) => {
                 attr: {
                     startOffset: `-200%`
                 },
-                // delay: ,
-                // duration: 4,
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionSecond,
                     scrub: true,
-                    // markers: true,
                     start: "top 20%",
                     end: "bottom 20%",
                 }

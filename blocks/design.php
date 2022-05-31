@@ -104,47 +104,7 @@
                 </svg>
             </div>
         </div>
-        <div class="content__block_2">
-            <div class="content__block_title">Микроанимации</div>
-            <div class="content__block_desc">Проработка микроанимаций — важный процесс,
-                на который стоит уделять внимание, проектируя интерфейс. Мы стараемся делать пользовательский
-                опыт бесшовным и увлекательным.
-            </div>
-            <div class="content__block_cursor-container">
-            <div class="content__block_girls-cursor">
-                <picture class="trail-block">
-                    <source type="image/webp" srcset="assets/images/design/girls-cursor/6.webp">
-                    <img src="assets/images/design/girls-cursor/6.png" title=" " alt=" ">
-                </picture>
-                <picture class="trail-block">
-                    <source type="image/webp" srcset="assets/images/design/girls-cursor/5.webp">
-                    <img src="assets/images/design/girls-cursor/5.png" title=" " alt=" ">
-                </picture>
-                <picture class="trail-block">
-                    <source type="image/webp" srcset="assets/images/design/girls-cursor/4.webp">
-                    <img src="assets/images/design/girls-cursor/4.png" title=" " alt=" ">
-                </picture>
-                <picture class="trail-block">
-                    <source type="image/webp" srcset="assets/images/design/girls-cursor/3.webp">
-                    <img src="assets/images/design/girls-cursor/3.png" title=" " alt=" ">
-                </picture>
-                <picture class="trail-block">
-                    <source type="image/webp" srcset="assets/images/design/girls-cursor/2.webp">
-                    <img src="assets/images/design/girls-cursor/2.png" title=" " alt=" ">
-                </picture>
-                <picture class="trail-block">
-                    <source type="image/webp" srcset="assets/images/design/girls-cursor/1.png">
-                    <img src="assets/images/design/girls-cursor/1.png" title=" " alt=" ">
-                </picture>
-            </div>
-            </div>
-            <div class="content__block_2_bottom">
-                <p>Курсор на главной — это фотографии танцовщиц.</p>
-                <p>При перемещении, мы немного открываем пользователю, скрытые за первой изображения, которые, при
-                    остановке движения мыши, тут же становятся прозрачными. Это добавляет элемент завлечения,
-                    исследования.</p>
-            </div>
-        </div>
+
     </div>
     <div class="parties__container">
         <div class="parties__line">
@@ -170,6 +130,12 @@
             </div>
         </div>
         <div class="parties__line">
+            <div class="parties__line_img">
+                <picture>
+                    <img src="./assets/images/design/parties.animation-min.png" alt="">
+                </picture>
+            </div>
+
             <div class="parties__date">18 июня</div>
             <div class="parties__name">Playboy Party</div>
             <div class="parties__about">

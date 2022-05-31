@@ -6,6 +6,7 @@
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/hero.php' ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/research.php' ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/design.php' ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/development.php' ?>
 </main>
 
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/footer.php' ?>
