@@ -1,1 +1,279 @@
 @use "src/scss/vars" as v;
+
+.stage__title-block_development {
+  margin-bottom: v.dynamic-vw(1920, 3px);
+  @include v.tablet {
+    margin-bottom: v.dynamic-vw(1024, 34px);
+  }
+  @include v.mobile {
+    margin-bottom: v.dynamic-vw(375, 74px);
+  }
+  .stage__block_desc-row {
+    align-items: center;
+    @include v.mobile {
+      align-items: flex-start;
+    }
+  }
+  .stage__desc {
+    margin-left: 0;
+    @include v.mobile {
+      order: 2;
+    }
+  }
+  .stage__title {
+    margin-bottom: v.dynamic-vw(1920, 14px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 34px);
+    }
+    @include v.mobile {
+      margin-bottom: v.dynamic-vw(375, 64px);
+    }
+  }
+  .stage__block_video {
+    order: 1;
+  }
+}
+
+.content__block {
+  &_girls-cursor {
+    position: absolute;
+    top: -60%;
+    left: -18%;
+    width: v.dynamic-vw(1920, 1920px);
+    height: v.dynamic-vw(1920, 1080px);
+    z-index: 1;
+    @include v.tablet {
+      height: v.dynamic-vw(1024, 1366px);
+      width: v.dynamic-vw(1024, 1024px);
+      top: -112%;
+      left: -15%;
+    }
+    @include v.mobile {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: v.dynamic-vw(375, 250px);
+
+    }
+  }
+
+  &_cursor-container {
+    position: relative;
+    width: 100%;
+    height: v.dynamic-vw(1920, 580px);
+    overflow: visible;
+    @include v.tablet {
+      height: v.dynamic-vw(1024, 426px);
+      margin-bottom: v.dynamic-vw(1024, 190px);
+    }
+    @include v.mobile {
+      height: v.dynamic-vw(375, 344px);
+      margin-bottom: v.dynamic-vw(375, 116px);
+    }
+  }
+
+  &_2 {
+    .content__block_desc {
+      @include v.mobile {
+        margin-bottom: v.dynamic-vw(375, 80px);
+      }
+    }
+
+    &_bottom {
+      margin-left: v.dynamic-vw(1920, 597px);
+      max-width: v.dynamic-vw(1920, 683px);
+      margin-bottom: v.dynamic-vw(1920, 206px);
+      width: 100%;
+      position: relative;
+      pointer-events: none;
+      z-index: 15;
+      @include v.tablet {
+        margin-left: v.dynamic-vw(1024, 450px);
+        max-width: v.dynamic-vw(1024, 407px);
+        margin-bottom: v.dynamic-vw(1024, 80px);
+      }
+      @include v.mobile {
+        max-width: unset;
+        margin-left: 0;
+        margin-bottom: v.dynamic-vw(375, 64px);
+      }
+
+      p {
+        &:first-child {
+          margin-bottom: v.dynamic-vw(1920, 24px);
+          font-weight: 500;
+          line-height: 1.3;
+          font-size: v.dynamic-vw(1920, 22px);
+          color: #ffffff;
+          font-family: v.$halvarRegular;
+          @include v.tablet {
+            margin-bottom: v.dynamic-vw(1024, 16px);
+            font-size: v.dynamic-vw(1024, 22px);
+          }
+          @include v.mobile {
+            font-size: v.dynamic-vw(375, 22px);
+            margin-bottom: v.dynamic-vw(375, 16px);
+          }
+        }
+
+        &:last-child {
+          color: #D6D6D6;
+          font-family: v.$ttCommons;
+          font-weight: 300;
+          font-size: v.dynamic-vw(1920, 22px);
+          line-height: 1.3;
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 16px);
+          }
+          @include v.mobile {
+            font-size: v.dynamic-vw(375, 18px);
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.trail-block {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  width: 320px;
+  height: 450px;
+  opacity: 0;
+  transition: transform 96ms linear, opacity 96ms linear;
+  z-index: 0;
+
+  @media (max-width: 1919px) {
+    width: v.dynamic-vw(1920, 320px);
+    height: v.dynamic-vw(1920, 450px);
+  }
+  @media (max-width: 1024px) {
+    width: v.dynamic-vw(1024, 520px);
+    height: v.dynamic-vw(1024, 650px);
+  }
+  @media (max-width: 525px) {
+    width: v.dynamic-vw(375, 255px);
+    height: v.dynamic-vw(375, 358px);
+  }
+
+  &:last-of-type {
+    width: 322px;
+    height: 452px;
+    @media (max-width: 1919px) {
+      width: v.dynamic-vw(1920, 322px);
+      height: v.dynamic-vw(1920, 452px);
+    }
+    @media (max-width: 1024px) {
+      width: v.dynamic-vw(1024, 520px);
+      height: v.dynamic-vw(1024, 650px);
+    }
+    @media (max-width: 525px) {
+      width: v.dynamic-vw(375, 255px);
+      height: v.dynamic-vw(375, 358px);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.stage__section_dev-1 {
+  margin-bottom: v.dynamic-vw(1920, 54px);
+  @include v.tablet {
+    margin-bottom: v.dynamic-vw(1024, 62px);
+  }
+  .stage__section_title-block {
+    margin-bottom: v.dynamic-vw(1920, 132px);
+    max-width: v.dynamic-vw(1920, 561px);
+    position: relative;
+    pointer-events: none;
+    z-index: 15;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 370px);
+      width: 100%;
+      margin-bottom: v.dynamic-vw(1024, 112px);
+    }
+    @include v.mobile {
+      margin-bottom: v.dynamic-vw(375, 174px);
+      max-width: unset;
+    }
+  }
+}
+
+.stage__section_dev-2 {
+  margin-bottom: v.dynamic-vw(1920, 150px);
+  @include v.tablet {
+    margin-bottom: v.dynamic-vw(1024, 100px);
+  }
+  .stage__section_title-block {
+    max-width: v.dynamic-vw(1920, 602px);
+    margin-bottom: v.dynamic-vw(1920, 60px);
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 480px);
+      margin-bottom: v.dynamic-vw(1024, 64px);
+    }
+    @include v.mobile {
+      max-width: unset;
+      margin-bottom: v.dynamic-vw(375, 42px);
+    }
+  }
+}
+
+.load__screen {
+  width: 100%;
+  height: v.dynamic-vw(1920, 720px);
+  border-radius: v.dynamic-vw(1920, 16px);
+  border: 4px solid #4E4E4E;
+  position: relative;
+  z-index: 4;
+  @include v.tablet {
+    height: v.dynamic-vw(1024, 484px);
+    width: v.dynamic-vw(1024, 857px);
+    border-radius: v.dynamic-vw(1024, 16px);
+  }
+  @include v.mobile {
+    margin-bottom: v.dynamic-vw(375, 80px);
+  }
+  &_title {
+    text-align: center;
+    font-size: v.dynamic-vw(1920, 200px);
+    font-weight: 400;
+    font-family: v.$sverdlovsk;
+    line-height: 1.6;
+    color: #ffffff;
+    padding-top: v.dynamic-vw(1920, 166.14px);
+    //padding-bottom: v.dynamic-vw(1920, 221.86px);
+    @include v.tablet {
+      padding-top: v.dynamic-vw(1024, 161px);
+      //padding-bottom: v.dynamic-vw(1024, 157px);
+      font-size: v.dynamic-vw(1024, 100px);
+    }
+    @include v.mobile {
+      padding-top: v.dynamic-vw(375, 55.73px);
+      //padding-bottom: v.dynamic-vw(375, 79.27px);
+      font-size: v.dynamic-vw(375, 30px);
+    }
+  }
+  &_blur {
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    left: 40%;
+    height: 80%;
+    @include v.tablet {
+      top: 10%;
+      left: 20%;
+    }
+    @include v.mobile {
+      width: 50%;
+      top: 10%;
+      left: 35%;
+    }
+  }
+}

@@ -7304,7 +7304,6 @@ window.addEventListener('load', function () {
       }
     };
     var firstRender = true;
-    console.log(trailArray);
     var bounds;
     var breakpoint = window.matchMedia('(min-width:1025px)');
     var hasHover = window.matchMedia('(hover: hover)');
@@ -7549,8 +7548,8 @@ var randomNumber = function randomNumber(min, max) {
 };
 
 window.addEventListener('load', function () {
-  if (document.querySelector('.parties__container')) {
-    var partiesSection = document.querySelector('.parties__container');
+  if (document.querySelector('.parties__line_playboy-party')) {
+    var partiesSection = document.querySelector('.parties__line_playboy-party');
 
     var partiesTrailArray = _toConsumableArray(partiesSection.querySelectorAll('.parties__line_img'));
 
@@ -7596,8 +7595,8 @@ window.addEventListener('load', function () {
 
     partiesSection.addEventListener('pointermove', function (e) {
       var partiesRect = partiesSection.getBoundingClientRect();
-      var px = e.clientX - partiesRect.left - partiesBounds.child.width;
-      var py = e.clientY - partiesRect.top - partiesBounds.child.height - partiesBounds.child.height * 0.5;
+      var px = e.clientX - partiesRect.left - partiesBounds.child.width + partiesBounds.child.width * 1.25;
+      var py = e.clientY - partiesRect.top - partiesBounds.child.height + partiesBounds.child.height * 0.5;
       partiesMousepos = {
         x: px,
         y: py
@@ -7613,14 +7612,13 @@ window.addEventListener('load', function () {
       if (partiesBreakpoint.matches && partiesHasHover.matches) {
         partiesInitialCoords.x = partiesBounds.container.width / 1.5;
         partiesInitialCoords.y = partiesBounds.container.height / 3 - partiesBounds.child.height / 2;
-        partiesInitialCoords.r = 5;
+        partiesInitialCoords.r = -10;
       } else {
         partiesInitialCoords.x = partiesBounds.container.width / 2 - partiesBounds.child.width / 2;
         partiesInitialCoords.y = partiesBounds.container.height / 2 - partiesBounds.child.height / 2;
         partiesInitialCoords.r = 0;
       }
 
-      console.log(partiesInitialCoords.y);
       gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].set(partiesTrailArray, {
         x: function x() {
           return partiesBreakpoint.matches && partiesHasHover.matches ? partiesInitialCoords.x : partiesInitialCoords.x - randomNumber(-20, 20);
@@ -7732,7 +7730,6 @@ window.addEventListener('load', function () {
         child: partiesTrailArray[0].getBoundingClientRect()
       };
       partiesInitialPos();
-      console.log(partiesTrailArray);
 
       if (partiesBreakpoint.matches && matchMedia('(hover: hover)').matches) {
         partiesSection.addEventListener('mouseenter', partiesLoopRender);
@@ -7768,6 +7765,22 @@ var options = {
   rootMargin: '300px 0px -150px 0px',
   threshold: 1.0
 };
+
+var updateLabelsObserverParams = function updateLabelsObserverParams() {
+  switch (true) {
+    case window.matchMedia("(max-width: 375px)").matches:
+      options.rootMargin = '300px 0px -150px 0px';
+      break;
+
+    case window.matchMedia("(max-width: 1024px)").matches:
+      options.rootMargin = '0px 0px -400px 0px';
+      break;
+
+    default:
+      options.rootMargin = '300px 0px -150px 0px';
+  }
+};
+
 var played = false;
 var text1 = document.querySelector('#hero-text-inner1');
 var text2 = document.querySelector('#hero-text-inner2');
@@ -7779,6 +7792,7 @@ var svgAnimationSectionSecond = document.querySelector('.content__block_svg-text
 var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting && !played) {
+      updateLabelsObserverParams();
       console.log('aga');
       played = true;
       document.querySelector('#hero-svg').classList.add('active');
@@ -7794,6 +7808,7 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
         scrollTrigger: {
           trigger: svgAnimationSectionFirst,
           scrub: true,
+          markers: true,
           start: "top center",
           end: "bottom center"
         }
@@ -7809,6 +7824,7 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
         ease: 'none',
         scrollTrigger: {
           trigger: svgAnimationSectionSecond,
+          markers: true,
           scrub: true,
           start: "top 20%",
           end: "bottom 20%"
@@ -7853,7 +7869,7 @@ var svgTitleAnimation = function svgTitleAnimation(entries, observer) {
 };
 
 var observer = new IntersectionObserver(svgTitleAnimation, options);
-observer.observe(document.querySelector('.content__block_text'));
+observer.observe(document.querySelector('.content__block_title'));
 
 /***/ }),
 

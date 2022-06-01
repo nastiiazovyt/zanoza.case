@@ -1,6 +1,6 @@
 <div class="hero__container">
     <div class="hero__container_for-img">
-    <img class="hero__background" src="./assets/images/hero/hero_bg.jpeg" alt="hero-bg">
+    <img class="hero__background" src="./assets/images/hero/hero_girl.jpeg" alt="hero-bg">
     </div>
     <img class="hero__background_blur" src="./assets/images/hero/hero-blur.png" alt="hero-blur">
     <div class="hero__title">

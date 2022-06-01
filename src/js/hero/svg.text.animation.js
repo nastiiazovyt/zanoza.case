@@ -9,6 +9,19 @@ const options = {
     threshold: 1.0
 }
 
+const updateLabelsObserverParams = () => {
+    switch (true) {
+        case window.matchMedia("(max-width: 375px)").matches:
+            options.rootMargin = '300px 0px -150px 0px'
+            break;
+        case window.matchMedia("(max-width: 1024px)").matches:
+            options.rootMargin = '0px 0px -400px 0px'
+            break;
+        default:
+            options.rootMargin = '300px 0px -150px 0px'
+    }
+}
+
 let played = false;
 let text1 = document.querySelector('#hero-text-inner1');
 let text2 = document.querySelector('#hero-text-inner2');
@@ -21,6 +34,7 @@ let svgAnimationSectionSecond = document.querySelector('.content__block_svg-text
 const svgTitleAnimation = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !played) {
+            updateLabelsObserverParams()
             console.log('aga')
             played = true
             document.querySelector('#hero-svg').classList.add('active')
@@ -38,6 +52,7 @@ const svgTitleAnimation = (entries, observer) => {
                 scrollTrigger: {
                     trigger: svgAnimationSectionFirst,
                     scrub: true,
+                    markers: true,
                     start: "top center",
                     end: "bottom center",
                 }
@@ -53,6 +68,7 @@ const svgTitleAnimation = (entries, observer) => {
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionSecond,
+                    markers: true,
                     scrub: true,
                     start: "top 20%",
                     end: "bottom 20%",
@@ -97,6 +113,6 @@ const svgTitleAnimation = (entries, observer) => {
 };
 
 const observer = new IntersectionObserver(svgTitleAnimation, options);
-observer.observe(document.querySelector('.content__block_text'));
+observer.observe(document.querySelector('.content__block_title'));
 
 

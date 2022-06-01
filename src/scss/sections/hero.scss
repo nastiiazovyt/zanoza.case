@@ -50,17 +50,21 @@
 
   &__background {
     position: absolute;
-    top: 0;
+    top: -33%;
     left: 0;
-    height: 100%;
     @include v.tablet {
-      transform: translateX(-25%);
+      transform: translateX(-17%) scale(0.9, 0.9);
+    }
+    @include v.mobile {
+      transform: translateX(-36%) scale(0.6, 0.6);
+      top: -64%;
     }
 
     &_blur {
       position: absolute;
       top: 0;
       left: 0;
+      height: 140%;
       width: 100%;
       z-index: 3;
       pointer-events: none;
@@ -68,7 +72,7 @@
         height: 120%;
       }
       @include v.mobile {
-        height: 100%;
+        height: 120%;
       }
     }
   }

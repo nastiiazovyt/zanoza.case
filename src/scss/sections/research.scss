@@ -168,7 +168,7 @@
         }
         @include v.mobile {
           max-width: unset;
-          margin-bottom: v.dynamic-vw(375, 40px);
+          margin-bottom: v.dynamic-vw(375, 32px);
         }
       }
 
@@ -428,8 +428,8 @@
       }
       @include v.mobile {
         margin-right: 0;
-        margin-left: v.dynamic-vw(375, 108px);
-        max-width: v.dynamic-vw(375, 226px);
+        margin-left: 0;
+        max-width: unset;
         font-size: v.dynamic-vw(375, 16px);
       }
     }

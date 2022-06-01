@@ -1,0 +1,109 @@
+@use "src/scss/vars" as v;
+
+.stage__title-block_seo {
+  .stage__title {
+    margin-bottom: v.dynamic-vw(1920, 60px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 80px);
+    }
+  }
+
+  .stage__block_desc-row {
+    align-items: center;
+    margin-bottom: v.dynamic-vw(1920, 124px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 84px);
+    }
+    @include v.mobile {
+      align-items: flex-start;
+      margin-bottom: v.dynamic-vw(375, 52px);
+    }
+  }
+
+  .stage__desc {
+    margin-left: 0;
+    @include v.mobile {
+      margin-bottom: v.dynamic-vw(375, 37px);
+    }
+    p {
+      font-weight: 300;
+      font-family: v.$ttCommons;
+      font-size: v.dynamic-vw(1920, 22px);
+      line-height: 1.3;
+      color: #D6D6D6;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 22px);
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 22px);
+      }
+      &:first-child {
+        margin-bottom: v.dynamic-vw(1920, 32px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 24px);
+        }
+        @include v.mobile {
+          margin-bottom: v.dynamic-vw(375, 24px);
+        }
+      }
+    }
+  }
+}
+
+.seo_img_container {
+  width: v.dynamic-vw(1920, 1027px);
+  height: v.dynamic-vw(1920, 566px);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: v.dynamic-vw(1920, 140px);
+  @include v.tablet {
+    width: v.dynamic-vw(1024, 857px);
+    height: v.dynamic-vw(1024, 472px);
+    margin-bottom: v.dynamic-vw(1024, 88px);
+    @include v.mobile {
+      width: v.dynamic-vw(375, 335px);
+      height: v.dynamic-vw(375, 230px);
+      margin-bottom: v.dynamic-vw(375, 80px);
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.seo_img {
+height: 100%;
+  width: 100%;
+
+}
+
+.seo_desc {
+  max-width: v.dynamic-vw(1920, 573px);
+  width: 100%;
+  font-family: v.$ttCommons;
+  font-size: v.dynamic-vw(1920, 24px);
+  line-height: 1.3;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: v.dynamic-vw(1290, 111px);
+  margin-left: v.dynamic-vw(1920, 825px);
+  @include v.tablet {
+    font-size: v.dynamic-vw(1024, 22px);
+    margin-bottom: v.dynamic-vw(1024, 100px);
+    max-width: v.dynamic-vw(1024, 407px);
+    margin-left: v.dynamic-vw(1024, 450px);
+  }
+  @include v.mobile {
+    max-width: unset;
+    font-size: v.dynamic-vw(375, 22px);
+    margin-left: 0;
+    margin-bottom: v.dynamic-vw(375, 40px);
+  }
+}

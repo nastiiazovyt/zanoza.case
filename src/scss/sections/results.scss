@@ -1,0 +1,110 @@
+@use "src/scss/vars" as v;
+
+.stage__title-block_results {
+  @include v.tablet {
+    margin-bottom: v.dynamic-vw(1024, 88px);
+  }
+  @include v.mobile {
+    margin-bottom: v.dynamic-vw(375, 56px);
+  }
+  .stage__title {
+    margin-bottom: v.dynamic-vw(1920, 80px);
+    @include v.tablet {
+      margin-bottom: v.dynamic-vw(1024, 80px);
+    }
+    @include v.mobile {
+      margin-bottom: v.dynamic-vw(375, 64px);
+    }
+  }
+  .stage__block_desc-row {
+    align-items: center;
+    @include v.mobile {
+      align-items: flex-start;
+    }
+  }
+  .stage__desc {
+    margin-left: 0;
+    @include v.mobile {
+      order: 2;
+    }
+  }
+  .stage__block_video {
+    @include v.mobile {
+      order: 1;
+      margin-bottom: v.dynamic-vw(375, 26px);
+    }
+  }
+}
+
+.results__text-block {
+  margin-left: v.dynamic-vw(1920, 160px);
+  margin-right: v.dynamic-vw(1920, 307px);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  position: relative;
+  z-index: 5;
+  @include v.tablet {
+    margin-right: 0;
+    margin-left: v.dynamic-vw(1024, 87px);
+  }
+  @include v.mobile {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero__text-block_title {
+    &:before {
+      @include v.mobile {
+        display: none;
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: v.dynamic-vw(1920, 1px);
+    background-color: #ffffff;
+    z-index: 5;
+    opacity: 0.2;
+    @include v.tablet {
+     top: -25%;
+    }
+    @include v.mobile {
+      top: -3%;
+    }
+  }
+  .right-block {
+    padding-right: 0;
+    max-width: v.dynamic-vw(1920, 310px);
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 250px);
+    }
+    @include v.mobile {
+      max-width: v.dynamic-vw(375, 250px);
+    }
+  }
+  .left-block {
+    max-width: v.dynamic-vw(1920, 360px);
+    .hero__text-block_desc {
+      max-width: v.dynamic-vw(375, 240px);
+    }
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 240px);
+    }
+    @include v.mobile {
+      max-width: unset;
+    }
+  }
+  .center-block {
+    .hero__text-block_desc {
+      max-width: v.dynamic-vw(375, 280px);
+    }
+  }
+}

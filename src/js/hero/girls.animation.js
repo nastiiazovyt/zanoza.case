@@ -51,7 +51,6 @@ window.addEventListener('load', () => {
                 },
             };
             let firstRender = true;
-            console.log(trailArray)
             let bounds;
             const breakpoint = window.matchMedia('(min-width:1025px)');
             const hasHover = window.matchMedia('(hover: hover)');

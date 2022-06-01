@@ -118,7 +118,7 @@
                 </svg>
             </div>
         </div>
-        <div class="parties__line">
+        <div class="parties__line parties__line_weekend">
             <div class="parties__date">1 июня</div>
             <div class="parties__name">НЕЗЕМНОЙ Weekend</div>
             <div class="parties__about">
@@ -129,7 +129,7 @@
                 </svg>
             </div>
         </div>
-        <div class="parties__line">
+        <div class="parties__line parties__line_playboy-party">
             <div class="parties__line_img">
                 <picture>
                     <img src="./assets/images/design/parties.animation-min.png" alt="">
@@ -237,27 +237,6 @@
                     женского тела.</p>
             </div>
             <img class="row_4_img" src="./assets/images/design/girls-line-img-2.png" alt="">
-        </div>
-    </div>
-    <div class="stage__section stage__section_5">
-        <div class="stage__section_title-block">
-            <div class="stage__section_number-circle">
-                <div class="stage__section_number">05</div>
-            </div>
-            <div class="stage__section_title">SEO и маркетинг</div>
-            <div class="stage__section_desc">текст текст
-            </div>
-        </div>
-        <div class="stage__section_content-row_5">
-            <div class="row_5_block">
-                <p>Учитывая пожелание клиента — оставили форму с акцией, стилизовав её и сделав менее
-                    навязчивой.</p>
-                <img src="./assets/images/design/seo_img-1.png" alt="">
-            </div>
-            <div class="row_5_block">
-                <p>Для удобства бронирования, отрисовали схему клуба, указав все ключевые локации.</p>
-                <img src="./assets/images/design/seo_img-2.png" alt="">
-            </div>
         </div>
     </div>
 </div>

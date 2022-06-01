@@ -16,8 +16,8 @@ const randomNumber = (min, max) => {
 }
 
 window.addEventListener('load', () => {
-    if (document.querySelector('.parties__container')) {
-        const partiesSection = document.querySelector('.parties__container');
+    if (document.querySelector('.parties__line_playboy-party')) {
+        const partiesSection = document.querySelector('.parties__line_playboy-party');
         const partiesTrailArray = [...partiesSection.querySelectorAll('.parties__line_img')];
         let partiesMousepos = {
             x: 0,
@@ -64,8 +64,8 @@ window.addEventListener('load', () => {
 
         partiesSection.addEventListener('pointermove', e => {
             let partiesRect = partiesSection.getBoundingClientRect();
-            let px = e.clientX - partiesRect.left - partiesBounds.child.width;
-            let py = e.clientY - partiesRect.top - partiesBounds.child.height - (partiesBounds.child.height * 0.5);
+            let px = e.clientX - partiesRect.left - partiesBounds.child.width + partiesBounds.child.width * 1.25;
+            let py = e.clientY - partiesRect.top - partiesBounds.child.height + partiesBounds.child.height * 0.5;
             partiesMousepos = {
                 x: px,
                 y: py,
@@ -82,13 +82,12 @@ window.addEventListener('load', () => {
             if (partiesBreakpoint.matches && partiesHasHover.matches) {
                 partiesInitialCoords.x = partiesBounds.container.width / 1.5
                 partiesInitialCoords.y = partiesBounds.container.height / 3 - partiesBounds.child.height / 2
-                partiesInitialCoords.r = 5
+                partiesInitialCoords.r = -10
             } else {
                 partiesInitialCoords.x = partiesBounds.container.width / 2 - partiesBounds.child.width / 2
                 partiesInitialCoords.y = partiesBounds.container.height / 2 - partiesBounds.child.height / 2
                 partiesInitialCoords.r = 0
             }
-            console.log(partiesInitialCoords.y)
             gsap.set(partiesTrailArray, {
                 x: () => partiesBreakpoint.matches && partiesHasHover.matches ? partiesInitialCoords.x : partiesInitialCoords.x - randomNumber(-20, 20),
                 y: () => partiesBreakpoint.matches && partiesHasHover.matches ? partiesInitialCoords.y : partiesInitialCoords.y - randomNumber(-40, 40),
@@ -197,7 +196,6 @@ window.addEventListener('load', () => {
                 child: partiesTrailArray[0].getBoundingClientRect()
             }
             partiesInitialPos()
-            console.log(partiesTrailArray)
             if (partiesBreakpoint.matches && matchMedia('(hover: hover)').matches) {
                 partiesSection.addEventListener('mouseenter', partiesLoopRender)
                 partiesSection.addEventListener('mouseleave', partiesStopCycle)
