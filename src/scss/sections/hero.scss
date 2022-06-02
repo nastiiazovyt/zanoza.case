@@ -19,18 +19,18 @@
       top: 0;
       left: 0;
       overflow: hidden;
-      width: v.dynamic-vw(1920, 1905px);
+      width: 100%;
       padding: v.dynamic-vw(1920, 342px) v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 181px) v.dynamic-vw(1920, 100px);
       //height: v.dynamic-vw(1920, 1080px);
       height: 100%;
       @include v.tablet {
         height: v.dynamic-vw(1024, 1396px);
         padding: v.dynamic-vw(1024, 403px) v.dynamic-vw(1024, 40px) v.dynamic-vw(1024, 170px) v.dynamic-vw(1024, 40px);
-        width: v.dynamic-vw(1024, 1024px);
+        width: 100%;
       }
       @include v.mobile {
         height: v.dynamic-vw(375, 1238px);
-        width: v.dynamic-vw(375, 375px);
+        width: 100%;
         padding: v.dynamic-vw(375, 299px) v.dynamic-vw(375, 35px) v.dynamic-vw(375, 118px) v.dynamic-vw(375, 35px);
       }
     }
@@ -49,15 +49,22 @@
   }
 
   &__background {
+    width: 100%;
+    height: auto;
     position: absolute;
     top: -33%;
     left: 0;
     @include v.tablet {
-      transform: translateX(-17%) scale(0.9, 0.9);
+      transform: scale(0.9, 0.9);
+      left: -38%;
+      width: unset;
+      height: unset;
     }
     @include v.mobile {
       transform: translateX(-36%) scale(0.6, 0.6);
       top: -64%;
+      width: unset;
+      height: unset;
     }
 
     &_blur {

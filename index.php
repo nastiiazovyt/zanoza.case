@@ -9,6 +9,7 @@
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/development.php' ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/SEO.php' ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/results.php' ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/parties blyat.php' ?>
 </main>
 
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/blocks/footer.php' ?>
