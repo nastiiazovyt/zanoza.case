@@ -106,153 +106,98 @@
         </div>
 
     </div>
+    <section id="parties"
+             data-animation-parent="parties"
+             data-trigger-offset="top bottom"
+             class="parties-wrapper vh100">
+        <div class="container">
+            <div class="parties">
+                <hr>
+                <ul class="parties-list">
+                    <li>
+                        <div class="grid-container parties-list--item">
+                            <div class="parties-list--date">21 мая</div>
+                            <div class="parties-list--info">
 
-<!--    <section id="parties"-->
-<!--             data-animation-parent="parties"-->
-<!--             data-trigger-offset="top bottom"-->
-<!--             class="parties-wrapper vh100">-->
-<!--        <div class="container">-->
-<!--            <div class="parties">-->
-<!--                <h2 class="template-title" data-animation="clipTop">-->
-<!--                    <span class="halvar-text">Посещай</span>-->
-<!--                    <span class="apoc-text">тематические</span>-->
-<!--                    <span class="halvar-text">вечеринки</span>-->
-<!--                </h2>-->
-<!--                <hr>-->
-<!--                <ul class="parties-list">-->
-<!--                    <li>-->
-<!--                        <div class="grid-container parties-list--item">-->
-<!--                            <div class="parties-list--date">21 мая</div>-->
-<!--                            <div class="parties-list--info">-->
-<!--                                <h3 class="parties-list--name">Тропические Ночи</h3>-->
-<!--                                <!--                            <div class="link-button parties-list-link">-->-->
-<!--                                <!--                                <span>Подробнее</span>-->-->
-<!--                                <!--                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"-->-->
-<!--                                <!--                                     xmlns="http://www.w3.org/2000/svg">-->-->
-<!--                                <!--                                    <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"-->-->
-<!--                                <!--                                          stroke="#FF3D54"-->-->
-<!--                                <!--                                          stroke-width="2"/>-->-->
-<!--                                <!--                                </svg>-->-->
-<!--                                <!--                            </div>-->-->
-<!--                            </div>-->
-<!--                            <hr>-->
-<!--                            <div class="parties-list--img">-->
-<!--                                <picture>-->
-<!--                                    <img src="./assets/images/design/parties.animation-min.png" alt=" ">-->
-<!--                                </picture>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="grid-container parties-list--item">-->
-<!--                            <div class="parties-list--date">1 июня</div>-->
-<!--                            <div class="parties-list--info">-->
-<!--                                <h3 class="parties-list--name">НЕЗЕМНОЙ Weekend</h3>-->
-<!--                                <!--                            <div class="link-button parties-list-link">-->-->
-<!--                                <!--                                <span>Подробнее</span>-->-->
-<!--                                <!--                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"-->-->
-<!--                                <!--                                     xmlns="http://www.w3.org/2000/svg">-->-->
-<!--                                <!--                                    <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"-->-->
-<!--                                <!--                                          stroke="#FF3D54"-->-->
-<!--                                <!--                                          stroke-width="2"/>-->-->
-<!--                                <!--                                </svg>-->-->
-<!--                                <!--                            </div>-->-->
-<!--                            </div>-->
-<!--                            <hr>-->
-<!--                            <div class="parties-list--img">-->
-<!--                                <picture>-->
-<!--                                    <img src="./assets/images/design/parties.animation-min.png" alt=" ">-->
-<!--                                </picture>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="grid-container parties-list--item">-->
-<!--                            <div class="parties-list--date">18 июня</div>-->
-<!--                            <div class="parties-list--info">-->
-<!--                                <h3 class="parties-list--name">Playboy Party</h3>-->
-<!--                                <!--                            <div class="link-button parties-list-link">-->-->
-<!--                                <!--                                <span>Подробнее</span>-->-->
-<!--                                <!--                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"-->-->
-<!--                                <!--                                     xmlns="http://www.w3.org/2000/svg">-->-->
-<!--                                <!--                                    <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"-->-->
-<!--                                <!--                                          stroke="#FF3D54"-->-->
-<!--                                <!--                                          stroke-width="2"/>-->-->
-<!--                                <!--                                </svg>-->-->
-<!--                                <!--                            </div>-->-->
-<!--                            </div>-->
-<!--                            <hr>-->
-<!--                            <div class="parties-list--img">-->
-<!--                                <picture>-->
-<!--                                    <img src="./assets/images/design/parties.animation-min.png" alt=" ">-->
-<!--                                </picture>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--                <div class="grid-container parties-button">-->
-<!--                    <a href="/" class="link-button">-->
-<!--                        <span>уже было</span>-->
-<!--                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                            <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"-->
-<!--                                  stroke="#FF3D54"-->
-<!--                                  stroke-width="2"/>-->
-<!--                        </svg>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-
-        <div class="parties__container">
-        <div class="parties__line">
-            <div class="parties__date">21 мая</div>
-            <div class="parties__name">Тропические Ночи</div>
-            <div class="parties__about">
-                <span>Подробнее</span>
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
-                          stroke="#FF3D54" stroke-width="1.79422"/>
-                </svg>
+                            </div>
+                            <div class="parties-list--name">Тропические Ночи</div>
+                            <div class="link-button parties-list-link">
+                                <span>Подробнее</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"
+                                          stroke="#FF3D54"
+                                          stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <hr>
+                            <div class="parties-list--img">
+                                <picture>
+                                    <img src="./assets/images/parties%20blyat/3.jpeg" alt=" ">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="grid-container parties-list--item">
+                            <div class="parties-list--date">1 июня</div>
+                            <div class="parties-list--info">
+                            </div>
+                            <div class="parties-list--name">НЕЗЕМНОЙ Weekend</div>
+                            <div class="link-button parties-list-link">
+                                <span>Подробнее</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"
+                                          stroke="#FF3D54"
+                                          stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <hr>
+                            <div class="parties-list--img">
+                                <picture>
+                                    <img src="./assets/images/parties%20blyat/2.jpeg" alt=" ">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="grid-container parties-list--item">
+                            <div class="parties-list--date">18 июня</div>
+                            <div class="parties-list--info">
+                            </div>
+                            <div class="parties-list--name">Playboy Party</div>
+                            <div class="link-button parties-list-link">
+                                <span>Подробнее</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"
+                                          stroke="#FF3D54"
+                                          stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <hr>
+                            <div class="parties-list--img">
+                                <picture>
+                                    <img src="./assets/images/parties%20blyat/1.jpeg" alt=" ">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="grid-container parties-button">
+                    <a href="/" class="link-button">
+                        <span>уже было</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.75391 18.9941L17.004 7.744M17.004 7.744V18.505M17.004 7.744H6.24304"
+                                  stroke="#FF3D54"
+                                  stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="parties__line parties__line_weekend">
-            <div class="parties__date">1 июня</div>
-            <div class="parties__name">НЕЗЕМНОЙ Weekend</div>
-            <div class="parties__about">
-                <span>Подробнее</span>
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
-                          stroke="#FF3D54" stroke-width="1.79422"/>
-                </svg>
-            </div>
-        </div>
-        <div class="parties__line parties__line_playboy-party">
-            <div class="parties__line_img">
-                <picture>
-                    <img src="./assets/images/design/parties.animation-min.png" alt="">
-                </picture>
-            </div>
-
-            <div class="parties__date">18 июня</div>
-            <div class="parties__name">Playboy Party</div>
-            <div class="parties__about">
-                <span>Подробнее</span>
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.10071 0.96582L11.1933 11.0584M11.1933 11.0584V1.40463M11.1933 11.0584H1.53952"
-                          stroke="#FF3D54" stroke-width="1.79422"/>
-                </svg>
-            </div>
-        </div>
-        <div class="parties__about">
-            <span>Уже было</span>
-            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.44397 11.1992L11.5366 1.10661M11.5366 1.10661V10.7604M11.5366 1.10661H1.88278"
-                      stroke="#FF3D54" stroke-width="1.79422"/>
-            </svg>
-        </div>
-    </div>
+    </section>
     <div class="stage__section stage__section_3">
         <div class="stage__section_title-block stage__section_3_title-block">
             <div class="stage__section_number-circle">

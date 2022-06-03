@@ -8,18 +8,27 @@
   @include v.mobile {
     margin-bottom: v.dynamic-vw(375, 74px);
   }
+
   .stage__block_desc-row {
     align-items: center;
     @include v.mobile {
       align-items: flex-start;
     }
   }
+
   .stage__desc {
+    max-width: v.dynamic-vw(1920, 775px);
+    width: 100%;
     margin-left: 0;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 570px);
+    }
     @include v.mobile {
+      max-width: unset;
       order: 2;
     }
   }
+
   .stage__title {
     margin-bottom: v.dynamic-vw(1920, 14px);
     @include v.tablet {
@@ -29,6 +38,7 @@
       margin-bottom: v.dynamic-vw(375, 64px);
     }
   }
+
   .stage__block_video {
     order: 1;
   }
@@ -184,10 +194,12 @@
 }
 
 .stage__section_dev-1 {
+  position: relative;
   margin-bottom: v.dynamic-vw(1920, 54px);
   @include v.tablet {
     margin-bottom: v.dynamic-vw(1024, 62px);
   }
+
   .stage__section_title-block {
     margin-bottom: v.dynamic-vw(1920, 132px);
     max-width: v.dynamic-vw(1920, 561px);
@@ -195,7 +207,7 @@
     pointer-events: none;
     z-index: 15;
     @include v.tablet {
-      max-width: v.dynamic-vw(1024, 370px);
+      max-width: v.dynamic-vw(1024, 390px);
       width: 100%;
       margin-bottom: v.dynamic-vw(1024, 112px);
     }
@@ -207,10 +219,13 @@
 }
 
 .stage__section_dev-2 {
+  position: relative;
+  z-index: 10;
   margin-bottom: v.dynamic-vw(1920, 150px);
   @include v.tablet {
     margin-bottom: v.dynamic-vw(1024, 100px);
   }
+
   .stage__section_title-block {
     max-width: v.dynamic-vw(1920, 602px);
     margin-bottom: v.dynamic-vw(1920, 60px);
@@ -231,7 +246,8 @@
   border-radius: v.dynamic-vw(1920, 16px);
   border: 4px solid #4E4E4E;
   position: relative;
-  z-index: 4;
+  background-color: #111111;
+  z-index: 10;
   @include v.tablet {
     height: v.dynamic-vw(1024, 484px);
     width: v.dynamic-vw(1024, 857px);
@@ -240,6 +256,7 @@
   @include v.mobile {
     margin-bottom: v.dynamic-vw(375, 80px);
   }
+
   &_title {
     text-align: center;
     font-size: v.dynamic-vw(1920, 200px);
@@ -260,6 +277,7 @@
       font-size: v.dynamic-vw(375, 30px);
     }
   }
+
   &_blur {
     position: absolute;
     z-index: 3;

@@ -29,7 +29,7 @@
         width: 100%;
       }
       @include v.mobile {
-        height: v.dynamic-vw(375, 1238px);
+        height: v.dynamic-vw(375, 1260px);
         width: 100%;
         padding: v.dynamic-vw(375, 299px) v.dynamic-vw(375, 35px) v.dynamic-vw(375, 118px) v.dynamic-vw(375, 35px);
       }
@@ -55,16 +55,14 @@
     top: -33%;
     left: 0;
     @include v.tablet {
-      transform: scale(0.9, 0.9);
-      left: -38%;
-      width: unset;
-      height: unset;
+      transform: scale(1.7);
+      left: 14%;
+      top: 18%;
     }
     @include v.mobile {
-      transform: translateX(-36%) scale(0.6, 0.6);
-      top: -64%;
-      width: unset;
-      height: unset;
+      transform: scale(3);
+      top: 30%;
+      left: 20%;
     }
 
     &_blur {

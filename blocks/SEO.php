@@ -20,12 +20,14 @@
             </video>
         </div>
     </div>
+    <img class="body__blur_6" src="./assets/images/blurs/blur_6.png" alt="">
 </div>
 <div class="seo_img_container">
     <picture>
         <img class="seo_img" src="./assets/images/SEO/SEO.graf.png" alt="">
     </picture>
 </div>
+
 <div class="stage__section stage__section_5">
     <div class="seo_desc">Сделали сайт не только для СЕО, но и для людей, красивый, приятный, атмосферный. Человек проникается атмосферой еще до похода в клуб, ему понятно как будет проходить его визит, гость заочно знаком с девушками.</div>
     <div class="stage__section_content-row_5">

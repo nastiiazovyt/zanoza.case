@@ -52,7 +52,6 @@ const svgTitleAnimationDesktop = (entries, observerDesktop) => {
                 scrollTrigger: {
                     trigger: svgAnimationSectionFirst,
                     scrub: true,
-                    markers: true,
                     start: "top 60%",
                     end: "bottom 60%",
                 }
@@ -68,7 +67,6 @@ const svgTitleAnimationDesktop = (entries, observerDesktop) => {
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionSecond,
-                    markers: true,
                     scrub: true,
                     start: "top 20%",
                     end: "bottom 20%",

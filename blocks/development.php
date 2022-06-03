@@ -22,6 +22,7 @@
     </div>
 </div>
 <div class="stage__section stage__section_dev-1">
+    <img class="body__blur_5" src="./assets/images/blurs/blur_5.png" alt="">
     <div class="stage__section_title-block">
         <div class="stage__section_number-circle">
             <div class="stage__section_number">01</div>

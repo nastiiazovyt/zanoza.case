@@ -1,7 +1,10 @@
 @use "src/scss/vars" as v;
 
 .stage__title-block_seo {
+  position: relative;
   .stage__title {
+    position: relative;
+    z-index: 10;
     margin-bottom: v.dynamic-vw(1920, 60px);
     @include v.tablet {
       margin-bottom: v.dynamic-vw(1024, 80px);
@@ -13,6 +16,8 @@
     margin-bottom: v.dynamic-vw(1920, 124px);
     @include v.tablet {
       margin-bottom: v.dynamic-vw(1024, 84px);
+      position: relative;
+      z-index: 10;
     }
     @include v.mobile {
       align-items: flex-start;
@@ -22,8 +27,12 @@
 
   .stage__desc {
     margin-left: 0;
+    @include v.tablet {
+      max-width: v.dynamic-vw(1024, 560px);
+    }
     @include v.mobile {
       margin-bottom: v.dynamic-vw(375, 37px);
+      max-width: unset;
     }
     p {
       font-weight: 300;
@@ -51,6 +60,8 @@
 }
 
 .seo_img_container {
+  position: relative;
+  z-index: 10;
   width: v.dynamic-vw(1920, 1027px);
   height: v.dynamic-vw(1920, 566px);
   position: relative;
@@ -107,3 +118,4 @@ height: 100%;
     margin-bottom: v.dynamic-vw(375, 40px);
   }
 }
+
