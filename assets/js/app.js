@@ -7905,7 +7905,6 @@ var svgTitleAnimationTablet = function svgTitleAnimationTablet(entries, observer
         scrollTrigger: {
           trigger: svgAnimationSectionFirst,
           scrub: true,
-          markers: true,
           start: "top 75%",
           end: "bottom 75%"
         }
@@ -7921,7 +7920,6 @@ var svgTitleAnimationTablet = function svgTitleAnimationTablet(entries, observer
         ease: 'none',
         scrollTrigger: {
           trigger: svgAnimationSectionSecond,
-          markers: true,
           scrub: true,
           start: "top 20%",
           end: "bottom 20%"

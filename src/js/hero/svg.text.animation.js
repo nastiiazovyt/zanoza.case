@@ -133,7 +133,6 @@ const svgTitleAnimationTablet = (entries, observerTablet) => {
                 scrollTrigger: {
                     trigger: svgAnimationSectionFirst,
                     scrub: true,
-                    markers: true,
                     start: "top 75%",
                     end: "bottom 75%",
                 }
@@ -149,7 +148,6 @@ const svgTitleAnimationTablet = (entries, observerTablet) => {
                 ease: 'none',
                 scrollTrigger: {
                     trigger: svgAnimationSectionSecond,
-                    markers: true,
                     scrub: true,
                     start: "top 20%",
                     end: "bottom 20%",
