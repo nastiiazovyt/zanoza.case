@@ -4,6 +4,9 @@ const videoCircle = document.querySelector('.circle_white');
 let r = videoCircle.getAttribute('r');
 let c = Math.PI * (r * 2);
 const videoWrapper = document.querySelector('.stage__block_video')
+const videoStaticWrapper = document.querySelector('.stage__block_video-wrapper')
+const replayClick = document.querySelector('.replay-button')
+const videoCross = document.querySelector('.video-cross')
 
 const videoPlayer = () => {
     if (video.paused === false) {
@@ -15,6 +18,7 @@ const videoPlayer = () => {
         videoButton.classList.add('den4ik-button_hidden')
         video.style.transform = 'scale(1.1, 1.1)'
         console.log('slaziet')
+        replayClick.classList.add('hidden')
     }
 }
 
@@ -29,26 +33,40 @@ const progressLoop = () => {
 const replayVideo = () => {
     console.log('end')
     video.style.transform = 'scale(1, 1)'
-    // добавить кнопочку реплай
+    replayClick.classList.remove('hidden')
+    videoButton.classList.add('den4ik-button_hidden')
 
 }
 
 const videoVisible = () => {
-    if (-325 >= (video.getBoundingClientRect().y)) {
-        console.log('можно запускать функцию которая уводит видео в угол')
-        videoWrapper.classList.add('fixed')
-    } else {
-        console.log('возвращать видео обратно')
-        // videoWrapper.classList.remove('fixed')
-    }
+    let timerId = setInterval(() => {
+        console.log(videoStaticWrapper.getBoundingClientRect().y)
+        if (-325 >= (videoStaticWrapper.getBoundingClientRect().y)) {
+            console.log('можно запускать функцию которая уводит видео в угол')
+            videoWrapper.classList.add('fixed')
+            videoCross.classList.add('fixed')
+        } else {
+            console.log('возвращать видео обратно')
+            videoWrapper.classList.remove('fixed')
+            videoCross.classList.remove('fixed')
+        }
+        const videoCloser = () => {
+            video.pause();
+            videoWrapper.classList.remove('fixed')
+            videoCross.classList.remove('fixed')
+            video.currentTime = 0
+            videoButton.classList.remove('den4ik-button_hidden')
+            clearInterval(timerId)
+        }
+        videoCross.addEventListener('click', videoCloser)
+    }, 100)
 }
-
 
 video.addEventListener('timeupdate', progressLoop);
 video.addEventListener('click', videoPlayer);
 videoButton.addEventListener('click', videoPlayer);
 video.addEventListener('ended', replayVideo);
-video.addEventListener('timeupdate', videoVisible)
+video.addEventListener('click', videoVisible);
 
 
 

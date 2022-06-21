@@ -459,7 +459,7 @@
       align-items: flex-start;
     }
   }
-  .stage__block_video {
+  .stage__block_video-wrapper {
     margin-bottom: v.dynamic-vw(1920, 40px);
     @include v.tablet {
       margin-bottom: v.dynamic-vw(1024, 32px);

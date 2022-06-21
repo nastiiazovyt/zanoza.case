@@ -8059,6 +8059,9 @@ var videoCircle = document.querySelector('.circle_white');
 var r = videoCircle.getAttribute('r');
 var c = Math.PI * (r * 2);
 var videoWrapper = document.querySelector('.stage__block_video');
+var videoStaticWrapper = document.querySelector('.stage__block_video-wrapper');
+var replayClick = document.querySelector('.replay-button');
+var videoCross = document.querySelector('.video-cross');
 
 var videoPlayer = function videoPlayer() {
   if (video.paused === false) {
@@ -8070,6 +8073,7 @@ var videoPlayer = function videoPlayer() {
     videoButton.classList.add('den4ik-button_hidden');
     video.style.transform = 'scale(1.1, 1.1)';
     console.log('slaziet');
+    replayClick.classList.add('hidden');
   }
 };
 
@@ -8081,23 +8085,43 @@ var progressLoop = function progressLoop() {
 
 var replayVideo = function replayVideo() {
   console.log('end');
-  video.style.transform = 'scale(1, 1)'; // добавить кнопочку реплай
+  video.style.transform = 'scale(1, 1)';
+  replayClick.classList.remove('hidden');
+  videoButton.classList.add('den4ik-button_hidden');
 };
 
 var videoVisible = function videoVisible() {
-  if (-325 >= video.getBoundingClientRect().y) {
-    console.log('можно запускать функцию которая уводит видео в угол');
-    videoWrapper.classList.add('fixed');
-  } else {
-    console.log('возвращать видео обратно'); // videoWrapper.classList.remove('fixed')
-  }
+  var timerId = setInterval(function () {
+    console.log(videoStaticWrapper.getBoundingClientRect().y);
+
+    if (-325 >= videoStaticWrapper.getBoundingClientRect().y) {
+      console.log('можно запускать функцию которая уводит видео в угол');
+      videoWrapper.classList.add('fixed');
+      videoCross.classList.add('fixed');
+    } else {
+      console.log('возвращать видео обратно');
+      videoWrapper.classList.remove('fixed');
+      videoCross.classList.remove('fixed');
+    }
+
+    var videoCloser = function videoCloser() {
+      video.pause();
+      videoWrapper.classList.remove('fixed');
+      videoCross.classList.remove('fixed');
+      video.currentTime = 0;
+      videoButton.classList.remove('den4ik-button_hidden');
+      clearInterval(timerId);
+    };
+
+    videoCross.addEventListener('click', videoCloser);
+  }, 100);
 };
 
 video.addEventListener('timeupdate', progressLoop);
 video.addEventListener('click', videoPlayer);
 videoButton.addEventListener('click', videoPlayer);
 video.addEventListener('ended', replayVideo);
-video.addEventListener('timeupdate', videoVisible);
+video.addEventListener('click', videoVisible);
 
 /***/ }),
 

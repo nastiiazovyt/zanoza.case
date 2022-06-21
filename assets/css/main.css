@@ -1279,11 +1279,34 @@ a {
   width: 11.4583333333vw;
   height: 11.4583333333vw;
   position: relative;
+  z-index: 9999;
 }
 .stage__block_video.fixed {
   position: fixed;
   top: 100px;
   right: 100px;
+}
+.stage__block_video-wrapper {
+  display: block;
+  width: 11.4583333333vw;
+  height: 11.4583333333vw;
+}
+@media (max-width: 1024px) {
+  .stage__block_video-wrapper {
+    width: 17.578125vw;
+    height: 17.578125vw;
+  }
+}
+@media (max-width: 525px) {
+  .stage__block_video-wrapper {
+    width: 48vw;
+    height: 48vw;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: 0;
+    margin-bottom: 8.5333333333vw;
+  }
 }
 @media (max-width: 1024px) {
   .stage__block_video {
@@ -3283,6 +3306,44 @@ a {
   }
 }
 
+.replay-button {
+  opacity: 0.8;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 2.03125vw;
+  height: 2.6041666667vw;
+  z-index: 10;
+  stroke: #FFFFFF;
+  pointer-events: none;
+}
+.replay-button.hidden {
+  opacity: 0;
+}
+
+.video-cross {
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: -15%;
+  left: 85%;
+  stroke: #FFFFFF;
+  width: 2.03125vw;
+  height: 2.6041666667vw;
+  z-index: 10;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.video-cross.fixed {
+  opacity: 0.8;
+}
+
 .parties-list--img picture:before {
   position: absolute;
   pointer-events: none;
@@ -3896,16 +3957,16 @@ a {
             align-items: flex-start;
   }
 }
-.stage__section_research_3 .stage__block_video {
+.stage__section_research_3 .stage__block_video-wrapper {
   margin-bottom: 2.0833333333vw;
 }
 @media (max-width: 1024px) {
-  .stage__section_research_3 .stage__block_video {
+  .stage__section_research_3 .stage__block_video-wrapper {
     margin-bottom: 3.125vw;
   }
 }
 @media (max-width: 525px) {
-  .stage__section_research_3 .stage__block_video {
+  .stage__section_research_3 .stage__block_video-wrapper {
     margin-left: 0;
     margin-bottom: 8.5333333333vw;
   }

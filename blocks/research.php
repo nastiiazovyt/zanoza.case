@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="stage__section stage__section_3 stage__section_research_3">
-            <img class="body__blur_1" src="./assets/images/blurs/blur_1.png" alt="">
+        <img class="body__blur_1" src="./assets/images/blurs/blur_1.png" alt="">
         <div class="stage__section_title-block">
             <div class="stage__section_number-circle">
                 <div class="stage__section_number">03</div>
@@ -48,13 +48,23 @@
         <div class="stage__section_pic-text-row">
             <div class="stage__block_video-wrapper">
                 <div class="stage__block_video">
+                    <svg class="video-cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+<!--                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>-->
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
                     <svg class="progress__svg" width="200" height="200" viewBox="0 0 200 200">
-                        <circle class="circle_white" r="98" cx="100" cy="100" fill="transparent" stroke-dasharray="615.44"
+                        <circle class="circle_white" r="98" cx="100" cy="100" fill="transparent"
+                                stroke-dasharray="615.44"
                                 stroke-dashoffset="615.44" stroke-width="4"></circle>
                     </svg>
                     <svg class="den4ik-button" width="39" height="50" viewBox="0 0 39 50" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.6" d="M0 50V0L39 25L0 50Z" fill="white"/>
+                    </svg>
+                    <svg class="replay-button hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                         fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
                     </svg>
                     <video class="den4ik" width="216" height="216">
                         <!--                    <source src="./assets/videos/telegram.circles/denchik-slaziet-original_IVDLoEeU.webm">-->
@@ -82,7 +92,8 @@
             <div class="stage__section_desc">
                 <p>Нам очень помогло, что в команде есть разработчик
                     - социолог с опытом проведения подобных исследований.</p>
-                <p>Его и проектного менеджер мы и направили в клуб для проверки наших гипотез, предварительно собрав чек-лист с задачами.</p>
+                <p>Его и проектного менеджер мы и направили в клуб для проверки наших гипотез, предварительно собрав
+                    чек-лист с задачами.</p>
             </div>
         </div>
         <div class="stage__section_pic-text-row">
@@ -100,16 +111,19 @@
             </div>
         </div>
         <div class="stage__section_text-row">
-            <p>Ребята выяснили, что у мужчин есть подобные факторы стеснения, а среди тех, кто посещает— большинство делает  это ради общения в приятной компании девушек.</p>
+            <p>Ребята выяснили, что у мужчин есть подобные факторы стеснения, а среди тех, кто посещает— большинство
+                делает это ради общения в приятной компании девушек.</p>
             <p>Посещая стриптиз клуб — человек приходит к человеку,
-                рассматривая время, проведенное в заведении, на стыке эстетического удовольствия и душевного комфорта.</p>
+                рассматривая время, проведенное в заведении, на стыке эстетического удовольствия
+                и душевного комфорта.</p>
         </div>
     </div>
     <div class="stage__section stage__section_6">
         <div class="stage__section_title-block">
             <div class="stage__section_title">В это время разработчики</div>
             <div class="stage__section_desc">
-                оценили ситуацию через доступные средства аналитики и зафиксировали статистику по сайту на текущий момент.
+                оценили ситуацию через доступные средства аналитики и зафиксировали статистику по сайту на текущий
+                момент.
             </div>
         </div>
         <div class="stage__section_text-row">
@@ -119,7 +133,8 @@
                 <p>Текущий сайт существовал с 2014 года и за 7 лет сформировал хороший SEO</p>
             </div>
             <div class="stage__section_text-row_right">
-                <p>Основная аудитория — мужчины, 35-55 лет, преимущественно посещают клуб не ради стриптиза, а для общения с девушками</p>
+                <p>Основная аудитория — мужчины, 35-55 лет, преимущественно посещают клуб не ради стриптиза,
+                    а для общения с девушками</p>
                 <p>Подтвердили, что клуб — интересное место с индивидуальным подходом</p>
             </div>
         </div>

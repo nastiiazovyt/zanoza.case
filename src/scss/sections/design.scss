@@ -146,6 +146,7 @@
       width: v.dynamic-vw(1920, 220px);
       height: v.dynamic-vw(1920, 220px);
       position: relative;
+      z-index: 9999;
       //@media (min-width: 1921px) {
       //  width: 220px;
       //  height: 220px;
@@ -155,6 +156,24 @@
         top: 100px;
         right: 100px;
       }
+
+      &-wrapper {
+        display: block;
+        width: v.dynamic-vw(1920, 220px);
+        height: v.dynamic-vw(1920, 220px);
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 180px);
+          height: v.dynamic-vw(1024, 180px);
+        }
+        @include v.mobile {
+          width: v.dynamic-vw(375, 180px);
+          height: v.dynamic-vw(375, 180px);
+          order: 1;
+          margin-left: 0;
+          margin-bottom: v.dynamic-vw(375, 32px);
+        }
+      }
+
       @include v.tablet {
         width: v.dynamic-vw(1024, 180px);
         height: v.dynamic-vw(1024, 180px);
@@ -1830,6 +1849,39 @@
       width: v.dynamic-vw(375, 24px);
       height: v.dynamic-vw(375, 24px);
     }
+  }
+}
+
+.replay-button {
+  opacity: 0.8;
+  transition: .2s ease-in-out;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: v.dynamic-vw(1920, 39px);
+  height: v.dynamic-vw(1920, 50px);
+  z-index: 10;
+  stroke: #FFFFFF;
+  pointer-events: none;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.video-cross {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  position: absolute;
+  top: -15%;
+  left: 85%;
+  stroke: #FFFFFF;
+  width: v.dynamic-vw(1920, 39px);
+  height: v.dynamic-vw(1920, 50px);
+  z-index: 10;
+  transform: rotate(45deg);
+  &.fixed {
+    opacity: 0.8;
   }
 }
 
