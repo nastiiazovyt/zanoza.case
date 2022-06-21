@@ -46,6 +46,6 @@ mix.browserSync({
     watch: true,
     host: 'localhost',
     //Домен на локальном сервере
-    proxy: 'zanoza.case'
+    proxy: 'localhost:8888'
 });
 

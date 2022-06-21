@@ -8055,9 +8055,10 @@ observerMob.observe(document.querySelector('.content__block_title'));
 
 var video = document.querySelector('.den4ik');
 var videoButton = document.querySelector('.den4ik-button');
-var pink = document.querySelector('.circle_white');
-var r = pink.getAttribute('r');
+var videoCircle = document.querySelector('.circle_white');
+var r = videoCircle.getAttribute('r');
 var c = Math.PI * (r * 2);
+var videoWrapper = document.querySelector('.stage__block_video');
 
 var videoPlayer = function videoPlayer() {
   if (video.paused === false) {
@@ -8067,19 +8068,36 @@ var videoPlayer = function videoPlayer() {
   } else {
     video.play();
     videoButton.classList.add('den4ik-button_hidden');
+    video.style.transform = 'scale(1.1, 1.1)';
     console.log('slaziet');
   }
 };
 
 var progressLoop = function progressLoop() {
   setInterval(function () {
-    pink.style.strokeDashoffset = String((100 - Math.round(video.currentTime / video.duration * 100)) / 100 * c);
+    videoCircle.style.strokeDashoffset = String((100 - Math.round(video.currentTime / video.duration * 100)) / 100 * c);
   });
+};
+
+var replayVideo = function replayVideo() {
+  console.log('end');
+  video.style.transform = 'scale(1, 1)'; // добавить кнопочку реплай
+};
+
+var videoVisible = function videoVisible() {
+  if (-325 >= video.getBoundingClientRect().y) {
+    console.log('можно запускать функцию которая уводит видео в угол');
+    videoWrapper.classList.add('fixed');
+  } else {
+    console.log('возвращать видео обратно'); // videoWrapper.classList.remove('fixed')
+  }
 };
 
 video.addEventListener('timeupdate', progressLoop);
 video.addEventListener('click', videoPlayer);
 videoButton.addEventListener('click', videoPlayer);
+video.addEventListener('ended', replayVideo);
+video.addEventListener('timeupdate', videoVisible);
 
 /***/ }),
 
