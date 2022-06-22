@@ -8117,11 +8117,20 @@ var videoVisible = function videoVisible() {
   }, 100);
 };
 
+var videoClickFunctions = function videoClickFunctions() {
+  videoPlayer();
+  videoVisible();
+};
+
+var videoButtonFunctions = function videoButtonFunctions() {
+  videoPlayer();
+  videoVisible();
+};
+
 video.addEventListener('timeupdate', progressLoop);
-video.addEventListener('click', videoPlayer);
-videoButton.addEventListener('click', videoPlayer);
 video.addEventListener('ended', replayVideo);
-video.addEventListener('click', videoVisible);
+video.addEventListener('click', videoClickFunctions);
+videoButton.addEventListener('click', videoButtonFunctions);
 
 /***/ }),
 

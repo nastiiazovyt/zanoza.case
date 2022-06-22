@@ -62,11 +62,20 @@ const videoVisible = () => {
     }, 100)
 }
 
+const videoClickFunctions = () => {
+    videoPlayer ()
+    videoVisible ()
+}
+
+const videoButtonFunctions = () => {
+    videoPlayer ()
+    videoVisible ()
+}
+
 video.addEventListener('timeupdate', progressLoop);
-video.addEventListener('click', videoPlayer);
-videoButton.addEventListener('click', videoPlayer);
 video.addEventListener('ended', replayVideo);
-video.addEventListener('click', videoVisible);
+video.addEventListener('click', videoClickFunctions);
+videoButton.addEventListener('click', videoButtonFunctions);
 
 
 
