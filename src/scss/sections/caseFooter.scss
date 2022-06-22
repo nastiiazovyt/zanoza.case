@@ -1,0 +1,47 @@
+@use "src/scss/vars" as v;
+
+.case-footer {
+  background: #242424;
+
+  &-container {
+    padding: v.dynamic-vw(1920, 45px) 0 v.dynamic-vw(1920, 25px) 0;
+    margin-bottom: v.dynamic-vw(1920, 65px);
+    @media (min-width: 1921px) {
+      margin-bottom: 65px;
+      padding: 45px 0 25px 0;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+
+    span {
+      &:nth-child(1) {
+        color: #FF585D;
+        font-size: v.dynamic-vw(1920, 80px);
+        font-weight: 400;
+        line-height: 1;
+        font-family: v.$Helvetica;
+        filter: drop-shadow(0 0 10px #FF585D);
+        margin-bottom: v.dynamic-vw(1920, 16px);
+        @media (min-width: 1921px) {
+          margin-bottom: 16px;
+          font-size: 80px;
+        }
+      }
+
+      &:nth-child(2) {
+        color: #FFFFFF;
+        font-family: v.$Helvetica;
+        font-size: v.dynamic-vw(1920, 20px);
+        font-weight: 500;
+        line-height: 1.4;
+        @media (min-width: 1921px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+$Helvetica: 'HelveticaNeueCyr';
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/subset-HelveticaNeueCyr-Medium.woff2') format('woff2'),
+  url('../fonts/subset-HelveticaNeueCyr-Medium.woff') format('woff'),
+  url('../fonts/subset-HelveticaNeueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/subset-HelveticaNeueCyr-Roman.woff2') format('woff2'),
+  url('../fonts/subset-HelveticaNeueCyr-Roman.woff') format('woff'),
+  url('../fonts/subset-HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

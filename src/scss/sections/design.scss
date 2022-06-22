@@ -2,7 +2,7 @@
 
 .stage {
   &__container {
-    padding: 0 v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 177px) v.dynamic-vw(1920, 100px);
+    padding: 0 v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 100px) v.dynamic-vw(1920, 100px);
     overflow-x: hidden;
     //@media (min-width: 1921px) {
     //  padding: 0 100px 177px 100px;
@@ -824,13 +824,11 @@
   }
 }
 
-.circle {
-  &_white {
-    stroke: #ffffff;
-    stroke-width: v.dynamic-vw(1920, 2px);
-    transition: stroke-dashoffset 0.4s linear;
-    opacity: 0.8;
-  }
+.circle_white {
+  stroke: #ffffff;
+  stroke-width: v.dynamic-vw(1920, 2px);
+  transition: stroke-dashoffset 0.4s linear;
+  opacity: 0.8;
 }
 
 .progress__svg {
@@ -861,414 +859,415 @@
   }
 }
 
-.row_1 {
-  &_left-block {
-    max-width: v.dynamic-vw(1920, 448px);
-    width: 100%;
-    @include v.tablet {
-      max-width: v.dynamic-vw(1024, 448px);
-    }
-    @include v.mobile {
-      max-width: unset;
-      margin-bottom: v.dynamic-vw(375, 40px);
-    }
-
-    p {
-      font-size: v.dynamic-vw(1920, 22px);
-      font-weight: 300;
-      font-family: v.$ttCommons;
-      color: #D6D6D6;
-      line-height: 1.3;
+.row {
+  &_1 {
+    &_left-block {
+      max-width: v.dynamic-vw(1920, 448px);
+      width: 100%;
       @include v.tablet {
-        font-size: v.dynamic-vw(1024, 22px);
+        max-width: v.dynamic-vw(1024, 448px);
       }
       @include v.mobile {
-        font-size: v.dynamic-vw(375, 22px);
+        max-width: unset;
+        margin-bottom: v.dynamic-vw(375, 40px);
       }
 
-      &:first-child {
+      p {
+        font-size: v.dynamic-vw(1920, 22px);
+        font-weight: 300;
+        font-family: v.$ttCommons;
+        color: #D6D6D6;
+        line-height: 1.3;
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 22px);
+        }
+        @include v.mobile {
+          font-size: v.dynamic-vw(375, 22px);
+        }
+
+        &:first-child {
+          margin-bottom: v.dynamic-vw(1920, 40px);
+          @include v.tablet {
+            margin-bottom: v.dynamic-vw(1024, 32px);
+          }
+          @include v.mobile {
+            margin-bottom: v.dynamic-vw(375, 28px);
+            font-size: v.dynamic-vw(375, 20px);
+          }
+        }
+      }
+    }
+
+    &_right-block {
+      max-width: v.dynamic-vw(1920, 375px);
+      margin-right: v.dynamic-vw(1920, 30px);
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 306px);
+        margin-right: 0;
+      }
+      @include v.mobile {
+        max-width: unset;
+        margin-right: 0;
+      }
+
+      p {
+        font-size: v.dynamic-vw(1920, 18px);
+        font-weight: 300;
+        font-family: v.$ttCommons;
+        color: #ACACAC;
+        line-height: 1.3;
         margin-bottom: v.dynamic-vw(1920, 40px);
         @include v.tablet {
-          margin-bottom: v.dynamic-vw(1024, 32px);
+          font-size: v.dynamic-vw(1024, 16px);
+          margin-bottom: v.dynamic-vw(1024, 35px);
         }
         @include v.mobile {
           margin-bottom: v.dynamic-vw(375, 28px);
-          font-size: v.dynamic-vw(375, 20px);
+          font-size: v.dynamic-vw(375, 18px);
         }
       }
-    }
-  }
 
-  &_right-block {
-    max-width: v.dynamic-vw(1920, 375px);
-    margin-right: v.dynamic-vw(1920, 30px);
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    @include v.tablet {
-      max-width: v.dynamic-vw(1024, 306px);
-      margin-right: 0;
-    }
-    @include v.mobile {
-      max-width: unset;
-      margin-right: 0;
-    }
-
-    p {
-      font-size: v.dynamic-vw(1920, 18px);
-      font-weight: 300;
-      font-family: v.$ttCommons;
-      color: #ACACAC;
-      line-height: 1.3;
-      margin-bottom: v.dynamic-vw(1920, 40px);
-      @include v.tablet {
-        font-size: v.dynamic-vw(1024, 16px);
-        margin-bottom: v.dynamic-vw(1024, 35px);
-      }
-      @include v.mobile {
-        margin-bottom: v.dynamic-vw(375, 28px);
-        font-size: v.dynamic-vw(375, 18px);
-      }
-    }
-
-    &_img {
-      border-radius: v.dynamic-vw(1920, 18px);
-      width: v.dynamic-vw(1920, 375px);
-      height: v.dynamic-vw(1920, 377px);
-      box-shadow: 0 0 80px rgba(239, 46, 68, 0.2);
-      @include v.tablet {
-        width: v.dynamic-vw(1024, 308px);
-        height: v.dynamic-vw(1024, 309px);
-        border-radius: v.dynamic-vw(1024, 18px);
-        box-shadow: 0 0 65.7067px rgba(239, 46, 68, 0.2);
-      }
-      @include v.mobile {
-        border-radius: v.dynamic-vw(375, 18px);
-        width: v.dynamic-vw(375, 335px);
-        height: v.dynamic-vw(375, 336.79px);
-        box-shadow: 0px 0px 71.4667px rgba(239, 46, 68, 0.2);
-      }
-    }
-  }
-}
-
-.row_2 {
-  &_left-block {
-    max-width: v.dynamic-vw(1920, 524px);
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    @include v.tablet {
-      max-width: v.dynamic-vw(1024, 450px);
-    }
-    @include v.mobile {
-      max-width: unset;
-      margin-bottom: v.dynamic-vw(375, 56px);
-    }
-
-    p {
-      font-weight: 300;
-      font-family: v.$ttCommons;
-      color: #ffffff;
-      font-size: v.dynamic-vw(1920, 24px);
-      line-height: 1.3;
-      margin-bottom: v.dynamic-vw(1920, 40px);
-      @include v.tablet {
-        font-size: v.dynamic-vw(1024, 20px);
-        margin-bottom: v.dynamic-vw(1024, 40px);
-      }
-      @include v.mobile {
-        font-size: v.dynamic-vw(375, 20px);
-        margin-bottom: v.dynamic-vw(375, 28px);
-      }
-    }
-
-    img {
-      width: v.dynamic-vw(1920, 456px);
-      height: v.dynamic-vw(1920, 294px);
-      @include v.tablet {
-        height: v.dynamic-vw(1024, 290px);
-        width: v.dynamic-vw(1024, 450px);
-      }
-      @include v.mobile {
-        width: v.dynamic-vw(375, 335px);
-        height: v.dynamic-vw(375, 260px);
-      }
-    }
-  }
-
-  &_right-block {
-    max-width: v.dynamic-vw(1920, 501px);
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    @include v.tablet {
-      max-width: v.dynamic-vw(1024, 307px);
-    }
-    @include v.mobile {
-      max-width: unset;
-    }
-
-    p {
-      font-weight: 300;
-      font-family: v.$ttCommons;
-      color: #ffffff;
-      font-size: v.dynamic-vw(1920, 24px);
-      line-height: 1.3;
-      margin-bottom: v.dynamic-vw(1920, 40px);
-      @include v.tablet {
-        font-size: v.dynamic-vw(1024, 20px);
-        margin-bottom: v.dynamic-vw(1024, 40px);
-      }
-      @include v.mobile {
-        font-size: v.dynamic-vw(375, 20px);
-        margin-bottom: v.dynamic-vw(375, 28px);
-      }
-    }
-
-    &_img {
-      width: v.dynamic-vw(1920, 294px);
-      height: v.dynamic-vw(1920, 368px);
-      @include v.tablet {
-        height: v.dynamic-vw(1024, 384px);
-        width: v.dynamic-vw(1024, 307px);
-      }
-      @include v.mobile {
-        width: v.dynamic-vw(375, 335px);
-        height: v.dynamic-vw(375, 420px);
-      }
-    }
-  }
-}
-
-.row_3 {
-  &_title {
-    color: #ffffff;
-    margin-bottom: v.dynamic-vw(1920, 60px);
-    font-size: v.dynamic-vw(1920, 60px);
-    line-height: 1.2;
-    @include v.tablet {
-      margin-bottom: v.dynamic-vw(1024, 64px);
-      font-size: v.dynamic-vw(1024, 48px);
-      margin-left: v.dynamic-vw(1024, -87px);
-    }
-    @include v.mobile {
-      margin-bottom: v.dynamic-vw(375, 40px);
-      font-size: v.dynamic-vw(375, 28px);
-      margin-left: 0;
-    }
-
-    span {
-      &:first-child {
-        font-family: v.$halvarRegular;
-        font-weight: 500;
-      }
-
-      &:last-child {
-        font-family: v.$apocLC;
-        font-weight: 400;
-        font-style: italic;
-      }
-    }
-  }
-
-  &_photos {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: v.dynamic-vw(1920, 1280px);
-    @include v.tablet {
-      max-width: v.dynamic-vw(1024, 857px);
-    }
-    @include v.mobile {
-      flex-flow: column nowrap;
-      max-width: unset;
-    }
-
-    img {
-      width: v.dynamic-vw(1920, 600px);
-      @include v.tablet {
-        width: v.dynamic-vw(1024, 402px);
-      }
-      @include v.mobile {
-        width: v.dynamic-vw(375, 335px);
-        margin-bottom: v.dynamic-vw(375, 20px);
-      }
-    }
-  }
-}
-
-.row_4 {
-  &_title-block {
-    max-width: v.dynamic-vw(1920, 670px);
-    width: 100%;
-    margin-bottom: v.dynamic-vw(1920, 60px);
-    @include v.tablet {
-      max-width: v.dynamic-vw(1024, 649px);
-      margin-bottom: v.dynamic-vw(1024, 40px);
-    }
-    @include v.mobile {
-      max-width: unset;
-      margin-bottom: v.dynamic-vw(375, 40px);
-    }
-  }
-
-  &_title {
-    margin-bottom: v.dynamic-vw(1920, 24px);
-    font-weight: 500;
-    font-family: v.$halvarRegular;
-    font-size: v.dynamic-vw(1920, 20px);
-    line-height: 1;
-    color: #ffffff;
-    @include v.tablet {
-      margin-bottom: v.dynamic-vw(1024, 16px);
-      font-size: v.dynamic-vw(1024, 20px);
-    }
-    @include v.mobile {
-      font-size: v.dynamic-vw(375, 20px);
-      margin-bottom: v.dynamic-vw(375, 16px);
-    }
-  }
-
-  &_desc {
-    p {
-      font-weight: 300;
-      font-size: v.dynamic-vw(1920, 24px);
-      line-height: 1.3;
-      color: #ffffff;
-      font-family: v.$ttCommons;
-      @include v.tablet {
-        font-size: v.dynamic-vw(1024, 22px);
-      }
-      @include v.mobile {
-        font-size: v.dynamic-vw(375, 22px);
-      }
-
-      &:first-child {
-        margin-bottom: v.dynamic-vw(1920, 16px);
-        color: #ACACAC;
-        font-size: v.dynamic-vw(1920, 18px);
+      &_img {
+        border-radius: v.dynamic-vw(1920, 18px);
+        width: v.dynamic-vw(1920, 375px);
+        height: v.dynamic-vw(1920, 377px);
+        box-shadow: 0 0 80px rgba(239, 46, 68, 0.2);
         @include v.tablet {
-          font-size: v.dynamic-vw(1024, 16px);
-          margin-bottom: v.dynamic-vw(1024, 16px);
+          width: v.dynamic-vw(1024, 308px);
+          height: v.dynamic-vw(1024, 309px);
+          border-radius: v.dynamic-vw(1024, 18px);
+          box-shadow: 0 0 65.7067px rgba(239, 46, 68, 0.2);
         }
         @include v.mobile {
-          font-size: v.dynamic-vw(375, 16px);
-          margin-bottom: v.dynamic-vw(375, 16px);
+          border-radius: v.dynamic-vw(375, 18px);
+          width: v.dynamic-vw(375, 335px);
+          height: v.dynamic-vw(375, 336.79px);
+          box-shadow: 0px 0px 71.4667px rgba(239, 46, 68, 0.2);
+        }
+      }
+    }
+  }
+  &_2 {
+    &_left-block {
+      max-width: v.dynamic-vw(1920, 524px);
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 450px);
+      }
+      @include v.mobile {
+        max-width: unset;
+        margin-bottom: v.dynamic-vw(375, 56px);
+      }
+
+      p {
+        font-weight: 300;
+        font-family: v.$ttCommons;
+        color: #ffffff;
+        font-size: v.dynamic-vw(1920, 24px);
+        line-height: 1.3;
+        margin-bottom: v.dynamic-vw(1920, 40px);
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 20px);
+          margin-bottom: v.dynamic-vw(1024, 40px);
+        }
+        @include v.mobile {
+          font-size: v.dynamic-vw(375, 20px);
+          margin-bottom: v.dynamic-vw(375, 28px);
+        }
+      }
+
+      img {
+        width: v.dynamic-vw(1920, 456px);
+        height: v.dynamic-vw(1920, 294px);
+        @include v.tablet {
+          height: v.dynamic-vw(1024, 290px);
+          width: v.dynamic-vw(1024, 450px);
+        }
+        @include v.mobile {
+          width: v.dynamic-vw(375, 335px);
+          height: v.dynamic-vw(375, 260px);
         }
       }
     }
 
-    &_2 {
+    &_right-block {
+      max-width: v.dynamic-vw(1920, 501px);
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 307px);
+      }
+      @include v.mobile {
+        max-width: unset;
+      }
+
+      p {
+        font-weight: 300;
+        font-family: v.$ttCommons;
+        color: #ffffff;
+        font-size: v.dynamic-vw(1920, 24px);
+        line-height: 1.3;
+        margin-bottom: v.dynamic-vw(1920, 40px);
+        @include v.tablet {
+          font-size: v.dynamic-vw(1024, 20px);
+          margin-bottom: v.dynamic-vw(1024, 40px);
+        }
+        @include v.mobile {
+          font-size: v.dynamic-vw(375, 20px);
+          margin-bottom: v.dynamic-vw(375, 28px);
+        }
+      }
+
+      &_img {
+        width: v.dynamic-vw(1920, 294px);
+        height: v.dynamic-vw(1920, 368px);
+        @include v.tablet {
+          height: v.dynamic-vw(1024, 384px);
+          width: v.dynamic-vw(1024, 307px);
+        }
+        @include v.mobile {
+          width: v.dynamic-vw(375, 335px);
+          height: v.dynamic-vw(375, 420px);
+        }
+      }
+    }
+  }
+  &_3 {
+    &_title {
+      color: #ffffff;
+      margin-bottom: v.dynamic-vw(1920, 60px);
+      font-size: v.dynamic-vw(1920, 60px);
+      line-height: 1.2;
+      @include v.tablet {
+        margin-bottom: v.dynamic-vw(1024, 64px);
+        font-size: v.dynamic-vw(1024, 48px);
+        margin-left: v.dynamic-vw(1024, -87px);
+      }
+      @include v.mobile {
+        margin-bottom: v.dynamic-vw(375, 40px);
+        font-size: v.dynamic-vw(375, 28px);
+        margin-left: 0;
+      }
+
+      span {
+        &:first-child {
+          font-family: v.$halvarRegular;
+          font-weight: 500;
+        }
+
+        &:last-child {
+          font-family: v.$apocLC;
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+    }
+
+    &_photos {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: v.dynamic-vw(1920, 1280px);
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 857px);
+      }
+      @include v.mobile {
+        flex-flow: column nowrap;
+        max-width: unset;
+      }
+
+      img {
+        &:nth-child(2) {
+          transform: rotateY(180deg);
+        }
+        width: v.dynamic-vw(1920, 600px);
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 402px);
+        }
+        @include v.mobile {
+          width: v.dynamic-vw(375, 335px);
+          margin-bottom: v.dynamic-vw(375, 20px);
+        }
+      }
+    }
+  }
+  &_4 {
+    &_title-block {
+      max-width: v.dynamic-vw(1920, 670px);
+      width: 100%;
+      margin-bottom: v.dynamic-vw(1920, 60px);
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 649px);
+        margin-bottom: v.dynamic-vw(1024, 40px);
+      }
+      @include v.mobile {
+        max-width: unset;
+        margin-bottom: v.dynamic-vw(375, 40px);
+      }
+    }
+
+    &_title {
+      margin-bottom: v.dynamic-vw(1920, 24px);
+      font-weight: 500;
+      font-family: v.$halvarRegular;
+      font-size: v.dynamic-vw(1920, 20px);
+      line-height: 1;
+      color: #ffffff;
+      @include v.tablet {
+        margin-bottom: v.dynamic-vw(1024, 16px);
+        font-size: v.dynamic-vw(1024, 20px);
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 20px);
+        margin-bottom: v.dynamic-vw(375, 16px);
+      }
+    }
+
+    &_desc {
       p {
         font-weight: 300;
         font-size: v.dynamic-vw(1920, 24px);
         line-height: 1.3;
         color: #ffffff;
         font-family: v.$ttCommons;
-        margin-bottom: v.dynamic-vw(1920, 60px);
-        width: v.dynamic-vw(1920, 640px);
         @include v.tablet {
-          width: v.dynamic-vw(1024, 651px);
-          margin-bottom: v.dynamic-vw(1024, 40px);
           font-size: v.dynamic-vw(1024, 22px);
         }
         @include v.mobile {
-          margin-bottom: v.dynamic-vw(375, 40px);
-          width: unset;
           font-size: v.dynamic-vw(375, 22px);
         }
+
+        &:first-child {
+          margin-bottom: v.dynamic-vw(1920, 16px);
+          color: #ACACAC;
+          font-size: v.dynamic-vw(1920, 18px);
+          @include v.tablet {
+            font-size: v.dynamic-vw(1024, 16px);
+            margin-bottom: v.dynamic-vw(1024, 16px);
+          }
+          @include v.mobile {
+            font-size: v.dynamic-vw(375, 16px);
+            margin-bottom: v.dynamic-vw(375, 16px);
+          }
+        }
       }
-    }
-  }
 
-  &_img {
-    width: v.dynamic-vw(1920, 1280px);
-
-    &-1 {
-      margin-bottom: v.dynamic-vw(1920, 150px);
-      @include v.tablet {
-        margin-bottom: v.dynamic-vw(1024, 64px);
-      }
-      @include v.mobile {
-        margin-bottom: v.dynamic-vw(375, 56px);
-      }
-    }
-
-    @include v.tablet {
-      width: v.dynamic-vw(1024, 857px);
-    }
-    @include v.mobile {
-      width: v.dynamic-vw(375, 335px);
-    }
-  }
-}
-
-.row_5 {
-  &_block {
-    max-width: v.dynamic-vw(1920, 600px);
-    width: 100%;
-
-    &:nth-child(2) {
-      p {
-        max-width: v.dynamic-vw(1024, 275px);
-        @include v.mobile {
-          max-width: unset;
+      &_2 {
+        p {
+          font-weight: 300;
+          font-size: v.dynamic-vw(1920, 24px);
+          line-height: 1.3;
+          color: #ffffff;
+          font-family: v.$ttCommons;
+          margin-bottom: v.dynamic-vw(1920, 60px);
+          width: v.dynamic-vw(1920, 640px);
+          @include v.tablet {
+            width: v.dynamic-vw(1024, 651px);
+            margin-bottom: v.dynamic-vw(1024, 40px);
+            font-size: v.dynamic-vw(1024, 22px);
+          }
+          @include v.mobile {
+            margin-bottom: v.dynamic-vw(375, 40px);
+            width: unset;
+            font-size: v.dynamic-vw(375, 22px);
+          }
         }
       }
     }
 
-    &:first-child {
-      @include v.tablet {
-        margin-right: v.dynamic-vw(1024, 43px);
-      }
-      @include v.mobile {
-        margin-right: 0;
-        margin-bottom: v.dynamic-vw(375, 40px);
-      }
-    }
+    &_img {
+      width: v.dynamic-vw(1920, 1280px);
 
-    @include v.tablet {
-      max-width: unset;
-    }
-    @include v.mobile {
-      max-width: unset;
-    }
-
-    p {
-      max-width: v.dynamic-vw(1920, 520px);
-      width: 100%;
-      color: #ffffff;
-      font-weight: 300;
-      font-size: v.dynamic-vw(1920, 24px);
-      font-family: v.$ttCommons;
-      line-height: 1.3;
-      margin-bottom: v.dynamic-vw(1920, 32px);
-      @include v.tablet {
-        max-width: v.dynamic-vw(1024, 354px);
-        margin-bottom: v.dynamic-vw(1024, 40px);
-        font-size: v.dynamic-vw(1024, 20px);
+      &-1 {
+        margin-bottom: v.dynamic-vw(1920, 150px);
+        @include v.tablet {
+          margin-bottom: v.dynamic-vw(1024, 64px);
+        }
+        @include v.mobile {
+          margin-bottom: v.dynamic-vw(375, 56px);
+        }
       }
-      @include v.mobile {
-        max-width: unset;
-        font-size: v.dynamic-vw(375, 20px);
-        margin-bottom: v.dynamic-vw(375, 32px);
-      }
-    }
 
-    img {
-      width: v.dynamic-vw(1920, 600px);
       @include v.tablet {
-        width: v.dynamic-vw(1024, 407px);
+        width: v.dynamic-vw(1024, 857px);
       }
       @include v.mobile {
         width: v.dynamic-vw(375, 335px);
+      }
+    }
+  }
+  &_5 {
+    &_block {
+      max-width: v.dynamic-vw(1920, 600px);
+      width: 100%;
+
+      &:nth-child(2) {
+        p {
+          max-width: v.dynamic-vw(1024, 275px);
+          @include v.mobile {
+            max-width: unset;
+          }
+        }
+      }
+
+      &:first-child {
+        @include v.tablet {
+          margin-right: v.dynamic-vw(1024, 43px);
+        }
+        @include v.mobile {
+          margin-right: 0;
+          margin-bottom: v.dynamic-vw(375, 40px);
+        }
+      }
+
+      @include v.tablet {
+        max-width: unset;
+      }
+      @include v.mobile {
+        max-width: unset;
+      }
+
+      p {
+        max-width: v.dynamic-vw(1920, 520px);
+        width: 100%;
+        color: #ffffff;
+        font-weight: 300;
+        font-size: v.dynamic-vw(1920, 24px);
+        font-family: v.$ttCommons;
+        line-height: 1.3;
+        margin-bottom: v.dynamic-vw(1920, 32px);
+        @include v.tablet {
+          max-width: v.dynamic-vw(1024, 354px);
+          margin-bottom: v.dynamic-vw(1024, 40px);
+          font-size: v.dynamic-vw(1024, 20px);
+        }
+        @include v.mobile {
+          max-width: unset;
+          font-size: v.dynamic-vw(375, 20px);
+          margin-bottom: v.dynamic-vw(375, 32px);
+        }
+      }
+
+      img {
+        width: v.dynamic-vw(1920, 600px);
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 407px);
+        }
+        @include v.mobile {
+          width: v.dynamic-vw(375, 335px);
+        }
       }
     }
   }
@@ -1375,10 +1374,6 @@
     }
   }
 
-}
-
-.sanya-pravo {
-  transform: rotateY(180deg);
 }
 
 .content__block {
@@ -1520,56 +1515,6 @@
   }
 }
 
-#hero-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-  pointer-events: none;
-  opacity: 0;
-  @include v.tablet {
-    transform-origin: 15% center;
-    transform: scale(1.5);
-    left: 0;
-    max-width: v.dynamic-vw(1024, 629px);
-  }
-
-  &.active {
-    opacity: 1;
-  }
-
-  #hero-text-inner1, #hero-text-inner2 {
-    font-family: $badRussian;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 180px;
-    line-height: 1.3;
-    text-transform: uppercase;
-    font-feature-settings: 'salt' on;
-    fill: white;
-  }
-}
-
-#hero-path1 {
-  @include v.tablet {
-    max-width: v.dynamic-vw(1024, 629px);
-  }
-}
-
-#hero-path2 {
-  @include v.tablet {
-    max-width: v.dynamic-vw(1024, 629px);
-  }
-}
-
-#parties {
-  margin-bottom: v.dynamic-vw(1920, 180px);
-  @include v.tablet {
-    margin-bottom: v.dynamic-vw(1024, 160px);
-    min-height: auto;
-  }
-}
-
 .parties {
   position: relative;
 
@@ -1583,150 +1528,167 @@
     z-index: 2;
     position: relative;
   }
-}
 
-.parties-button {
-  margin-top: v.dynamic-vw(1920, 72px);
-  @include v.tablet {
-    margin-top: v.dynamic-vw(1024, 31px);
-  }
-  @include v.mobile {
-    margin-top: v.dynamic-vw(375, 80px);
-  }
-
-  .link-button {
-    justify-self: flex-start;
-    color: #ffffff;
-    justify-content: flex-start;
-    font-weight: 500;
-    font-family: v.$halvarRegular;
-    line-height: 1.2;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 5;
-    max-width: v.dynamic-vw(1920, 170px);
-    width: 100%;
+  &-button {
+    margin-top: v.dynamic-vw(1920, 72px);
     @include v.tablet {
-      max-width: v.dynamic-vw(1024, 190px);
+      margin-top: v.dynamic-vw(1024, 31px);
     }
     @include v.mobile {
-      max-width: v.dynamic-vw(375, 140px);
-      margin-left: auto;
-      margin-right: auto;
-      justify-self: unset;
-      justify-content: unset;
+      margin-top: v.dynamic-vw(375, 80px);
     }
 
-    svg {
-      width: v.dynamic-vw(1920, 24px);
-      height: v.dynamic-vw(1920, 24px);
-      @include v.tablet {
-        width: v.dynamic-vw(1024, 24px);
-        height: v.dynamic-vw(1024, 24px);
-      }
-      @include v.mobile {
-        width: v.dynamic-vw(375, 24px);
-        height: v.dynamic-vw(375, 24px);
-      }
-    }
-
-    span {
-      margin-right: v.dynamic-vw(1920, 5px);
-      font-size: v.dynamic-vw(1920, 16px);
-      @include v.tablet {
-        margin-right: v.dynamic-vw(1024, 5px);
-        font-size: v.dynamic-vw(1024, 16px);
-      }
-      @include v.mobile {
-        margin-right: v.dynamic-vw(375, 5px);
-        font-size: v.dynamic-vw(375, 16px);
-      }
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    svg {
-      transform: rotate(45deg);
-    }
-  }
-
-  svg {
-    transform: rotate(0deg);
-  }
-}
-
-.parties-list {
-  hr {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    transform: scale(0, 1);
-  }
-
-  &--img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: v.dynamic-vw(1920, 330px);
-    height: v.dynamic-vw(1920, 482px);
-    pointer-events: none;
-    transition: opacity .2s ease-in-out;
-    opacity: 0;
-    @include v.tablet {
-      height: v.dynamic-vw(1024, 411px);
-      width: v.dynamic-vw(1024, 287px);
-    }
-    @media (hover: none) {
-      transition: none;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-    }
-
-    picture {
+    .link-button {
+      justify-self: flex-start;
+      color: #ffffff;
+      justify-content: flex-start;
+      font-weight: 500;
+      font-family: v.$halvarRegular;
+      line-height: 1.2;
+      text-transform: uppercase;
       position: relative;
+      z-index: 5;
+      max-width: v.dynamic-vw(1920, 170px);
       width: 100%;
-      height: 100%;
-      display: block;
-
-      &:before {
-        @extend %before-gradient;
-        background: radial-gradient(69.16% 69.16% at 50% 50%, rgba(0, 0, 0, 0) 60.94%, var(--bg-color) 100%);
+      @include v.tablet {
+        max-width: v.dynamic-vw(1024, 190px);
+      }
+      @include v.mobile {
+        max-width: v.dynamic-vw(375, 140px);
+        margin-left: auto;
+        margin-right: auto;
+        justify-self: unset;
+        justify-content: unset;
       }
 
-      img {
-        @include v.centerImg;
+      svg {
+        width: v.dynamic-vw(1920, 24px);
+        height: v.dynamic-vw(1920, 24px);
+        @include v.tablet {
+          width: v.dynamic-vw(1024, 24px);
+          height: v.dynamic-vw(1024, 24px);
+        }
+        @include v.mobile {
+          width: v.dynamic-vw(375, 24px);
+          height: v.dynamic-vw(375, 24px);
+        }
       }
+
+      span {
+        margin-right: v.dynamic-vw(1920, 5px);
+        font-size: v.dynamic-vw(1920, 16px);
+        @include v.tablet {
+          margin-right: v.dynamic-vw(1024, 5px);
+          font-size: v.dynamic-vw(1024, 16px);
+        }
+        @include v.mobile {
+          margin-right: v.dynamic-vw(375, 5px);
+          font-size: v.dynamic-vw(375, 16px);
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    svg {
+      transform: rotate(0deg);
     }
   }
 
-  &--item {
-    padding: v.dynamic-vw(1920, 86.12px) v.dynamic-vw(1920, 21.46px) v.dynamic-vw(1920, 58.31px) v.dynamic-vw(1920, 21.46px);
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    @include v.tablet {
-      padding: v.dynamic-vw(1024, 69px) v.dynamic-vw(1024, 8px) v.dynamic-vw(1024, 54px) v.dynamic-vw(1024, 20px);
+  &-list {
+    hr {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      transform: scale(0, 1);
     }
-    @include v.mobile {
-      flex-flow: column nowrap;
-      text-align: center;
-      justify-content: center;
+
+    &--img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: v.dynamic-vw(1920, 330px);
+      height: v.dynamic-vw(1920, 482px);
+      pointer-events: none;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+      @include v.tablet {
+        height: v.dynamic-vw(1024, 411px);
+        width: v.dynamic-vw(1024, 287px);
+      }
+      @media (hover: none) {
+        transition: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+
+      picture {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        &:before {
+          @extend %before-gradient;
+          background: radial-gradient(69.16% 69.16% at 50% 50%, rgba(0, 0, 0, 0) 60.94%, var(--bg-color) 100%);
+        }
+
+        img {
+          @include v.centerImg;
+        }
+      }
+    }
+
+    &--item {
+      padding: v.dynamic-vw(1920, 86.12px) v.dynamic-vw(1920, 21.46px) v.dynamic-vw(1920, 58.31px) v.dynamic-vw(1920, 21.46px);
+      display: flex;
+      flex-flow: row nowrap;
       align-items: center;
-      padding: v.dynamic-vw(375, 28px) v.dynamic-vw(375, 58px);
-    }
+      justify-content: space-between;
+      position: relative;
+      @include v.tablet {
+        padding: v.dynamic-vw(1024, 69px) v.dynamic-vw(1024, 8px) v.dynamic-vw(1024, 54px) v.dynamic-vw(1024, 20px);
+      }
+      @include v.mobile {
+        flex-flow: column nowrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: v.dynamic-vw(375, 28px) v.dynamic-vw(375, 58px);
+      }
 
-    @media (hover: hover) {
-      &:hover {
-        cursor: pointer;
+      @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
 
+          .parties-list--name {
+            color: #FF3D54;
+          }
+
+          .parties-list--date {
+            transform: skewX(-10deg);
+            color: #FF3D54;
+          }
+
+          .link-button {
+            svg {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+
+      &.active {
         .parties-list--name {
           color: #FF3D54;
         }
@@ -1744,72 +1706,55 @@
       }
     }
 
-    &.active {
-      .parties-list--name {
-        color: #FF3D54;
+    &--date {
+      line-height: 1;
+      font-feature-settings: 'salt' on;
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+      transform-origin: bottom;
+      transition: transform .2s ease-in-out, color .2s ease-in-out;
+      font-family: v.$halvarRegular;
+      font-weight: 400;
+      font-size: v.dynamic-vw(1920, 35.88px);
+      @media (min-width: 1921px) {
+        font-size: 35.88px;
       }
-
-      .parties-list--date {
-        transform: skewX(-10deg);
-        color: #FF3D54;
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 32px);
       }
-
-      .link-button {
-        svg {
-          transform: rotate(45deg);
-        }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 22px);
+        margin-bottom: v.dynamic-vw(375, 9px);
       }
     }
-  }
 
-  &--date {
-    line-height: 1;
-    font-feature-settings: 'salt' on;
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    transform-origin: bottom;
-    transition: transform .2s ease-in-out, color .2s ease-in-out;
-    font-family: v.$halvarRegular;
-    font-weight: 400;
-    font-size: v.dynamic-vw(1920, 35.88px);
-    @media (min-width: 1921px) {
-      font-size: 35.88px;
+    &--info {
+      position: relative;
+      z-index: 2;
     }
-    @include v.tablet {
-      font-size: v.dynamic-vw(1024, 32px);
-    }
-    @include v.mobile {
-      font-size: v.dynamic-vw(375, 22px);
-      margin-bottom: v.dynamic-vw(375, 9px);
-    }
-  }
 
-  &--info {
-    position: relative;
-    z-index: 2;
-  }
-
-  &--name {
-    font-family: v.$badRussian;
-    font-weight: normal;
-    font-size: v.dynamic-vw(1920, 80px);
-    line-height: 1.3;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-feature-settings: 'salt' on;
-    transition: color .2s ease-in-out;
-    position: relative;
-    z-index: 10;
-    @media (min-width: 1921px) {
-      font-size: 80px;
-    }
-    @include v.tablet {
-      font-size: v.dynamic-vw(1024, 48px);
-    }
-    @include v.mobile {
-      font-size: v.dynamic-vw(375, 40px);
-      margin-bottom: v.dynamic-vw(375, 18.5px);
+    &--name {
+      font-family: v.$badRussian;
+      font-weight: normal;
+      font-size: v.dynamic-vw(1920, 80px);
+      line-height: 1.3;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-feature-settings: 'salt' on;
+      transition: color .2s ease-in-out;
+      position: relative;
+      z-index: 10;
+      @media (min-width: 1921px) {
+        font-size: 80px;
+      }
+      @include v.tablet {
+        font-size: v.dynamic-vw(1024, 48px);
+      }
+      @include v.mobile {
+        font-size: v.dynamic-vw(375, 40px);
+        margin-bottom: v.dynamic-vw(375, 18.5px);
+      }
     }
   }
 }
@@ -1889,6 +1834,56 @@
 
   &.fixed {
     opacity: 0.8;
+  }
+}
+
+#hero-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+  opacity: 0;
+  @include v.tablet {
+    transform-origin: 15% center;
+    transform: scale(1.5);
+    left: 0;
+    max-width: v.dynamic-vw(1024, 629px);
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  #hero-text-inner1, #hero-text-inner2 {
+    font-family: $badRussian;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 180px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-feature-settings: 'salt' on;
+    fill: white;
+  }
+}
+
+#hero-path1 {
+  @include v.tablet {
+    max-width: v.dynamic-vw(1024, 629px);
+  }
+}
+
+#hero-path2 {
+  @include v.tablet {
+    max-width: v.dynamic-vw(1024, 629px);
+  }
+}
+
+#parties {
+  margin-bottom: v.dynamic-vw(1920, 180px);
+  @include v.tablet {
+    margin-bottom: v.dynamic-vw(1024, 160px);
+    min-height: auto;
   }
 }
 
