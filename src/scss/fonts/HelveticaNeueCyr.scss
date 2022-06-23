@@ -1,10 +1,11 @@
 $Helvetica: 'HelveticaNeueCyr';
+$HelveticaRoman: 'HelveticaNeueCyr-Roman';
 
 @font-face {
   font-family: 'HelveticaNeueCyr';
-  src: url('../fonts/subset-HelveticaNeueCyr-Medium.woff2') format('woff2'),
-  url('../fonts/subset-HelveticaNeueCyr-Medium.woff') format('woff'),
-  url('../fonts/subset-HelveticaNeueCyr-Medium.ttf') format('truetype');
+  src: url('/assets/fonts/HelveticaNeueCyr/subset-HelveticaNeueCyr-Medium.woff2') format('woff2'),
+  url('/assets/fonts/HelveticaNeueCyr/subset-HelveticaNeueCyr-Medium.woff') format('woff'),
+  url('/assets/fonts/HelveticaNeueCyr/subset-HelveticaNeueCyr-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -12,10 +13,23 @@ $Helvetica: 'HelveticaNeueCyr';
 
 @font-face {
   font-family: 'HelveticaNeueCyr';
-  src: url('../fonts/subset-HelveticaNeueCyr-Roman.woff2') format('woff2'),
-  url('../fonts/subset-HelveticaNeueCyr-Roman.woff') format('woff'),
-  url('../fonts/subset-HelveticaNeueCyr-Roman.ttf') format('truetype');
+  src: url('/assets/fonts/HelveticaNeueCyr/subset-HelveticaNeueCyr-Roman.woff2') format('woff2'),
+  url('/assets/fonts/HelveticaNeueCyr/subset-HelveticaNeueCyr-Roman.woff') format('woff'),
+  url('/assets/fonts/HelveticaNeueCyr/subset-HelveticaNeueCyr-Roman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+//@font-face {
+//  font-family: 'HelveticaNeueCyr-Roman';
+//  src: url('../fonts/helveticaneuecyr-roman.eot'); /* IE 9 Compatibility Mode */
+//  src: url('../fonts/helveticaneuecyr-roman.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+//  url('../fonts/helveticaneuecyr-roman.woff2') format('woff2'), /* Super Modern Browsers */
+//  url('../fonts/helveticaneuecyr-roman.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+//  url('../fonts/helveticaneuecyr-roman.ttf') format('truetype'), /* Safari, Android, iOS */
+//  url('../fonts/helveticaneuecyr-roman.svg#helveticaneuecyr-roman') format('svg'); /* Chrome < 4, Legacy iOS */
+//  font-weight: normal;
+//  font-style: normal;
+//  font-display: swap;
+//}
