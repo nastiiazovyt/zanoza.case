@@ -4729,34 +4729,11 @@ a {
 }
 
 .case-footer {
-  background: #242424;
-}
-.case-footer-container {
-  padding: 2.34375vw 0 1.3020833333vw 0;
-  margin-bottom: 3.3854166667vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  width: 100%;
   position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: #242424;
+  overflow: hidden;
 }
-@media (min-width: 1921px) {
-  .case-footer-container {
-    margin-bottom: 65px;
-    padding: 45px 0 25px 0;
-  }
-}
-.case-footer-container:before {
+.case-footer:before {
   content: "";
   width: 100%;
   height: 0.0520833333vw;
@@ -4765,7 +4742,32 @@ a {
   top: 0;
   left: 0;
 }
-.case-footer-title {
+.case-footer-container {
+  padding: 2.34375vw 0 1.3020833333vw 0;
+  margin-bottom: 3.3854166667vw;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+@media (min-width: 1921px) {
+  .case-footer-container {
+    margin-bottom: 65px;
+    padding: 45px 0 25px 0;
+  }
+}
+
+.swiper-slide {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4775,9 +4777,40 @@ a {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
 }
-.case-footer-title span:nth-child(1) {
-  color: #242424;
+.swiper-slide span:nth-child(1) {
+  opacity: 0;
   font-size: 4.1666666667vw;
+}
+@media (min-width: 1921px) {
+  .swiper-slide span:nth-child(1) {
+    font-size: 80px;
+  }
+}
+.swiper-slide span:nth-child(2) {
+  opacity: 0;
+  color: #FFFFFF;
+  font-family: "HelveticaNeueCyr";
+  font-size: 1.0416666667vw;
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+@media (min-width: 1921px) {
+  .swiper-slide span:nth-child(2) {
+    font-size: 20px;
+  }
+}
+.swiper-slide-active {
+  -webkit-transition: scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  -o-transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+}
+.swiper-slide-active span:nth-child(1) {
+  color: #242424;
   font-weight: 400;
   line-height: 1;
   font-family: "HelveticaNeueCyr";
@@ -4785,31 +4818,68 @@ a {
   margin-bottom: 0.8333333333vw;
   -webkit-filter: drop-shadow(0 0 2px #FF585D);
           filter: drop-shadow(0 0 2px #FF585D);
+  opacity: 1;
 }
 @media (min-width: 1921px) {
-  .case-footer-title span:nth-child(1) {
+  .swiper-slide-active span:nth-child(1) {
     margin-bottom: 16px;
-    font-size: 80px;
   }
 }
-.case-footer-title span:nth-child(2) {
-  color: #FFFFFF;
+.swiper-slide-active span:nth-child(2) {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out 0.5s;
+  -o-transition: opacity 0.5s ease-in-out 0.5s;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+.swiper-slide-prev {
+  -webkit-transition: scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  -o-transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+}
+.swiper-slide-prev span:nth-child(1) {
+  color: #242424;
+  line-height: 1;
+  font-weight: 400;
+  opacity: 1;
   font-family: "HelveticaNeueCyr";
-  font-size: 1.0416666667vw;
-  font-weight: 500;
-  line-height: 1.4;
+  -webkit-filter: drop-shadow(0 0 2px #FF585D);
+          filter: drop-shadow(0 0 2px #FF585D);
 }
-@media (min-width: 1921px) {
-  .case-footer-title span:nth-child(2) {
-    font-size: 20px;
-  }
+.swiper-slide-next {
+  -webkit-transition: scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  -o-transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0), scale 0.7s cubic-bezier(0.7, 0, 0.84, 0), -webkit-transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
 }
-.case-footer-left-side .case-footer-nav {
+.swiper-slide-next span:nth-child(1) {
+  color: #242424;
+  line-height: 1;
+  font-weight: 400;
+  font-family: "HelveticaNeueCyr";
+  opacity: 1;
+  -webkit-filter: drop-shadow(0 0 2px #FF585D);
+          filter: drop-shadow(0 0 2px #FF585D);
+}
+.swiper-wrapper {
+  width: 500%;
+}
+.swiper-button-prev {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 0;
   margin-left: 4.1145833333vw;
 }
-.case-footer-right-side .case-footer-nav {
+.swiper-button-next {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 89%;
+  margin-left: 4.1145833333vw;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  margin-right: 4.1145833333vw;
 }
