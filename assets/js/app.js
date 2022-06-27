@@ -20201,7 +20201,7 @@ var caseFooterSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.case
   // },
   slidesPerView: 1,
   initialSlide: 1,
-  speed: 500,
+  speed: 800,
   allowTouchMove: false
 });
 

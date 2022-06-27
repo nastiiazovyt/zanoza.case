@@ -23,7 +23,7 @@ const caseFooterSwiper = new Swiper('.case-footer', {
     // },
     slidesPerView: 1,
     initialSlide: 1,
-    speed: 500,
+    speed: 800,
     allowTouchMove: false,
 })
 
