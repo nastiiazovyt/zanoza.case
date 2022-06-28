@@ -34,20 +34,27 @@
 .swiper {
   &-slide {
     text-align: center;
-
     display: flex;
     flex-flow: column nowrap;
-    transition: transform .8s cubic-bezier(0.7, 0, 0.84, 0);
+    transition: transform .6s cubic-bezier(0.7, 0, 0.84, 0);
 
     span {
       transform-origin: top;
 
       &:nth-child(1) {
-        transition: transform .8s cubic-bezier(0.7, 0, 0.84, 0), text-shadow .8s cubic-bezier(0.7, 0, 0.84, 0);
+        transition: transform .6s cubic-bezier(0.7, 0, 0.84, 0), text-shadow .6s cubic-bezier(0.7, 0, 0.84, 0), opacity .6s cubic-bezier(0.7, 0, 0.84, 0);
         opacity: 0;
         font-size: v.dynamic-vw(1920, 80px);
+        margin-bottom: v.dynamic-vw(1920, 16px);
+        text-shadow: unset;
+        color: #242424;
+        line-height: 1;
+        font-weight: 400;
+        font-family: v.$Helvetica;
+        filter: drop-shadow(0 0 2px #FF585D);
         @media (min-width: 1921px) {
           font-size: 80px;
+          margin-bottom: 16px;
         }
       }
 
@@ -58,7 +65,7 @@
         font-size: v.dynamic-vw(1920, 20px);
         font-weight: 500;
         line-height: 1.4;
-        transition: opacity .4s ease-in-out;
+        transition: opacity .3s ease-in-out;
         @media (min-width: 1921px) {
           font-size: 20px;
         }
@@ -66,26 +73,16 @@
     }
 
     &-active {
-
       span {
         &:nth-child(1) {
           transform: scale(1);
-          color: #242424;
-          font-weight: 400;
-          line-height: 1;
-          font-family: v.$Helvetica;
           text-shadow: 1px 0 0 #FF585D, -1px 0 0 #FF585D, 0 1px 0 #FF585D, 0 -1px 0 #FF585D;
-          margin-bottom: v.dynamic-vw(1920, 16px);
-          filter: drop-shadow(0 0 2px #FF585D);
           opacity: 1;
-          @media (min-width: 1921px) {
-            margin-bottom: 16px;
-          }
         }
 
         &:nth-child(2) {
           opacity: 1;
-          transition: opacity 1.2s ease-in-out .6s;
+          transition: opacity 1s ease-in-out .4s;
         }
 
       }
@@ -95,18 +92,10 @@
       pointer-events: none;
       transform: translateX(50%);
       opacity: 1;
-
       span {
         &:nth-child(1) {
-          transform: scale(2.2);
-          transform-origin: top;
-          color: #242424;
-          line-height: 1;
-          font-weight: 400;
           opacity: 1;
-          font-family: v.$Helvetica;
-          text-shadow: unset;
-          filter: drop-shadow(0 0 2px #FF585D);
+          transform: scale(2.2);
         }
       }
     }
@@ -118,15 +107,8 @@
 
       span {
         &:nth-child(1) {
-          text-shadow: unset;
-          transform-origin: top;
-          transform: scale(2.2);
-          color: #242424;
-          line-height: 1;
-          font-weight: 400;
-          font-family: v.$Helvetica;
           opacity: 1;
-          filter: drop-shadow(0 0 2px #FF585D);
+          transform: scale(2.2);
         }
 
       }
@@ -136,7 +118,7 @@
   }
 
   &-wrapper {
-    transition: transform .8s cubic-bezier(0.7, 0, 0.84, 0);
+    transition: transform .6s cubic-bezier(0.7, 0, 0.84, 0);
     width: 500%;
   }
 
