@@ -135,6 +135,7 @@ $activeEasing: $easing1;
     top: 50%;
     left: v.dynamic-vw(1920, 79px);
     transition: transform .2s ease-in-out;
+    cursor: pointer;
     @media (min-width: 1921px) {
       padding: 5px;
       left: 79px;
@@ -153,6 +154,7 @@ $activeEasing: $easing1;
   &-button-next {
     padding: v.dynamic-vw(1920, 5px);
     z-index: 10;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     right: v.dynamic-vw(1920, 79px);

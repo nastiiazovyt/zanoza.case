@@ -4884,6 +4884,7 @@ a {
   -o-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 @media (min-width: 1921px) {
   .swiper-button-prev {
@@ -4906,6 +4907,7 @@ a {
 .swiper-button-next {
   padding: 0.2604166667vw;
   z-index: 10;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 4.1145833333vw;
