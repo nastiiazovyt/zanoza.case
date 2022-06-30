@@ -1,9 +1,20 @@
 @use "src/scss/vars" as v;
 
+$easing1: cubic-bezier(0.65, 0, 0.35, 1);
+$easing2: cubic-bezier (1, 0, 0.35, 1);
+
+$activeEasing: $easing1;
+
 .case-footer {
   position: relative;
   background: #242424;
   overflow: hidden;
+  margin-bottom: v.dynamic-vw(1920, 65px);
+  padding: v.dynamic-vw(1920, 73px) 0;
+  @media (min-width: 1921px) {
+    margin-bottom: 65px;
+    padding: 73px 0;
+  }
 
   &:before {
     content: "";
@@ -16,17 +27,11 @@
   }
 
   &-container {
-    padding: v.dynamic-vw(1920, 45px) 0 v.dynamic-vw(1920, 25px) 0;
-    margin-bottom: v.dynamic-vw(1920, 65px);
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-flow: row nowrap;
-    @media (min-width: 1921px) {
-      margin-bottom: 65px;
-      padding: 45px 0 25px 0;
-    }
   }
 
 }
@@ -36,13 +41,13 @@
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
-    transition: transform .6s cubic-bezier(0.7, 0, 0.84, 0);
+    transition: transform 650ms $activeEasing;
 
     span {
       transform-origin: top;
 
       &:nth-child(1) {
-        transition: transform .6s cubic-bezier(0.7, 0, 0.84, 0), text-shadow .6s cubic-bezier(0.7, 0, 0.84, 0), opacity .6s cubic-bezier(0.7, 0, 0.84, 0);
+        transition: transform 700ms $activeEasing, text-shadow 700ms $activeEasing, opacity 700ms $activeEasing;
         opacity: 0;
         font-size: v.dynamic-vw(1920, 80px);
         margin-bottom: v.dynamic-vw(1920, 16px);
@@ -82,7 +87,7 @@
 
         &:nth-child(2) {
           opacity: 1;
-          transition: opacity 1s ease-in-out .4s;
+          transition: opacity .8s ease-in-out .4s;
         }
 
       }
@@ -90,25 +95,26 @@
 
     &-prev {
       pointer-events: none;
-      transform: translateX(50%);
+      transform: translateY(-20%) translateX(50%);
       opacity: 1;
+
       span {
         &:nth-child(1) {
           opacity: 1;
-          transform: scale(2.2);
+          transform: scale(2.4);
         }
       }
     }
 
     &-next {
       pointer-events: none;
-      transform: translateX(-50%);
+      transform: translateY(-20%) translateX(-50%);
       opacity: 1;
 
       span {
         &:nth-child(1) {
           opacity: 1;
-          transform: scale(2.2);
+          transform: scale(2.4);
         }
 
       }
@@ -118,17 +124,21 @@
   }
 
   &-wrapper {
-    transition: transform .6s cubic-bezier(0.7, 0, 0.84, 0);
+    transition: transform 700ms $activeEasing;
     width: 500%;
   }
 
   &-button-prev {
+    padding: v.dynamic-vw(1920, 5px);
     z-index: 10;
     position: absolute;
     top: 50%;
-    left: 0;
-    margin-left: v.dynamic-vw(1920, 79px);
+    left: v.dynamic-vw(1920, 79px);
     transition: transform .2s ease-in-out;
+    @media (min-width: 1921px) {
+      padding: 5px;
+      left: 79px;
+    }
     @media (hover: hover) {
       &:hover {
         transform: scale(1.2);
@@ -141,13 +151,17 @@
   }
 
   &-button-next {
+    padding: v.dynamic-vw(1920, 5px);
     z-index: 10;
     position: absolute;
     top: 50%;
-    left: 89%;
-    margin-left: v.dynamic-vw(1920, 79px);
+    right: v.dynamic-vw(1920, 79px);
     transform: rotate(180deg);
     transition: transform .2s ease-in-out;
+    @media (min-width: 1921px) {
+      padding: 5px;
+      right: 79px;
+    }
     @media (hover: hover) {
       &:hover {
         transform: rotate(180deg) scale(1.2);
