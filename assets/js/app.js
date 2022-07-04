@@ -20181,10 +20181,11 @@ __webpack_require__.r(__webpack_exports__);
 var caseFooterSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.case-footer', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["EffectCreative"]],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: '.swiper-button-n',
+    prevEl: '.swiper-button-p'
   },
-  slidesPerView: 1,
+  slidesPerView: 'auto',
+  centeredSlides: true,
   initialSlide: 1,
   speed: 700,
   allowTouchMove: false

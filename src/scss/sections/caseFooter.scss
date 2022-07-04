@@ -1,4 +1,5 @@
 @use "src/scss/vars" as v;
+@import "~swiper/swiper-bundle.min.css";
 
 $easing1: cubic-bezier(0.65, 0, 0.35, 1);
 $easing2: cubic-bezier (1, 0, 0.35, 1);
@@ -29,7 +30,7 @@ $activeEasing: $easing1;
   &-container {
     width: 100%;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     display: flex;
     flex-flow: row nowrap;
   }
@@ -42,9 +43,10 @@ $activeEasing: $easing1;
     display: flex;
     flex-flow: column nowrap;
     transition: transform 650ms $activeEasing;
+    width: 50%;
 
     span {
-      transform-origin: top;
+      transform-origin: 50% 12% 0;
 
       &:nth-child(1) {
         transition: transform 700ms $activeEasing, text-shadow 700ms $activeEasing, opacity 700ms $activeEasing;
@@ -101,7 +103,7 @@ $activeEasing: $easing1;
       span {
         &:nth-child(1) {
           opacity: 1;
-          transform: scale(2.4);
+          transform: scale(2.2);
         }
       }
     }
@@ -114,7 +116,7 @@ $activeEasing: $easing1;
       span {
         &:nth-child(1) {
           opacity: 1;
-          transform: scale(2.4);
+          transform: scale(2.2);
         }
 
       }
@@ -125,10 +127,9 @@ $activeEasing: $easing1;
 
   &-wrapper {
     transition: transform 700ms $activeEasing;
-    width: 500%;
   }
 
-  &-button-prev {
+  &-button-p {
     padding: v.dynamic-vw(1920, 5px);
     z-index: 10;
     position: absolute;
@@ -151,7 +152,7 @@ $activeEasing: $easing1;
     }
   }
 
-  &-button-next {
+  &-button-n {
     padding: v.dynamic-vw(1920, 5px);
     z-index: 10;
     cursor: pointer;
